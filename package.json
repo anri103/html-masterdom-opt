@@ -1,0 +1,23 @@
+{
+  "name": "html-masterdom-opt",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^6.0.16",
+    "bootstrap": "^5.3.7",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "del": "^6.1.1",
+    "gulp": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.89.2"
+  }
+}

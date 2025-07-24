@@ -1,0 +1,149 @@
+/* GENERAL ============================ */
+
+@media (min-width: 992px) {
+    :root {
+        --bs-body-font-size: 1.125rem;
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+    min-height: 75vh;
+}
+
+/* utils */
+
+.bg-img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mt-32px {
+    margin-top: 32px !important;
+}
+
+.mt-22px {
+    margin-top: 22px !important;
+}
+
+.mt-12px {
+    margin-top: 12px !important;
+}
+
+.mb-10px {
+    margin-bottom: 10px !important;
+}
+
+.mb-12px {
+    margin-bottom: 12px !important;
+}
+
+.mb-22px {
+    margin-bottom: 22px !important;
+}
+
+.mb-32px {
+    margin-bottom: 32px !important;
+}
+
+.mb-42px {
+    margin-bottom: 42px !important;
+}
+
+.gap-12px {
+    gap: 12px !important;
+}
+
+.gap-22px {
+    gap: 22px !important;
+}
+
+.gap-32px {
+    gap: 32px !important;
+}
+
+.gap-42px {
+    gap: 42px !important;
+}
+
+.gap-row-12px {
+    row-gap: 12px !important;
+}
+
+.z-1 {
+    z-index: 1 !important;
+}
+
+.z-2 {
+    z-index: 2 !important;
+}
+
+.z-3 {
+    z-index: 3 !important;
+}
+
+.z-4 {
+    z-index: 4 !important;
+}
+
+.z-5 {
+    z-index: 5 !important;
+}
+
+.bg-primary-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.offcanvas-footer {
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+}
+
+.container-gutter-inherit,
+.row-gutter-inherit {
+    --bs-gutter-x: inherit;
+    --bs-gutter-y: inherit;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: #DEE5ED;
+    --bs-tooltip-color: #1A1A16;
+}
+
+@media (min-width: 992px) {
+    .col-lg-20 {
+        width: 20%;
+    }
+
+    .col-lg-80 {
+        width: 80%;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .col-xl-20 {
+        width: 20%;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1504px;
+    }
+
+}
