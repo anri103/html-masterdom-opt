@@ -1,0 +1,41 @@
+/* Коллекции */
+
+.swiperProductCollection .swiper-slide,
+.swiperProductCatalog .swiper-slide {
+    width: auto;
+    height: auto;
+    max-width: 320px;
+}
+
+.product-collection-card {
+    --bs-card-spacer-y: 16px;
+    --bs-card-spacer-x: 0;
+    --bs-card-border-width: 0;
+    --bs-card-title-color: var(--bs-body-color);
+    --bs-card-title-weight: 600;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-collection-card .card-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.product-collection-card .card-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 12px;
+    width: auto;
+    max-width: 220px;
+}
+
+@media (min-width: 992px) {
+
+    .product-collection-card {
+        font-size: 18px;
+    }
+}

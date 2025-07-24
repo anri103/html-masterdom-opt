@@ -1,12 +1,5 @@
 /* GENERAL ============================ */
 
-@media (min-width: 992px) {
-    :root {
-        --bs-body-font-size: 1.125rem;
-    }
-
-}
-
 html {
     scroll-behavior: smooth;
     min-height: 100%;
@@ -23,12 +16,32 @@ body {
     min-height: 75vh;
 }
 
+.section {
+    margin-bottom: 42px;
+}
+
+@media (min-width: 992px) {
+    .section {
+        margin-bottom: 82px;
+    }
+    
+}
+
 /* utils */
 
 .bg-img {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.table {
+    --bs-table-bg: inherit;
+}
+
+.table th {
+    color: var(--theme-light-gray);
+    font-weight: normal;
 }
 
 .mt-32px {

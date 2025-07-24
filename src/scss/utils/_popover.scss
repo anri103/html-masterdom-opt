@@ -1,0 +1,26 @@
+.popover {
+    --bs-popover-zindex: 999;
+    --bs-popover-max-width: 320px;
+    --bs-popover-font-size: 1rem;
+    font-family: var(--bs-body-font-family);
+}
+
+.popover .popover-title {
+    --bs-link-color-rgb: var(--bs-body-color-rgb);
+    --bs-link-hover-color-rgb: var(--bs-primary-rgb);
+    font-family: var(--bs-title-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.popover .popover-arrow {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .popover-title {
+        font-size: 20px;
+    }
+
+}

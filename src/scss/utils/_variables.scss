@@ -54,3 +54,10 @@
 
     --swiper-theme-color: #9F9387;
 }
+
+@media (min-width: 992px) {
+    :root {
+        --bs-body-font-size: 1.125rem;
+    }
+
+}

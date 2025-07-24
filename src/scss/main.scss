@@ -18,31 +18,27 @@
 @use 'utils/cards';
 @use 'utils/accordion';
 @use 'utils/modals';
+@use 'utils/popover';
 
 // components
 @use '../components/layout/header/header';
 @use '../components/layout/footer/footer';
 
-@use '../components/sections/hero/hero';
-@use '../components/sections/categories-circles/categories-circles';
-@use '../components/sections/popular-products/popular-products';
 @use '../components/sections/blog-slider/blog-slider';
-@use '../components/sections/shops-location/shops-location';
 @use '../components/sections/breadcrumbs/breadcrumbs';
 @use '../components/sections/catalog/catalog';
+@use '../components/sections/categories-circles/categories-circles';
+@use '../components/sections/collection/collection';
+@use '../components/sections/featured-collections/featured-collections';
+@use '../components/sections/featured-products/featured-products';
+@use '../components/sections/hero/hero';
+@use '../components/sections/popular-products/popular-products';
+@use '../components/sections/product/product';
+@use '../components/sections/shops-grid/shops-grid';
+@use '../components/sections/shops-location/shops-location';
 
 @use '../components/ui/product-item/product-item';
 @use '../components/ui/product-cat-oboi/product-cat-oboi';
-
-// @use 'components/breadcrumb';
-// @use 'components/pagination';
-// @use 'components/slider-hero';
-// @use 'components/grid-tags';
-// @use 'components/card-book';
-// @use 'components/card-collection';
-// @use 'components/card-genre';
-// @use 'components/card-author';
-// @use 'components/alerts';
 
 // pages
 @use 'pages/test';
