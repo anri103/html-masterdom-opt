@@ -4,28 +4,23 @@
 @@include('../components/layout/head/head.html', {
     "description": "",
     "keywords": "",
-    "title": "Главная",
+    "title": "Вёрстка ОПТ - Главная",
 })
 
 <body>
 
-    <!-- header -->
+    <!-- HEADER -->
     @@include('../components/layout/header/header.html')
 
-    <!-- main -->
+    <!-- MAIN -->
     <main class="main">
 
-        <!-- section -->
-        <section class="section section-test">
-            <div class="container">
-                <p>Content in Main container!</p>
-                <p>Hello, World!</p>
-            </div>
-        </section>
+        <!-- section-hero -->
+        @@include('../components/sections/hero/hero.html')
 
     </main>
 
-    <!-- footer -->
+    <!-- FOOTER -->
     @@include('../components/layout/footer/footer.html')
 </body>
 

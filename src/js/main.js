@@ -182,11 +182,11 @@ wishlistBtn.forEach(function (button) {
 
 var swiperHeroSlider = new Swiper(".swiperHeroSlider", {
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     spaceBetween: 16,
     grabCursor: true,
     pagination: {
-        el: ".swiperHeroSlider-pagination",
+        el: ".swiper-pagination",
     },
     navigation: {
         nextEl: ".swiperHeroSlider-next",

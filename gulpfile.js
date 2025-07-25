@@ -96,14 +96,14 @@ function vendorJS() {
 
 // Копирование изображений
 function images() {
-  return src(paths.img.src)
+  return src(paths.img.src, { encoding: false, allowEmpty: true })
     .pipe(dest(paths.img.dest))
     .pipe(browserSync.stream());
 }
 
 // Копирование шрифтов
 function fonts() {
-  return src(paths.fonts.src)
+  return src(paths.fonts.src, { encoding: false, allowEmpty: true })
     .pipe(dest(paths.fonts.dest))
     .pipe(browserSync.stream());
 }
@@ -115,9 +115,8 @@ function watchFiles() {
       baseDir: 'dist'
     }
   });
-  watch('src/pages/**/*.html', html);
-  watch('src/components/**/*.html', html);
-  watch('src/scss/**/*.scss', styles);
+  watch(['src/pages/**/*.html', 'src/components/**/*.html'], html);
+  watch(['src/scss/**/*.scss', 'src/components/**/*.scss'], styles);
   watch('src/js/**/*.js', scripts);
   watch('src/img/**/*', images);
   watch('src/fonts/**/*', fonts);

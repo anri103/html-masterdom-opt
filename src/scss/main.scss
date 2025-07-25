@@ -24,6 +24,7 @@
 @use '../components/layout/header/header';
 @use '../components/layout/footer/footer';
 
+@use '../components/sections/hero/hero';
 @use '../components/sections/blog-slider/blog-slider';
 @use '../components/sections/breadcrumbs/breadcrumbs';
 @use '../components/sections/catalog/catalog';
@@ -31,7 +32,6 @@
 @use '../components/sections/collection/collection';
 @use '../components/sections/featured-collections/featured-collections';
 @use '../components/sections/featured-products/featured-products';
-@use '../components/sections/hero/hero';
 @use '../components/sections/popular-products/popular-products';
 @use '../components/sections/product/product';
 @use '../components/sections/shops-grid/shops-grid';
