@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="53.2753mm" height="53.3971mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 4563.13 4573.56"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#FEFEFF;stroke-width:17.13;stroke-miterlimit:22.9256}
+    .fil0 {fill:#A4A5A5}
+    .fil1 {fill:#FEFEFF}
+   ]]>
+  </style>
+     <clipPath id="id0">
+      <rect x="1.09" y="2272.03" width="4562.04" height="2301.53"/>
+     </clipPath>
+      <clipPath id="id1">
+       <rect x="1.09" y="2272.03" width="4562.04" height="2301.53"/>
+      </clipPath>
+     <clipPath id="id2">
+      <rect width="4562.04" height="2301.53"/>
+     </clipPath>
+      <clipPath id="id3">
+       <rect transform="matrix(1 -0 -0 -1 -0 2301.53)" width="4562.04" height="2301.53"/>
+      </clipPath>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2379500151152">
+   <g>
+    <g style="clip-path:url(#id0)">
+     <image style="clip-path:url(#id1)" x="1.09" y="11.52" width="4562.04" height="4562.04" xlink:href="01_Images\01_ImgID1.png"/>
+    </g>
+    <g>
+     <path class="fil0" d="M1.09 2283.86c1.76,373.74 23.34,584.95 231.59,1000.68 309.66,618.16 844.6,1058.72 1527.73,1221.58 809.44,192.97 1618.44,-100.03 2100.95,-573.92 458.79,-450.6 682.92,-1016.96 701.77,-1579.26l0 -80.92 -4562.04 0 0 11.84z"/>
+     <path class="fil1" d="M548.87 2272.03l-2.38 65.84c322.34,145.32 1325.84,-138.07 1585.42,948.53 36.11,151.17 75.85,685.7 104.88,737.36l100.68 -0.6c106.4,-548.75 -45.44,-1351.33 937.88,-1584.56 162.61,-38.57 655.68,-62.9 737.81,-100.74l0.15 -65.83 -3464.45 0z"/>
+    </g>
+   </g>
+   <g>
+    <g style="clip-path:url(#id2)">
+     <image style="clip-path:url(#id3)" transform="matrix(1 -0 -0 -1 -0 4562.04)" x="0" y="0" width="4562.04" height="4562.04" xlink:href="01_Images\01_ImgID2.png"/>
+    </g>
+    <g>
+     <path class="fil0" d="M-0 2289.7c1.76,-373.74 23.34,-584.95 231.59,-1000.68 309.66,-618.16 844.6,-1058.72 1527.73,-1221.58 809.44,-192.97 1618.44,100.03 2100.95,573.92 458.79,450.6 682.92,1016.96 701.77,1579.26l0 80.92 -4562.04 0 0 -11.84z"/>
+     <path class="fil1" d="M547.78 2301.53l-2.38 -65.84c322.34,-145.32 1325.84,138.07 1585.42,-948.53 36.11,-151.17 75.85,-685.7 104.88,-737.36l100.68 0.6c106.4,548.75 -45.44,1351.33 937.88,1584.56 162.61,38.57 655.68,62.9 737.81,100.74l0.15 65.83 -3464.45 0z"/>
+    </g>
+   </g>
+   <rect class="fil1 str0" x="555.23" y="2269.32" width="3441.6" height="56.02"/>
+  </g>
+ </g>
+</svg>
