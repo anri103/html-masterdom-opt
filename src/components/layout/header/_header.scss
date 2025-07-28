@@ -122,7 +122,7 @@
     overflow-x: hidden;
 
     &__header {
-        margin-bottom: 22px;
+        // margin-bottom: 22px;
 
         .title {
             margin-bottom: 16px;
@@ -131,6 +131,7 @@
         .city-select-invoker {
             display: flex;
             gap: 6px;
+            margin-bottom: 22px;
         }
 
         .city-select__current-city {
@@ -141,6 +142,7 @@
     }
 
     &__body {
+        flex: 1 1 auto;
         position: relative;
         margin-bottom: 100px;
     }
@@ -909,6 +911,40 @@
             font-weight: 500;
             line-height: normal;
             text-transform: lowercase;
+        }
+    }
+}
+
+.prices-switch {
+    padding-left: 22px;
+
+    & > a {
+        display: flex;
+        background: #F2F9FF;
+        border-radius: 45px;
+        padding-top: 6px;
+        padding-right: 12px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        gap: 8px;
+    }
+
+    .sbtn {
+        display: block;
+        border-radius: 41px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 1%;
+        color: #1A1A16;
+
+        &.active {
+            background: #02378F;
+            color: #FFFFFF;
         }
     }
 }
