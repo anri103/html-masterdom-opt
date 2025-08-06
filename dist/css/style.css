@@ -2208,10 +2208,6 @@ textarea {
   border-radius: 50px;
   background-color: #DEE5ED;
 }
-.navbar-mobile__icon.icon-profile .notification-count {
-  top: auto;
-  bottom: -2px;
-}
 
 /* Выпадающее окно на мобилке */
 .mobile-collapse-menu {
@@ -2742,10 +2738,6 @@ textarea {
   border-radius: 50px;
   background-color: #DEE5ED;
 }
-.navbar-desktop__icon.icon-profile .notification-count {
-  top: auto;
-  bottom: -2px;
-}
 @media (min-width: 1400px) {
   .navbar-desktop__icon.icon-search {
     display: none;
@@ -3216,9 +3208,6 @@ textarea {
   }
 }
 
-.swiperHeroSlider {
-  height: 100%;
-}
 .swiperHeroSlider-next, .swiperHeroSlider-prev {
   position: absolute;
   top: 50%;
@@ -3249,9 +3238,6 @@ textarea {
   --swiper-pagination-bullet-width: 50px;
   --swiper-pagination-bullet-height: 2px;
   --swiper-pagination-bullet-border-radius: 0;
-}
-.swiperHeroSlider .swiper-slide {
-  text-align: center;
 }
 .swiperHeroSlider .hero-slider-item img {
   max-width: 100%;
@@ -5201,6 +5187,15 @@ textarea {
     padding: 57px 32px 53px;
   }
 }
+.section-account-auth {
+  padding: 56px 0 0;
+}
+@media (min-width: 992px) {
+  .section-account-auth {
+    padding: 98px 0 0;
+  }
+}
+
 /* product-item */
 .product-item {
   position: relative;

@@ -29,7 +29,6 @@
 }
 
 .swiperHeroSlider {
-    height: 100%;
 
     &-next,
     &-prev {
@@ -67,10 +66,6 @@
         --swiper-pagination-bullet-width: 50px;
         --swiper-pagination-bullet-height: 2px;
         --swiper-pagination-bullet-border-radius: 0;
-    }
-
-    .swiper-slide {
-        text-align: center;
     }
 
     .hero-slider-item {
