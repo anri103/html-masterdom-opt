@@ -10,17 +10,19 @@
     --bs-breadcrumb-item-padding-x: 4px;
     --bs-breadcrumb-divider-color: #ACB2BF;
     --bs-breadcrumb-item-active-color: var(--bs-secondary);
+    --bs-breadcrumb-font-size: 14px;
     --bs-link-color-rgb: 172,178,191;
     --bs-link-hover-color-rgb: 2,55,143;
+
+    @media (min-width: 992px) {
+        --bs-breadcrumb-font-size: 16px;
+    }
 }
 
 .section-page-title {
     margin-bottom: 38px;
-}
 
-@media (min-width: 992px) {
-
-    .section-page-title {
+    @media (min-width: 992px) {
         margin-bottom: 42px;
     }
 }

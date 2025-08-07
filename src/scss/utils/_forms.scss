@@ -41,6 +41,12 @@ textarea {
     border-color: var(--bs-primary);
 }
 
+.form-control:read-only,
+.form-control:disabled {
+    color: var(--theme-light-gray);
+    background-color: var(--bs-body-bg);
+}
+
 .form-select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M1.00781 1.07916L5.9816 6.70326C6.03983 6.77202 6.10978 6.82674 6.18723 6.86412C6.26466 6.9015 6.34798 6.92078 6.43219 6.92078C6.51638 6.92078 6.59972 6.9015 6.67715 6.86412C6.75459 6.82674 6.82453 6.77202 6.88278 6.70326L11.8565 1.07916' stroke='%23474A51' stroke-width='1.00133' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-size: auto;
