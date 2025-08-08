@@ -476,6 +476,10 @@
         display: flex;
         align-items: center;
     }
+
+    .prices-switch {
+        margin-left: 22px;
+    }
     
     &__offcanvas-toggle {
         display: flex;
@@ -918,7 +922,7 @@
 }
 
 .prices-switch {
-    padding-left: 22px;
+    display: inline-block;
 
     & > a {
         display: flex;

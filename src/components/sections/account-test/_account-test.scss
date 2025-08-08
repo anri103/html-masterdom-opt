@@ -98,3 +98,23 @@
         }
     }
 }
+
+.item-payer {
+    margin-bottom: 24px;
+
+    &__header {
+        margin-bottom: 12px;
+    }
+
+    &__status {
+        font-weight: 500;
+    }
+
+    &__inn {
+        margin-bottom: 12px;
+    }
+
+    &__button {
+        margin-bottom: 12px;
+    }
+}

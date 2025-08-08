@@ -2528,6 +2528,9 @@ textarea {
   display: flex;
   align-items: center;
 }
+.navbar-desktop .prices-switch {
+  margin-left: 22px;
+}
 .navbar-desktop__offcanvas-toggle {
   display: flex;
   align-items: center;
@@ -2897,7 +2900,7 @@ textarea {
 }
 
 .prices-switch {
-  padding-left: 22px;
+  display: inline-block;
 }
 .prices-switch > a {
   display: flex;
@@ -5298,6 +5301,22 @@ textarea {
   .account-side-menu__wrapper li a.active::after {
     width: 100%;
   }
+}
+
+.item-payer {
+  margin-bottom: 24px;
+}
+.item-payer__header {
+  margin-bottom: 12px;
+}
+.item-payer__status {
+  font-weight: 500;
+}
+.item-payer__inn {
+  margin-bottom: 12px;
+}
+.item-payer__button {
+  margin-bottom: 12px;
 }
 
 /* product-item */
