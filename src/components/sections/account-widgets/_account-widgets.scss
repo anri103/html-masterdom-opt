@@ -1,0 +1,62 @@
+/* account-widgets ============================ */
+
+.account-content-widget {
+    margin-bottom: 48px;
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    h5, h6 {
+        margin-top: 16px;
+    }
+}
+
+.payers-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.item-payer {
+
+    &__title {
+        font-weight: 500;
+    }
+
+    &__status {
+        font-weight: 500;
+    }
+
+    &__inn {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    &__info {
+
+        p {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__button {
+
+        .btn:not(.collapsed) .span-show,
+        .btn.collapsed .span-hide {
+            display: none;
+        }
+
+        .btn:not(.collapsed) svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .row {
+        align-items: center;
+    }
+}

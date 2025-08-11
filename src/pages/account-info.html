@@ -18,8 +18,21 @@
         <!-- section-breadcrumbs -->
         @@include('../components/sections/breadcrumbs/breadcrumbs.html')
 
-        <!-- section-account-test -->
-        @@include('../components/sections/account-test/account-test.html')
+        <!-- account-area -->
+        <section class="section">
+            <div class="container">
+                <div class="row" style="--bs-gutter-y: 2rem;">
+                    <div class="col-lg-3">
+                        <!-- account-sidebar -->
+                        @@include('../components/sections/account-sidebar/account-sidebar.html')
+                    </div>
+                    <div class="col-lg-9">
+                        <!-- account-widgets -->
+                        @@include('../components/sections/account-widgets/account-widgets.html')
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 

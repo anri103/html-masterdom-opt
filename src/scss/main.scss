@@ -24,6 +24,7 @@
 @use '../components/layout/header/header';
 @use '../components/layout/footer/footer';
 
+// sections
 @use '../components/sections/hero/hero';
 @use '../components/sections/blog-slider/blog-slider';
 @use '../components/sections/breadcrumbs/breadcrumbs';
@@ -37,8 +38,10 @@
 @use '../components/sections/shops-grid/shops-grid';
 @use '../components/sections/shops-location/shops-location';
 @use '../components/sections/account-auth/account-auth';
-@use '../components/sections/account-test/account-test';
+@use '../components/sections/account-widgets/account-widgets';
+@use '../components/sections/account-sidebar/account-sidebar';
 
+// ui
 @use '../components/ui/product-item/product-item';
 @use '../components/ui/product-cat-oboi/product-cat-oboi';
 
