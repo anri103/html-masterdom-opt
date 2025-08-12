@@ -803,3 +803,87 @@ document.addEventListener("click", (event) => {
 
 // Запускаем проверку при загрузке страницы
 document.addEventListener("DOMContentLoaded", initializeTextBlocks);
+
+
+// тест
+
+(function () {
+  'use strict';
+
+  // 1) отключаем автопоиск
+  if (window.Dropzone) {
+    Dropzone.autoDiscover = false;
+  } else {
+    console.error('Dropzone не найден. Подключи dropzone.min.js до этого скрипта.');
+    return;
+  }
+
+  // небольшие хелперы
+  const toInt = (v) => (v === undefined || v === null || v === '' ? undefined : parseInt(v, 10));
+  const toFloat = (v) => (v === undefined || v === null || v === '' ? undefined : parseFloat(v));
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var nodes = document.querySelectorAll('[data-plugin="dropzone"]');
+    if (!nodes.length) return;
+
+    nodes.forEach(function (el) {
+      // --- URL загрузки ---
+      var form = el.closest('form');
+      var url =
+        el.getAttribute('data-upload-url') ||
+        el.getAttribute('action') ||
+        (form && form.getAttribute('action')) ||
+        '/upload';
+
+      // --- контейнер превью ---
+      var previewsSelector = el.getAttribute('data-previews-container') || undefined;
+
+      // --- шаблон превью ---
+      var tplSelector = el.getAttribute('data-upload-preview-template');
+      var previewTemplate;
+      if (tplSelector) {
+        var tplEl = document.querySelector(tplSelector);
+        if (tplEl) previewTemplate = tplEl.innerHTML.trim();
+      }
+
+      // --- локализация сообщения по умолчанию ---
+      var defaultMsg = (el.querySelector('.dz-message') || {}).textContent || 'Перетащите файлы сюда';
+
+      // --- опции с поддержкой data-* ---
+      var opts = {
+        url: url,
+        paramName: el.getAttribute('data-param-name') || 'file',
+        maxFiles: toInt(el.getAttribute('data-max-files')),
+        maxFilesize: toFloat(el.getAttribute('data-max-filesize')) || 256, // МБ
+        acceptedFiles: el.getAttribute('data-accepted-files') || undefined,
+        previewsContainer: previewsSelector,      // можно строкой‑селектором в v5
+        previewTemplate: previewTemplate,         // строка HTML
+        clickable: el,                            // кликабельна вся зона
+        uploadMultiple: false,
+        parallelUploads: 3,
+        addRemoveLinks: false,                    // удаление делаем через data-dz-remove в шаблоне
+        dictDefaultMessage: defaultMsg,
+        dictRemoveFile: 'Удалить',
+        dictCancelUpload: 'Отмена',
+        withCredentials: false
+      };
+
+      // удаляем undefined, чтобы не переопределять дефолты Dropzone
+      Object.keys(opts).forEach(function (k) {
+        if (opts[k] === undefined || opts[k] === null) delete opts[k];
+      });
+
+      // --- инициализация ---
+      var dz = new Dropzone(el, opts);
+
+      // --- базовые события (по желанию, можно удалить) ---
+      dz.on('error', function (file, message) {
+        // Сообщение также попадёт в [data-dz-errormessage]
+        // console.warn('Dropzone error:', message);
+      });
+
+      // Сделаем доступным извне при необходимости
+      el._dropzone = dz;
+    });
+  });
+})();

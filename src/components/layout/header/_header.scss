@@ -943,10 +943,14 @@
         padding-bottom: 4px;
         padding-left: 8px;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 100%;
         letter-spacing: 1%;
         color: #1A1A16;
+
+        @media (min-width: 992px) {
+            font-size: 18px;
+        }
 
         &.active {
             background: #02378F;

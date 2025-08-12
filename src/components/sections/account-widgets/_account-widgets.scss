@@ -16,13 +16,20 @@
     }
 }
 
-.payers-wrapper {
+.users-wrapper {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.item-payer {
+.item-user {
+
+    &__body {
+
+        .row {
+            align-items: center;
+        }
+    }
 
     &__title {
         font-weight: 500;
@@ -55,8 +62,5 @@
             transform: rotate(180deg);
         }
     }
-
-    .row {
-        align-items: center;
-    }
 }
+
