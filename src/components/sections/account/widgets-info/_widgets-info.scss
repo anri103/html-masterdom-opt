@@ -1,4 +1,4 @@
-/* account-widgets ============================ */
+/* account-widgets-info ============================ */
 
 .account-content-widget {
     margin-bottom: 48px;
@@ -64,3 +64,23 @@
     }
 }
 
+/* File Upload */
+
+.fileUpload {
+    padding: 12px 0;
+}
+
+.fileUploadItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    &__icon {
+        flex-shrink: 0;
+    }
+
+    &__title {
+        font-size: 16px;
+    }
+}

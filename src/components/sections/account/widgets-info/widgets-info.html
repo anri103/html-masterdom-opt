@@ -19,6 +19,24 @@
     </form>
 </div>
 
+<!-- Отсрочка платежа -->
+<div class="account-content-widget max-w-600px">
+    <h4 class="account-content-widget__title">Отсрочка платежа</h4>
+    <p>
+        <span>
+            <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="10" fill="#DEE5ED"/>
+                <path d="M9.72599 11.9761C9.72599 11.5823 9.79384 11.2447 9.92954 10.9634C10.0757 10.6821 10.2531 10.4337 10.4619 10.218C10.6811 10.0023 10.9108 9.80075 11.1508 9.61322C11.4014 9.42569 11.6362 9.23816 11.8554 9.05063C12.0746 8.85373 12.2521 8.64276 12.3878 8.41772C12.5235 8.18331 12.5913 7.91139 12.5913 7.60197C12.5913 7.09564 12.3721 6.68308 11.9337 6.36428C11.4953 6.04548 10.8742 5.88608 10.0705 5.88608C9.4024 5.88608 8.82307 5.98453 8.33246 6.18143C7.84186 6.36896 7.42432 6.65026 7.07985 7.02532L6.25 6.46273C6.66754 5.99391 7.20511 5.63291 7.86273 5.37975C8.52035 5.12658 9.28236 5 10.1487 5C10.8794 5 11.511 5.09845 12.0433 5.29536C12.5861 5.49226 13.0037 5.77356 13.2959 6.13924C13.5986 6.50492 13.75 6.94093 13.75 7.44726C13.75 7.85045 13.6769 8.19737 13.5308 8.48804C13.3951 8.76934 13.2176 9.0225 12.9984 9.24754C12.7897 9.4632 12.56 9.66948 12.3095 9.86639C12.0694 10.0539 11.8398 10.2461 11.6206 10.443C11.4014 10.6399 11.2239 10.8603 11.0882 11.1041C10.9525 11.3479 10.8847 11.6385 10.8847 11.9761H9.72599ZM10.3053 15C10.0861 15 9.89301 14.9297 9.72599 14.789C9.56942 14.639 9.49113 14.4655 9.49113 14.2686C9.49113 14.0624 9.56942 13.8936 9.72599 13.7623C9.89301 13.6217 10.0861 13.5513 10.3053 13.5513C10.5454 13.5513 10.7437 13.6217 10.9003 13.7623C11.0569 13.8936 11.1352 14.0624 11.1352 14.2686C11.1352 14.4655 11.0569 14.639 10.9003 14.789C10.7437 14.9297 10.5454 15 10.3053 15Z" fill="#1A1A16"/>
+            </svg>
+        </span>
+        <span class="fs-6 text-muted-light">Информация о сроках погашения отсрочки</span>
+    </p>
+    <p><span class="text-muted-light">общая сумма лимита: </span><span class="fw-medium">340 567 ₽ сроком до 5-ти дней</span></p>
+    <p><span class="text-muted-light">сумма использованного лимита: </span><span class="text-primary fw-medium">40 567 ₽</span></p>
+    <p><span class="text-muted-light">просрочка задолженности: </span><span class="text-danger fw-medium">40 567 ₽ (10 дней)</span></p>
+    <p><span class="fs-6 text-danger">Отгрузка товаров приостановлена до погашения задолженности</span></p>
+</div>
+
 <!-- Пользователи -->
 <div class="account-content-widget max-w-700px">
     <h4 class="account-content-widget__title">Пользователи</h4>
@@ -261,7 +279,7 @@
                     <div class="modal-body">
 
                         <div class="account-content-widget max-w-600px">
-                            <form action="/">
+                            <form action="#">
                                 <div class="mb-12px">
                                     <input type="text" class="form-control form-control-sm" placeholder="Наименование*" required>
                                 </div>
@@ -307,43 +325,43 @@
                                 <div class="mb-12px">
                                     <p class="fs-6 text-muted-light">*Поля для обязательного заполнения</p>
                                 </div>
-                                <div class="mb-12px">
-                                    <!-- File Upload -->
-                                    <div
-                                        class="dropzone dropzone-multiple"
-                                        data-plugin="dropzone"
-                                        data-previews-container="#file-previews" 
-                                        data-upload-preview-template="#uploadPreviewTemplate"
-                                    >
-                                        <div class="fallback">
-                                            <input name="file" type="file" multiple="multiple" />
+                                <!-- Стандартное bootstrap поле загрузки файла если нет возможности сделать кастомную загрузку ниже -->
+                                <!-- <div class="mb-12px">
+                                    <input type="file" class="form-control form-control-sm" multiple>
+                                    <div class="fs-6 text-muted-light mt-12px">Прикрепление вложений в форматах pdf, jpeg.</div>
+                                </div> -->
+                                <!-- File Upload form widget -->
+                                <div class="fileUpload">
+                                    <!-- The container for the uploaded files -->
+                                    <div class="fileUploadList" id="fileUploadList">
+                                        <!-- item -->
+                                        <div class="fileUploadItem">
+                                            <span class="fileUploadItem__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M13,3 L5,3 L5,21 L15,21 L15,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 L15.4142136,1 L21,6.58578644 L21,14 L19,14 L19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 Z M19,19 L19,17 L21,17 L21,19 L23,19 L23,21 L21,21 L21,23 L19,23 L19,21 L17,21 L17,19 L19,19 Z M18.5857864,7 L15,3.41421356 L15,7 L18.5857864,7 Z" fill-rule="evenodd"  fill="#656565"/>
+                                                </svg>
+                                            </span>
+                                            <span class="fileUploadItem__title">название-файла.png</span>
                                         </div>
-                                        <div class="dz-message">Добавить файл</div>
-                                    </div>
-                                    <!-- Preview -->
-                                    <div class="dropzone-previews mt-3" id="file-previews"></div>
-                                    <!-- file preview template -->
-                                    <div class="d-none" id="uploadPreviewTemplate">
-                                        <div class="card mt-1 mb-0 shadow-none border">
-                                            <div class="p-2">
-                                                <div class="row align-items-center">
-                                                    <div class="col-auto">
-                                                        <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light" alt="">
-                                                    </div>
-                                                    <div class="col ps-0">
-                                                        <a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
-                                                        <p class="mb-0" data-dz-size></p>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <!-- Button -->
-                                                        <a href="" class="btn btn-link btn-lg text-muted" data-dz-remove>
-                                                            x
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <!-- item -->
+                                        <div class="fileUploadItem">
+                                            <span class="fileUploadItem__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M13,3 L5,3 L5,21 L15,21 L15,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 L15.4142136,1 L21,6.58578644 L21,14 L19,14 L19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 Z M19,19 L19,17 L21,17 L21,19 L23,19 L23,21 L21,21 L21,23 L19,23 L19,21 L17,21 L17,19 L19,19 Z M18.5857864,7 L15,3.41421356 L15,7 L18.5857864,7 Z" fill-rule="evenodd"  fill="#656565"/>
+                                                </svg>
+                                            </span>
+                                            <span class="fileUploadItem__title">название-файла.png</span>
                                         </div>
                                     </div>
+                                    <!-- File upload button with input field -->
+                                    <label for="fileUploadInput" class="fileUploadBtn btn btn-text p-0 border-0" id="fileUploadBtn">
+                                        <input type="file" name="fileUploadInput" id="fileUploadInput" class="d-none" multiple>
+                                        <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M16 9.13208H9.15862V16H6.84138V9.13208H0V6.90566H6.84138V0H9.15862V6.90566H16V9.13208Z" fill="currentColor"/>
+                                        </svg>
+                                        <span class="align-middle">Добавить файл</span>
+                                    </label>
+                                    <div class="fs-6 text-muted-light mt-2">Прикрепление вложений в форматах pdf, jpeg.</div>
                                 </div>
                                 <div class="mt-32px">
                                     <button type="submit" class="btn btn-secondary">отправить заявку</button>

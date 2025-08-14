@@ -4,7 +4,7 @@
  * Version: 1.0.0
  */
 
-// base
+// utils
 @use 'utils/fonts';
 @use 'utils/variables';
 @use 'utils/general';
@@ -14,17 +14,17 @@
 @use 'utils/buttons';
 @use 'utils/navs';
 @use 'utils/swiper';
-@use 'utils/sections';
 @use 'utils/cards';
 @use 'utils/accordion';
 @use 'utils/modals';
 @use 'utils/popover';
+@use 'utils/sections';
 
-// components
+// components > layout
 @use '../components/layout/header/header';
 @use '../components/layout/footer/footer';
 
-// sections
+// components > sections
 @use '../components/sections/hero/hero';
 @use '../components/sections/blog-slider/blog-slider';
 @use '../components/sections/breadcrumbs/breadcrumbs';
@@ -37,13 +37,17 @@
 @use '../components/sections/product/product';
 @use '../components/sections/shops-grid/shops-grid';
 @use '../components/sections/shops-location/shops-location';
-@use '../components/sections/account-auth/account-auth';
-@use '../components/sections/account-widgets/account-widgets';
-@use '../components/sections/account-sidebar/account-sidebar';
 
-// ui
+// components > sections > account
+@use '../components/sections/account/auth/auth';
+@use '../components/sections/account/sidebar/sidebar';
+@use '../components/sections/account/widgets-info/widgets-info';
+@use '../components/sections/account/widgets-orders/widgets-orders';
+
+// components > ui
 @use '../components/ui/product-item/product-item';
 @use '../components/ui/product-cat-oboi/product-cat-oboi';
+@use '../components/ui/pagination/pagination';
 
 // pages
-@use 'pages/test';
+@use 'pages/account';
