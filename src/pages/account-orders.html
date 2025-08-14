@@ -24,7 +24,9 @@
                 <div class="row" style="--bs-gutter-y: 2rem;">
                     <div class="col-lg-3">
                         <!-- account-sidebar -->
-                        @@include('../components/sections/account/sidebar/sidebar.html')
+                        @@include('../components/sections/account/sidebar/sidebar.html', {
+                            "activeLink": "account-orders"
+                        })
                     </div>
                     <div class="col-lg-9">
                         <!-- account-widgets -->
