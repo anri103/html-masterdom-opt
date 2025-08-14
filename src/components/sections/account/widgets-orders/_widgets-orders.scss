@@ -11,7 +11,37 @@
 
     &__date {
         color: #ACB2BF;
-        margin-bottom: 12px;
+    }
+
+    .dropdown-card-options {
+
+        .btn {
+
+            &.show,
+            &:hover {
+
+                svg .path-bg {
+                    fill: #F2F9FF;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            --bs-position: end;
+            --bs-dropdown-padding-y: 0;
+            --bs-dropdown-link-color: var(--bs-body-color);
+            --bs-dropdown-link-hover-color: #1A1A16;
+            --bs-dropdown-link-hover-bg: #F2F9FF;
+            --bs-dropdown-link-active-color: #1A1A16;
+            --bs-dropdown-link-active-bg: #F2F9FF;
+            --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
+            --bs-dropdown-item-padding-y: 0.875rem;
+            --bs-dropdown-item-padding-x: 1rem;
+    
+            @media (min-width: 992px) {
+                --bs-dropdown-min-width: 25rem;
+            }
+        }
     }
     
     &__heading {
