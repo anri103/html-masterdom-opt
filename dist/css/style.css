@@ -5087,12 +5087,12 @@ textarea {
     padding: 57px 32px 53px;
   }
 }
-/* section-account-auth ============================ */
-.section-account-auth {
+/* section-login ============================ */
+.section-login {
   padding: 56px 0 0;
 }
 @media (min-width: 992px) {
-  .section-account-auth {
+  .section-login {
     padding: 98px 0 0;
   }
 }

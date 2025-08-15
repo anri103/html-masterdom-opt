@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- title -->
-    <title>Вёрстка ОПТ - Главная</title>
+    <title>Вёрстка ОПТ - ЛК Авторизация</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 </head>
@@ -1193,264 +1193,71 @@
     <!-- MAIN -->
     <main class="main">
 
-        <!-- section-hero -->
-        <section class="section section-hero">
+        <!-- section-breadcrumbs -->
+        <section class="section section-breadcrumbs">
     <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-8 hero-col-main">
-                <div class="swiper swiperHeroSlider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="hero-slider-item">
-                                <picture>
-                                    <source srcset="img/section-hero/hero-banner-01-m.jpg" media="(max-width: 767px)">
-                                    <img src="img/section-hero/hero-banner-01.jpg" alt="Новая коллекция уже на складе">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="hero-slider-item">
-                                <picture>
-                                    <source srcset="img/section-hero/hero-banner-02-m.jpg" media="(max-width: 767px)">
-                                    <img src="img/section-hero/hero-banner-02.jpg" alt="Новая коллекция уже на складе">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="hero-slider-item">
-                                <picture>
-                                    <source srcset="img/section-hero/hero-banner-03-m.jpg" media="(max-width: 767px)">
-                                    <img src="img/section-hero/hero-banner-03.jpg" alt="Новая коллекция уже на складе">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiperHeroSlider-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="46" viewBox="0 0 27 46" fill="none">
-                            <path
-                                d="M1 41L1 43.1742L2.65079 41.7593L23.6508 23.7593L24.5366 23.0001L23.6508 22.2408L2.65079 4.24092L0.999997 2.82596L0.999997 5.00017L0.999997 7.56872L0.999997 8.02865L1.34921 8.32797L18.4668 23.0001L1.34921 37.6722L1 37.9715L1 38.4315L1 41Z"
-                                stroke="#9F9387" stroke-opacity="0.8" stroke-width="2" fill="white" />
-                        </svg>
-                    </div>
-                    <div class="swiperHeroSlider-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="46" viewBox="0 0 28 46" fill="none">
-                            <path
-                                d="M26.5274 5V2.86035L24.8859 4.23284L3.35855 22.2327L2.44104 22.9999L3.35855 23.7671L24.8859 41.767L26.5274 43.1395V40.9998V38.4313V37.9639L26.1689 37.6641L8.63086 22.9999L26.1689 8.3357L26.5274 8.03591V7.56854V5Z"
-                                stroke="#9F9387" stroke-opacity="0.8" stroke-width="2" fill="white" />
-                        </svg>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="col-lg-4 hero-col-secondary">
-                <a href="#" class="hero-category">
-                    <img src="img/section-hero/hero-category-01.webp" alt="Хиты продаж">
-                    <div class="hero-category__text">
-                        <div class="hero-category__title">новый шоу-рум</div>
-                        <div class="hero-category__link">
-                            <span>Нахимовский пр-т, 59А</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <span>Страница</span>
+                </li>
+            </ol>
+        </nav>
     </div>
 </section>
 
-        <!-- section-blog-slider -->
-        <section class="section section-blog-slider">
-    <!-- Заголовок -->
-    <h2 class="title">Блог</h2>
-    <!-- Навигация табы -->
-    <div class="blog-slider-nav scrollable-container">
-        <div class="scrollable-wrapper">
-            <div class="scrollable-item">
-                <a href="#" class="nav-link"><span>Все</span></a>
-            </div>
-            <div class="scrollable-item">
-                <a href="#" class="nav-link"><span>Новости</span></a>
-            </div>
-            <div class="scrollable-item">
-                <a href="#" class="nav-link"><span>Статьи</span></a>
-            </div>
-            <div class="scrollable-item">
-                <a href="#" class="nav-link"><span>События</span></a>
-            </div>
-        </div>
-    </div>
+        <!-- section-login -->
+        <section class="section section-login">
     <div class="container">
-        <!-- Слайдер -->
-        <div class="swiper swiperBlogSlider">
-            <div class="swiper-wrapper">
-                <!-- item-01 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-01.jpg"
-                                    alt="Монохромный интерьер: 6 важных рекомендаций по оформлению пространства в одном цвете">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">Новости</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">Монохромный интерьер: 6 важных рекомендаций по оформлению пространства в
-                                    одном цвете</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- item-02 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-02.jpg" alt="Камень и бетон в новых коллекциях керамогранита">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">Акции</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">Камень и бетон в новых коллекциях керамогранита</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- item-03 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-03.jpg"
-                                    alt="ТОП-9 трендов современной планировки: что предлагают застройщики">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">мероприятия</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">ТОП-9 трендов современной планировки: что предлагают застройщики</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- item-04 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-04.jpg" alt="Камень и бетон в новых коллекциях керамогранита">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">мероприятия</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">Камень и бетон в новых коллекциях керамогранита</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- item-05 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-02.jpg" alt="Камень и бетон в новых коллекциях керамогранита">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">Акции</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">Камень и бетон в новых коллекциях керамогранита</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- item-06 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-03.jpg"
-                                    alt="ТОП-9 трендов современной планировки: что предлагают застройщики">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">мероприятия</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">ТОП-9 трендов современной планировки: что предлагают застройщики</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- item-07 -->
-                <div class="swiper-slide">
-                    <div class="blog-slide-item">
-                        <div class="blog-slide-item__img">
-                            <a href="#">
-                                <img src="img/blog/blog-thumb-04.jpg" alt="Камень и бетон в новых коллекциях керамогранита">
-                            </a>
-                        </div>
-                        <div class="blog-slide-item__body">
-                            <div class="blog-slide-item__tags">
-                                <a href="#">мероприятия</a>
-                            </div>
-                            <div class="blog-slide-item__title">
-                                <a href="#">Камень и бетон в новых коллекциях керамогранита</a>
-                            </div>
-                            <div class="blog-slide-item__read-link">
-                                <a href="#">Читать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="mx-auto" style="max-width: 600px;">
+            <div class="text-center mb-32px">
+                <h1 class="h2">Авторизация</h1>
+                <div>Получайте бонусы, сохраняйте и отслеживайте заказы.</div>
             </div>
-            <!-- Навигация слайдера -->
-            <div class="swiperBlogSlider-next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36" viewBox="0 0 22 36" fill="none">
-                    <path
-                        d="M-5.72205e-05 35.9998L21.5273 17.9998L-6.04466e-05 -7.06433e-05L-6.02164e-05 2.56847L18.4554 17.9998L-5.74506e-05 33.4312L-5.72205e-05 35.9998Z"
-                        fill="white" />
-                </svg>
-            </div>
-            <!-- Навигация слайдера -->
-            <div class="swiperBlogSlider-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36" viewBox="0 0 22 36" fill="none"
-                    style="transform: rotate(180deg);">
-                    <path
-                        d="M-5.72205e-05 35.9998L21.5273 17.9998L-6.04466e-05 -7.06433e-05L-6.02164e-05 2.56847L18.4554 17.9998L-5.74506e-05 33.4312L-5.72205e-05 35.9998Z"
-                        fill="white" />
-                </svg>
-            </div>
+            <form action="account-info.html">
+                <div class="mb-22px">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" placeholder="Логин">
+                        <label>Логин</label>
+                    </div>
+                </div>
+                <div class="mb-22px">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" placeholder="Пароль">
+                        <label>Пароль</label>
+                    </div>
+                </div>
+                <div class="mb-32px">
+                    <label class="d-flex gap-2 align-items-center">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>Запомнить меня</span>
+                    </label>
+                </div>
+                <div class="mb-22px">
+                    <button type="submit" class="btn btn-secondary w-100">войти</button>
+                </div>
+                <div class="mb-32px">
+                    <label class="d-flex gap-2 align-items-center">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>Принимаю условия <a href="#" class="text-decoration-underline">обработки персональных
+                                данных</a>.</span>
+                    </label>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-text text-uppercase border-0 p-0">
+                        <span>Сайт мастер дом</span>
+                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"
+                            fill="none">
+                            <path
+                                d="M0.500122 11.4551L6.38283 6.45312C6.45475 6.39456 6.51199 6.32422 6.55109 6.24633C6.59019 6.16846 6.61035 6.08467 6.61035 5.99998C6.61035 5.91532 6.59019 5.8315 6.55109 5.75363C6.51199 5.67576 6.45475 5.60542 6.38283 5.54684L0.500121 0.544923"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </form>
         </div>
     </div>
 </section>
