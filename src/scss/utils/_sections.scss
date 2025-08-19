@@ -861,6 +861,7 @@
 
 .checkout-radio-card {
     position: relative;
+    margin-bottom: 22px;
 }
 
 .checkout-radio-card.disabled,
@@ -977,11 +978,20 @@
 
 .collapse-label {
     display: none;
+
+    &__body {
+        padding: 10px 24px;
+    }
 }
 
 .checkout-radio-btn__radio-input:checked ~ .collapse-label {
     display: block;
-    margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+    .checkout-radio-btn__radio-input ~ .collapse-label {
+        display: block;
+    }
 }
 
 .designer-avatar-wrapper {

@@ -208,6 +208,10 @@ body {
   --bs-tooltip-color: #1A1A16;
 }
 
+.max-w-480px {
+  max-width: 480px;
+}
+
 .max-w-600px {
   max-width: 600px;
 }
@@ -423,6 +427,10 @@ textarea {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Ccircle cx='6' cy='6' r='6' fill='%2302378f'/%3E%3C/svg%3E");
   background-color: transparent;
   border-color: #ACB2BF;
+}
+
+.form-radio:checked:disabled {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23ACB2BF'/%3E%3C/svg%3E");
 }
 
 .dropdown-select {
@@ -1927,6 +1935,7 @@ textarea {
 /* checkout-radio-card */
 .checkout-radio-card {
   position: relative;
+  margin-bottom: 22px;
 }
 
 .checkout-radio-card.disabled,
@@ -2039,12 +2048,19 @@ textarea {
 .collapse-label {
   display: none;
 }
+.collapse-label__body {
+  padding: 10px 24px;
+}
 
 .checkout-radio-btn__radio-input:checked ~ .collapse-label {
   display: block;
-  margin-top: 1rem;
 }
 
+@media (min-width: 992px) {
+  .checkout-radio-btn__radio-input ~ .collapse-label {
+    display: block;
+  }
+}
 .designer-avatar-wrapper {
   overflow: hidden;
   border-radius: 60px 0 0 0;
