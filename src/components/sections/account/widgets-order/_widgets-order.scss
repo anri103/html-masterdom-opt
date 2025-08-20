@@ -1,0 +1,120 @@
+/* account-widgets-orders ============================ */
+
+.profile-order-card {
+    --bs-card-spacer-y: 22px;
+    --bs-card-spacer-x: 22px;
+
+    @media (min-width: 992px) {
+        --bs-card-spacer-y: 32px;
+        --bs-card-spacer-x: 32px;
+    }
+
+    &__date {
+        color: #ACB2BF;
+    }
+
+    .dropdown-card-options {
+
+        .btn {
+
+            &.show,
+            &:hover {
+
+                svg .path-bg {
+                    fill: #F2F9FF;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            --bs-position: end;
+            --bs-dropdown-padding-y: 0;
+            --bs-dropdown-link-color: var(--bs-body-color);
+            --bs-dropdown-link-hover-color: #1A1A16;
+            --bs-dropdown-link-hover-bg: #F2F9FF;
+            --bs-dropdown-link-active-color: #1A1A16;
+            --bs-dropdown-link-active-bg: #F2F9FF;
+            --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
+            --bs-dropdown-item-padding-y: 0.875rem;
+            --bs-dropdown-item-padding-x: 1rem;
+    
+            @media (min-width: 992px) {
+                --bs-dropdown-min-width: 25rem;
+            }
+        }
+    }
+    
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 12px;
+
+        @media (min-width: 992px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    
+    &__title {
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    
+    &__status {
+        font-weight: 500;
+    }
+    
+    &__amount {
+        color: #7C7D80;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+    
+    &__pay-status {
+        margin-bottom: 22px;
+    }
+    
+    &__status-descr {
+        display: flex;
+        gap: 9px;
+        margin-bottom: 22px;
+    
+        svg {
+            flex-shrink: 0;
+        }
+    }
+    
+    &__goods-list {
+        
+        .swiper-profile-order-card-goods-list {
+            margin-left: calc(var(--bs-card-spacer-x) * -1);
+            margin-right: calc(var(--bs-card-spacer-x) * -1);
+            padding-left: var(--bs-card-spacer-x);
+            padding-right: var(--bs-card-spacer-x);
+        }
+    }
+    
+    &__more-goods {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px;
+    }
+    
+    &__btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px 12px;
+        margin-top: 32px;
+    
+        .btn {
+            min-width: 295px;
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+        }
+    }
+}
