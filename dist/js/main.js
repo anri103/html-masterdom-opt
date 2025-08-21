@@ -727,42 +727,42 @@ function goBack() {
 //////////////////////////////////////////////////////////////////
 // Страница "Оформление заказа"
 
-document.addEventListener('DOMContentLoaded', function () {
-    var allRadioCards = document.querySelectorAll('.checkout-radio-card');
+// document.addEventListener('DOMContentLoaded', function () {
+//     var allRadioCards = document.querySelectorAll('.checkout-radio-card');
 
-    allRadioCards.forEach(function (card) {
-        card.addEventListener('click', function () {
-            if (!card.classList.contains('disabled')) {
-                var radioInput = card.querySelector('.checkout-radio-card__radio-input');
-                var radioGroupName = radioInput.getAttribute('name');
+//     allRadioCards.forEach(function (card) {
+//         card.addEventListener('click', function () {
+//             if (!card.classList.contains('disabled')) {
+//                 var radioInput = card.querySelector('.checkout-radio-card__radio-input');
+//                 var radioGroupName = radioInput.getAttribute('name');
 
-                document.querySelectorAll('input[name="' + radioGroupName + '"]').forEach(function (input) {
-                    var parentCard = input.closest('.checkout-radio-card');
-                    if (parentCard !== card) {
-                        parentCard.querySelectorAll('input').forEach(function (input) {
-                            if (input.type === 'checkbox') {
-                                input.checked = false; // Снятие флага с checkbox
-                            } else if (input.type === 'radio') {
-                                input.checked = false; // Снятие флага с radio
-                            }
-                            input.value = ''; // Очистка значения поля input
-                        });
-                    }
-                });
+//                 document.querySelectorAll('input[name="' + radioGroupName + '"]').forEach(function (input) {
+//                     var parentCard = input.closest('.checkout-radio-card');
+//                     if (parentCard !== card) {
+//                         parentCard.querySelectorAll('input').forEach(function (input) {
+//                             if (input.type === 'checkbox') {
+//                                 input.checked = false; // Снятие флага с checkbox
+//                             } else if (input.type === 'radio') {
+//                                 input.checked = false; // Снятие флага с radio
+//                             }
+//                             input.value = ''; // Очистка значения поля input
+//                         });
+//                     }
+//                 });
 
-                radioInput.checked = true;
-            }
-        });
+//                 radioInput.checked = true;
+//             }
+//         });
 
-        card.querySelectorAll('input').forEach(function (input) {
-            if (card.classList.contains('disabled')) {
-                input.setAttribute('disabled', 'disabled');
-            } else {
-                input.removeAttribute('disabled');
-            }
-        });
-    });
-});
+//         card.querySelectorAll('input').forEach(function (input) {
+//             if (card.classList.contains('disabled')) {
+//                 input.setAttribute('disabled', 'disabled');
+//             } else {
+//                 input.removeAttribute('disabled');
+//             }
+//         });
+//     });
+// });
 
 // Функция инициализации для проверки высоты текста и скрытия кнопки, если текст короткий
 function initializeTextBlocks() {

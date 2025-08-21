@@ -1,0 +1,54 @@
+<div class="product-item">
+    <div class="product-item__top">
+        <div class="product-item__top-brand">Italon</div>
+        <div class="product-item__top-country">Россия</div>
+    </div>
+    <div class="product-item__header">
+        <a href="#">
+            <div class="product-item__img-wrapper">
+                <img src="@@imgJpg" class="product-item__img-primary" alt="@@imgAlt">
+            </div>
+        </a>
+        <div class="product-item__markers">
+            @@if (markers.hit) {
+                <div class="marker-item marker-hit">hit</div>
+            }
+            @@if (markers.new) {
+                <div class="marker-item marker-new">new</div>
+            }
+            @@if (markers.sale) {
+                <div class="marker-item marker-sale">sale</div>
+            }
+        </div>
+    </div>
+    <div class="product-item__body">
+        <div class="product-item__body-top">
+            <div class="product-item__sku">CV20195</div>
+            <button type="button" class="product-item__like-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path class="svg-like-path"
+                        d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z"
+                        stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__title">
+            <a href="#">@@title</a>
+        </div>
+        <div class="product-item__data-size">
+            <span>60x120, 80х120</span>
+        </div>
+    </div>
+    <div class="product-item__footer">
+        <div class="product-item__price">
+            <div class="text-muted-light">
+                <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
+            </div>
+            <div class="text-primary fw-medium">
+                <span>3 250 ₽</span> / <span class="measure">1 м²</span>
+            </div>
+        </div>
+        <button type="button" class="btn product-item__btn" data-bs-toggle="modal"
+            data-bs-target="#modal_basket_actions">в корзину</button>
+    </div>
+</div>

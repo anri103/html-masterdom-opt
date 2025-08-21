@@ -1091,14 +1091,14 @@
                                 </a>
                             </div>
                             <!-- icon -->
-                            <div class="navbar-desktop__icon icon-location">
+                            <!-- <div class="navbar-desktop__icon icon-location">
                                 <a href="#city-selector-modal" fancybox-dialog>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                         <path d="M28.0687 13.0343C28.0687 21.0572 16.0343 30.4172 16.0343 30.4172C16.0343 30.4172 4 21.0572 4 13.0343C4 6.47963 9.47963 1 16.0343 1C22.589 1 28.0687 6.47963 28.0687 13.0343Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M16.0349 17.0453C18.2503 17.0453 20.0463 15.2494 20.0463 13.0339C20.0463 10.8184 18.2503 9.02246 16.0349 9.02246C13.8194 9.02246 12.0234 10.8184 12.0234 13.0339C12.0234 15.2494 13.8194 17.0453 16.0349 17.0453Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </a>
-                            </div>
+                            </div> -->
                             <!-- icon -->
                             <div class="navbar-desktop__icon icon-profile">
                                 <a href="account-login.html">
@@ -2750,7 +2750,7 @@
                             </div>
 
                             <div class="mb-22px">
-                                <button type="button" class="btn btn-secondary w-100">оформить заказ</button>
+                                <a href="cart-checkout.html" class="btn btn-secondary w-100">оформить заказ</a>
                             </div>
 
                             <div class="d-none d-lg-block">
@@ -2787,239 +2787,271 @@
                     <div class="swiper-scrollbar"></div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                            <!-- card -->
                             <div class="product-item">
-                                <div class="product-item__top">
-                                    <div class="product-item__top-brand">Italon</div>
-                                    <div class="product-item__top-country">Россия</div>
-                                </div>
-                                <div class="product-item__header">
-                                    <a href="#">
-                                        <div class="product-item__img-wrapper">
-                                            <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary">
-                                        </div>
-                                    </a>
-                                    <div class="product-item__markers">
-                                        <div class="marker-item marker-hit">hit</div>
-                                        <div class="marker-item marker-new">new</div>
-                                        <div class="marker-item marker-sale">sale</div>
-                                    </div>
-                                </div>
-                                <div class="product-item__body">
-                                    <div class="product-item__body-top">
-                                        <div class="product-item__sku">CV20195</div>
-                                        <button type="button" class="product-item__like-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                                <path class="svg-like-path" d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z" stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
-                                    </div>
-                                    <div class="product-item__data-size">
-                                        <span>60x120, 80х120</span>
-                                    </div>
-                                </div>
-                                <div class="product-item__footer">
-                                    <div class="product-item__price">
-                                        <div class="text-muted-light">
-                                            <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
-                                        </div>
-                                        <div class="text-primary fw-medium">
-                                            <span>3 250 ₽</span> / <span class="measure">1 м²</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn product-item__btn" data-bs-toggle="modal" data-bs-target="#modal_basket_actions">в корзину</button>
-                                </div>
-                            </div>
+    <div class="product-item__top">
+        <div class="product-item__top-brand">Italon</div>
+        <div class="product-item__top-country">Россия</div>
+    </div>
+    <div class="product-item__header">
+        <a href="#">
+            <div class="product-item__img-wrapper">
+                <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary" alt="...">
+            </div>
+        </a>
+        <div class="product-item__markers">
+            
+                <div class="marker-item marker-hit">hit</div>
+            
+            
+                <div class="marker-item marker-new">new</div>
+            
+            
+                <div class="marker-item marker-sale">sale</div>
+            
+        </div>
+    </div>
+    <div class="product-item__body">
+        <div class="product-item__body-top">
+            <div class="product-item__sku">CV20195</div>
+            <button type="button" class="product-item__like-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path class="svg-like-path"
+                        d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z"
+                        stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__title">
+            <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
+        </div>
+        <div class="product-item__data-size">
+            <span>60x120, 80х120</span>
+        </div>
+    </div>
+    <div class="product-item__footer">
+        <div class="product-item__price">
+            <div class="text-muted-light">
+                <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
+            </div>
+            <div class="text-primary fw-medium">
+                <span>3 250 ₽</span> / <span class="measure">1 м²</span>
+            </div>
+        </div>
+        <button type="button" class="btn product-item__btn" data-bs-toggle="modal"
+            data-bs-target="#modal_basket_actions">в корзину</button>
+    </div>
+</div>
                         </div>
                         <div class="swiper-slide">
+                            <!-- card -->
                             <div class="product-item">
-                                <div class="product-item__top">
-                                    <div class="product-item__top-brand">Italon</div>
-                                    <div class="product-item__top-country">Россия</div>
-                                </div>
-                                <div class="product-item__header">
-                                    <a href="#">
-                                        <div class="product-item__img-wrapper">
-                                            <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary">
-                                        </div>
-                                    </a>
-                                    <div class="product-item__markers">
-                                        <div class="marker-item marker-hit">hit</div>
-                                        <div class="marker-item marker-new">new</div>
-                                        <div class="marker-item marker-sale">sale</div>
-                                    </div>
-                                </div>
-                                <div class="product-item__body">
-                                    <div class="product-item__body-top">
-                                        <div class="product-item__sku">CV20195</div>
-                                        <button type="button" class="product-item__like-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                                <path class="svg-like-path" d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z" stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
-                                    </div>
-                                    <div class="product-item__data-size">
-                                        <span>60x120, 80х120</span>
-                                    </div>
-                                </div>
-                                <div class="product-item__footer">
-                                    <div class="product-item__price">
-                                        <div class="text-muted-light">
-                                            <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
-                                        </div>
-                                        <div class="text-primary fw-medium">
-                                            <span>3 250 ₽</span> / <span class="measure">1 м²</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn product-item__btn" data-bs-toggle="modal" data-bs-target="#modal_basket_actions">в корзину</button>
-                                </div>
-                            </div>
+    <div class="product-item__top">
+        <div class="product-item__top-brand">Italon</div>
+        <div class="product-item__top-country">Россия</div>
+    </div>
+    <div class="product-item__header">
+        <a href="#">
+            <div class="product-item__img-wrapper">
+                <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary" alt="...">
+            </div>
+        </a>
+        <div class="product-item__markers">
+            
+            
+            
+        </div>
+    </div>
+    <div class="product-item__body">
+        <div class="product-item__body-top">
+            <div class="product-item__sku">CV20195</div>
+            <button type="button" class="product-item__like-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path class="svg-like-path"
+                        d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z"
+                        stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__title">
+            <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
+        </div>
+        <div class="product-item__data-size">
+            <span>60x120, 80х120</span>
+        </div>
+    </div>
+    <div class="product-item__footer">
+        <div class="product-item__price">
+            <div class="text-muted-light">
+                <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
+            </div>
+            <div class="text-primary fw-medium">
+                <span>3 250 ₽</span> / <span class="measure">1 м²</span>
+            </div>
+        </div>
+        <button type="button" class="btn product-item__btn" data-bs-toggle="modal"
+            data-bs-target="#modal_basket_actions">в корзину</button>
+    </div>
+</div>
                         </div>
                         <div class="swiper-slide">
+                            <!-- card -->
                             <div class="product-item">
-                                <div class="product-item__top">
-                                    <div class="product-item__top-brand">Italon</div>
-                                    <div class="product-item__top-country">Россия</div>
-                                </div>
-                                <div class="product-item__header">
-                                    <a href="#">
-                                        <div class="product-item__img-wrapper">
-                                            <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary">
-                                        </div>
-                                    </a>
-                                    <div class="product-item__markers">
-                                        <div class="marker-item marker-hit">hit</div>
-                                        <div class="marker-item marker-new">new</div>
-                                        <div class="marker-item marker-sale">sale</div>
-                                    </div>
-                                </div>
-                                <div class="product-item__body">
-                                    <div class="product-item__body-top">
-                                        <div class="product-item__sku">CV20195</div>
-                                        <button type="button" class="product-item__like-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                                <path class="svg-like-path" d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z" stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
-                                    </div>
-                                    <div class="product-item__data-size">
-                                        <span>60x120, 80х120</span>
-                                    </div>
-                                </div>
-                                <div class="product-item__footer">
-                                    <div class="product-item__price">
-                                        <div class="text-muted-light">
-                                            <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
-                                        </div>
-                                        <div class="text-primary fw-medium">
-                                            <span>3 250 ₽</span> / <span class="measure">1 м²</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn product-item__btn" data-bs-toggle="modal" data-bs-target="#modal_basket_actions">в корзину</button>
-                                </div>
-                            </div>
+    <div class="product-item__top">
+        <div class="product-item__top-brand">Italon</div>
+        <div class="product-item__top-country">Россия</div>
+    </div>
+    <div class="product-item__header">
+        <a href="#">
+            <div class="product-item__img-wrapper">
+                <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary" alt="...">
+            </div>
+        </a>
+        <div class="product-item__markers">
+            
+                <div class="marker-item marker-hit">hit</div>
+            
+            
+            
+        </div>
+    </div>
+    <div class="product-item__body">
+        <div class="product-item__body-top">
+            <div class="product-item__sku">CV20195</div>
+            <button type="button" class="product-item__like-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path class="svg-like-path"
+                        d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z"
+                        stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__title">
+            <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
+        </div>
+        <div class="product-item__data-size">
+            <span>60x120, 80х120</span>
+        </div>
+    </div>
+    <div class="product-item__footer">
+        <div class="product-item__price">
+            <div class="text-muted-light">
+                <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
+            </div>
+            <div class="text-primary fw-medium">
+                <span>3 250 ₽</span> / <span class="measure">1 м²</span>
+            </div>
+        </div>
+        <button type="button" class="btn product-item__btn" data-bs-toggle="modal"
+            data-bs-target="#modal_basket_actions">в корзину</button>
+    </div>
+</div>
                         </div>
                         <div class="swiper-slide">
+                            <!-- card -->
                             <div class="product-item">
-                                <div class="product-item__top">
-                                    <div class="product-item__top-brand">Italon</div>
-                                    <div class="product-item__top-country">Россия</div>
-                                </div>
-                                <div class="product-item__header">
-                                    <a href="#">
-                                        <div class="product-item__img-wrapper">
-                                            <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary">
-                                        </div>
-                                    </a>
-                                    <div class="product-item__markers">
-                                        <div class="marker-item marker-hit">hit</div>
-                                        <div class="marker-item marker-new">new</div>
-                                        <div class="marker-item marker-sale">sale</div>
-                                    </div>
-                                </div>
-                                <div class="product-item__body">
-                                    <div class="product-item__body-top">
-                                        <div class="product-item__sku">CV20195</div>
-                                        <button type="button" class="product-item__like-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                                <path class="svg-like-path" d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z" stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
-                                    </div>
-                                    <div class="product-item__data-size">
-                                        <span>60x120, 80х120</span>
-                                    </div>
-                                </div>
-                                <div class="product-item__footer">
-                                    <div class="product-item__price">
-                                        <div class="text-muted-light">
-                                            <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
-                                        </div>
-                                        <div class="text-primary fw-medium">
-                                            <span>3 250 ₽</span> / <span class="measure">1 м²</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn product-item__btn" data-bs-toggle="modal" data-bs-target="#modal_basket_actions">в корзину</button>
-                                </div>
-                            </div>
+    <div class="product-item__top">
+        <div class="product-item__top-brand">Italon</div>
+        <div class="product-item__top-country">Россия</div>
+    </div>
+    <div class="product-item__header">
+        <a href="#">
+            <div class="product-item__img-wrapper">
+                <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary" alt="...">
+            </div>
+        </a>
+        <div class="product-item__markers">
+            
+            
+                <div class="marker-item marker-new">new</div>
+            
+            
+        </div>
+    </div>
+    <div class="product-item__body">
+        <div class="product-item__body-top">
+            <div class="product-item__sku">CV20195</div>
+            <button type="button" class="product-item__like-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path class="svg-like-path"
+                        d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z"
+                        stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__title">
+            <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
+        </div>
+        <div class="product-item__data-size">
+            <span>60x120, 80х120</span>
+        </div>
+    </div>
+    <div class="product-item__footer">
+        <div class="product-item__price">
+            <div class="text-muted-light">
+                <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
+            </div>
+            <div class="text-primary fw-medium">
+                <span>3 250 ₽</span> / <span class="measure">1 м²</span>
+            </div>
+        </div>
+        <button type="button" class="btn product-item__btn" data-bs-toggle="modal"
+            data-bs-target="#modal_basket_actions">в корзину</button>
+    </div>
+</div>
                         </div>
                         <div class="swiper-slide">
+                            <!-- card -->
                             <div class="product-item">
-                                <div class="product-item__top">
-                                    <div class="product-item__top-brand">Italon</div>
-                                    <div class="product-item__top-country">Россия</div>
-                                </div>
-                                <div class="product-item__header">
-                                    <a href="#">
-                                        <div class="product-item__img-wrapper">
-                                            <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary">
-                                        </div>
-                                    </a>
-                                    <div class="product-item__markers">
-                                        <div class="marker-item marker-hit">hit</div>
-                                        <div class="marker-item marker-new">new</div>
-                                        <div class="marker-item marker-sale">sale</div>
-                                    </div>
-                                </div>
-                                <div class="product-item__body">
-                                    <div class="product-item__body-top">
-                                        <div class="product-item__sku">CV20195</div>
-                                        <button type="button" class="product-item__like-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                                <path class="svg-like-path" d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z" stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="product-item__title">
-                                        <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
-                                    </div>
-                                    <div class="product-item__data-size">
-                                        <span>60x120, 80х120</span>
-                                    </div>
-                                </div>
-                                <div class="product-item__footer">
-                                    <div class="product-item__price">
-                                        <div class="text-muted-light">
-                                            <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
-                                        </div>
-                                        <div class="text-primary fw-medium">
-                                            <span>3 250 ₽</span> / <span class="measure">1 м²</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn product-item__btn" data-bs-toggle="modal" data-bs-target="#modal_basket_actions">в корзину</button>
-                                </div>
-                            </div>
+    <div class="product-item__top">
+        <div class="product-item__top-brand">Italon</div>
+        <div class="product-item__top-country">Россия</div>
+    </div>
+    <div class="product-item__header">
+        <a href="#">
+            <div class="product-item__img-wrapper">
+                <img src="img/product/product-thumb-01.jpg" class="product-item__img-primary" alt="...">
+            </div>
+        </a>
+        <div class="product-item__markers">
+            
+            
+            
+                <div class="marker-item marker-sale">sale</div>
+            
+        </div>
+    </div>
+    <div class="product-item__body">
+        <div class="product-item__body-top">
+            <div class="product-item__sku">CV20195</div>
+            <button type="button" class="product-item__like-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path class="svg-like-path"
+                        d="M13.2766 22.8094L3.7117 14.1457C-1.48661 8.94735 6.1549 -1.03339 13.2766 7.0413C20.3982 -1.03339 28.0052 8.98202 22.8415 14.1457L13.2766 22.8094Z"
+                        stroke="#7C7D80" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="product-item__title">
+            <a href="#">Керамогранит Onix One 60x120 Fancy Grey Polished (проверка длинного названия товара)</a>
+        </div>
+        <div class="product-item__data-size">
+            <span>60x120, 80х120</span>
+        </div>
+    </div>
+    <div class="product-item__footer">
+        <div class="product-item__price">
+            <div class="text-muted-light">
+                <span>2 480 ₽</span> / <span class="measure">1 шт.</span>
+            </div>
+            <div class="text-primary fw-medium">
+                <span>3 250 ₽</span> / <span class="measure">1 м²</span>
+            </div>
+        </div>
+        <button type="button" class="btn product-item__btn" data-bs-toggle="modal"
+            data-bs-target="#modal_basket_actions">в корзину</button>
+    </div>
+</div>
                         </div>
                     </div>
                     <!-- Навигация слайдера -->
