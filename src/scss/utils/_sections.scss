@@ -857,62 +857,6 @@
 
 }
 
-/* checkout-radio-card */
-
-label.checkout-radio-card {
-    cursor: pointer;
-}
-
-.checkout-radio-card {
-    position: relative;
-    display: block;
-    padding: 1.5rem;
-    border: 1px solid #DEE5ED;
-
-    &:hover,
-    &:has(input[type="radio"]:checked) {
-        border-color: #02378F;
-    }
-    
-    &__header {
-        margin-bottom: 22px;
-    }
-
-    &__body-content {
-        display: none;
-        margin-top: 24px;
-    }
-
-    &:has(input[type="radio"]:checked) .checkout-radio-card__body-content {
-        display: block;
-    }
-
-    label {
-        cursor: pointer;
-    }
-
-    .item-option {
-        
-        &__btn {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 1.5rem;
-            background: #F8F8F8;
-        }
-
-        &__content {
-            display: none;
-            padding: 16px 24px;
-        }
-
-        &:has(input[type="radio"]:checked) .item-option__content {
-            display: block;
-        }
-    }
-}
-
 /* designer-avatar */
 
 .designer-avatar-wrapper {

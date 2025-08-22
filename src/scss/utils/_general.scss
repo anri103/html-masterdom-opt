@@ -18,12 +18,14 @@ body {
 
 .section {
     margin-bottom: 42px;
-}
 
-@media (min-width: 992px) {
-    .section {
+    @media (min-width: 992px) {
         margin-bottom: 82px;
     }
+}
+
+.content-widget:not(:last-of-type) {
+    margin-bottom: 48px;
 }
 
 /* utils */
@@ -157,6 +159,10 @@ body {
 
 .max-w-700px {
     max-width: 700px;
+}
+
+.max-w-800px {
+    max-width: 800px;
 }
 
 .max-w-850px {

@@ -45,6 +45,10 @@
 @use '../components/sections/account/widgets-orders/widgets-orders';
 @use '../components/sections/account/widgets-order/widgets-order';
 
+// components > sections > cart
+@use '../components/sections/cart/default/default';
+@use '../components/sections/cart/checkout/checkout';
+
 // components > ui
 @use '../components/ui/product-item/product-item';
 @use '../components/ui/product-cat-oboi/product-cat-oboi';

@@ -6,7 +6,7 @@ window.onscroll = function () {
     let fixedMenu;
 
     if (window.innerWidth >= 992) {
-        // Для десктопов
+        // For Desktop screens
         fixedMenu = document.querySelector('.fixed-header-desktop');
         if (fixedMenu) {
             if (windowScroll > 200) {
@@ -16,7 +16,7 @@ window.onscroll = function () {
             }
         }
     } else {
-        // Для мобильных устройств
+        // For Mobile screens
         fixedMenu = document.querySelector('.fixed-header-mobile');
         if (fixedMenu) {
             if (windowScroll > 100) {
@@ -29,7 +29,7 @@ window.onscroll = function () {
 };
 
 //////////////////////////////////////////////////////////////////
-// Мега меню на десктопе
+// Mega-menu on Desktop
 
 const megaMenuItems = document.querySelectorAll('.has-mega-menu');
 
@@ -52,7 +52,7 @@ megaMenuItems.forEach(item => {
     });
 });
 
-// Табы внутри мега меню на десктопе
+// Tabs inside mega-menu on Desktop
 
 const megaMenus = document.querySelectorAll('.mega-menu');
 
@@ -672,6 +672,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //////////////////////////////////////////////////////////////////
 // Enable bootstrap popovers and tooltips
+
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
@@ -724,46 +725,6 @@ function goBack() {
     window.history.back();
 }
 
-//////////////////////////////////////////////////////////////////
-// Страница "Оформление заказа"
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var allRadioCards = document.querySelectorAll('.checkout-radio-card');
-
-//     allRadioCards.forEach(function (card) {
-//         card.addEventListener('click', function () {
-//             if (!card.classList.contains('disabled')) {
-//                 var radioInput = card.querySelector('.checkout-radio-card__radio-input');
-//                 var radioGroupName = radioInput.getAttribute('name');
-
-//                 document.querySelectorAll('input[name="' + radioGroupName + '"]').forEach(function (input) {
-//                     var parentCard = input.closest('.checkout-radio-card');
-//                     if (parentCard !== card) {
-//                         parentCard.querySelectorAll('input').forEach(function (input) {
-//                             if (input.type === 'checkbox') {
-//                                 input.checked = false; // Снятие флага с checkbox
-//                             } else if (input.type === 'radio') {
-//                                 input.checked = false; // Снятие флага с radio
-//                             }
-//                             input.value = ''; // Очистка значения поля input
-//                         });
-//                     }
-//                 });
-
-//                 radioInput.checked = true;
-//             }
-//         });
-
-//         card.querySelectorAll('input').forEach(function (input) {
-//             if (card.classList.contains('disabled')) {
-//                 input.setAttribute('disabled', 'disabled');
-//             } else {
-//                 input.removeAttribute('disabled');
-//             }
-//         });
-//     });
-// });
-
 // Функция инициализации для проверки высоты текста и скрытия кнопки, если текст короткий
 function initializeTextBlocks() {
     document.querySelectorAll(".hide-text-block").forEach((block) => {
@@ -804,6 +765,116 @@ document.addEventListener("click", (event) => {
 // Запускаем проверку при загрузке страницы
 document.addEventListener("DOMContentLoaded", initializeTextBlocks);
 
+//////////////////////////////////////////////////////////////////
+// Страница "Оформление заказа"
 
-// тест
+$(document).ready(function() {
+    // Переменная для отслеживания мобильного состояния
+    let isMobile = $(window).width() < 768;
+    
+    // Обновляем состояние при ресайзе
+    $(window).on('resize', function() {
+        isMobile = $(window).width() < 768;
+    });
+    
+    // Функция для определения контейнера прокрутки
+    function getScrollContainer($element) {
+        // Ищем активное модальное окно (с классом show)
+        const $activeModal = $('.modal.show');
+        
+        // Проверяем, находится ли элемент внутри активного модального окна
+        if ($activeModal.length && $element.closest('.modal').is($activeModal)) {
+            return $activeModal;
+        }
+        return null; // Основная страница
+    }
+    
+    // Функция для плавной прокрутки к элементу с задержкой
+    function scrollToElement($element) {
+        if (!isMobile) return; // Только на мобильных
+        
+        setTimeout(function() {
+            const $container = getScrollContainer($element);
+            
+            if ($container && $container.length) {
+                // Прокрутка внутри модального окна
+                const elementTop = $element.offset().top;
+                const containerTop = $container.offset().top;
+                const scrollPosition = elementTop - containerTop - 150;
+                
+                $container.animate({
+                    scrollTop: scrollPosition
+                }, 300);
+            } else {
+                // Прокрутка основной страницы
+                const offset = $element.offset();
+                if (offset) {
+                    $('html, body').animate({
+                        scrollTop: offset.top - 150
+                    }, 300);
+                }
+            }
+        }, 300); // Задержка 300ms для корректной работы анимаций
+    }
+
+    // Обработчик для родительских radio
+    $(document).on('change', '[data-parent-radio]', function() {
+        const $card = $(this).closest('.checkout-radio-card');
+        const group = $card.data('group');
+        const $body = $card.find('.checkout-radio-card__body');
+        
+        $card.toggleClass('js-active', this.checked);
+        if (this.checked) {
+            $body.stop(true, true).slideDown(300);
+            scrollToElement($card);
+        } else {
+            $body.stop(true, true).slideUp(300);
+        }
+        
+        $(`.checkout-radio-card[data-group="${group}"]`).not($card).each(function() {
+            $(this).removeClass('js-active')
+                .find('.checkout-radio-card__body').slideUp(300)
+                .find('[data-child-radio]').prop('checked', false);
+            $(this).find('.item-pickup-option').removeClass('js-active')
+                .find('.item-pickup-option__body').slideUp(300);
+        });
+    });
+    
+    // Обработчик для дочерних radio
+    $(document).on('change', '[data-child-radio]', function() {
+        const $option = $(this).closest('.item-pickup-option');
+        const $card = $(this).closest('.checkout-radio-card');
+        
+        if ($option.length) {
+            $card.find('.item-pickup-option').not($option)
+                .removeClass('js-active')
+                .find('.item-pickup-option__body').slideUp(300);
+            
+            $option.toggleClass('js-active', this.checked)
+                .find('.item-pickup-option__body')
+                .stop(true, true)[this.checked ? 'slideDown' : 'slideUp'](300);
+                
+            if (this.checked) {
+                scrollToElement($option);
+            }
+        }
+    });
+    
+    // Инициализация начального состояния
+    $('[data-parent-radio]:checked').each(function() {
+        $(this).closest('.checkout-radio-card')
+            .addClass('js-active')
+            .find('.checkout-radio-card__body').show();
+    });
+    
+    $('[data-child-radio]:checked').each(function() {
+        const $option = $(this).closest('.item-pickup-option');
+        if ($option.length) {
+            $option.addClass('js-active')
+                .find('.item-pickup-option__body').show();
+        }
+    });
+});
+
+// CUSTOM
 
