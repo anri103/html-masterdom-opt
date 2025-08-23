@@ -24,8 +24,7 @@ const paths = {
     src: [
       'node_modules/bootstrap/dist/css/bootstrap.min.css',
       'node_modules/swiper/swiper-bundle.min.css',
-      'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css',
-      'node_modules/dropzone/dist/min/dropzone.min.css'
+      'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css'
     ],
     dest: 'dist/css/'
   },
@@ -33,8 +32,7 @@ const paths = {
     src: [
       'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       'node_modules/swiper/swiper-bundle.min.js',
-      'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
-      'node_modules/dropzone/dist/min/dropzone.min.js'
+      'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js'
     ],
     dest: 'dist/js/'
   },
