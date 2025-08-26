@@ -208,29 +208,42 @@
 .counter-drop {
     display: flex;
     height: 50px;
-}
 
-.counter-drop .counter__btn {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    padding: 0;
-    border: none;
-    background: #F8F8F8;
-}
+    .counter__btn {
+        padding: 0 14px;
+        border: none;
+        background: #F8F8F8;
+    }
+    
+    .counter__input {
+        width: 100%;
+        padding: 0;
+        border: none;
+        text-align: center;
+        font-size: 18px;
+        background: #F8F8F8;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
 
-.counter-drop .counter__input {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border: none;
-    text-align: center;
-    font-size: 18px;
-    background: #F8F8F8;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &.counter-small {
+        height: 30px;
+
+        .counter__btn {
+            padding: 0 6px;
+        }
+
+        .counter__input {
+            font-size: 16px;
+        }
+    }
 }
 
 .counter-measure {

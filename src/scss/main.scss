@@ -44,10 +44,12 @@
 @use '../components/sections/account/widgets-info/widgets-info';
 @use '../components/sections/account/widgets-orders/widgets-orders';
 @use '../components/sections/account/widgets-order/widgets-order';
+@use '../components/sections/account/widgets-order-edit/widgets-order-edit';
 
 // components > sections > cart
 @use '../components/sections/cart/default/default';
 @use '../components/sections/cart/checkout/checkout';
+@use '../components/sections/cart/success/success';
 
 // components > ui
 @use '../components/ui/product-item/product-item';

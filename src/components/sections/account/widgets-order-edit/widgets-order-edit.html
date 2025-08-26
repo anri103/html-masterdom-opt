@@ -1,0 +1,560 @@
+<div class="h2 fw-normal text-uppercase mb-22px">Редактирование заказа</div>
+
+<div class="account-content-widget max-w-600px">
+
+    <div class="row row-cols-2 gy-5">
+        <div class="col-12">
+            <h4>О заказе</h4>
+            <p>от 21.01.2024</p>
+            <p class="fs-4">№780</p>
+            <p class="text-danger fw-medium">не оплачен</p>
+        </div>
+        <div class="col">
+            <h4>Счета на оплату</h4>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">
+                        <span>
+                            <svg width="32" height="32">
+                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                            </svg>
+                        </span>
+                        <span>SD999999959/5 - цена.pdf</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <svg width="32" height="32">
+                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                            </svg>
+                        </span>
+                        <span>Название.pdf</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <svg width="32" height="32">
+                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                            </svg>
+                        </span>
+                        <span>Название.pdf</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <h4>УПД</h4>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">
+                        <span>
+                            <svg width="32" height="32">
+                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                            </svg>
+                        </span>
+                        <span>Название.pdf</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <svg width="32" height="32">
+                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                            </svg>
+                        </span>
+                        <span>Название.pdf</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <svg width="32" height="32">
+                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                            </svg>
+                        </span>
+                        <span>Название.pdf</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <div class="mb-12px">
+                <span class="text-primary fw-medium">ожидает подтверждения</span>
+            </div>
+            <div class="mb-12px">
+                <span class="text-muted-light">тип создания: </span>
+                <span>онлайн</span>
+            </div>
+            <div class="mb-12px">
+                <span class="text-muted-light">способ отгрузки: </span>
+                <span>курьерская доставка</span>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-outline">Изменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="account-content-widget max-w-full">
+    <h4 class="mb-22px">Товары в заказе</h4>
+
+    <div class="mb-32px max-w-800px">
+        <form class="form-order-add-product" action="#">
+            <div class="row align-items-end gy-4">
+                <div class="col-lg position-relative">
+                    <input type="text" autocomplete="off" class="form-control" placeholder="Поиск по артикулу, коллекции или названию">
+                </div>
+                <div class="col-lg-auto">
+                    <button type="submit" class="btn btn-outline">
+                        <span>добавить</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Группа товаров -->
+    <div class="mb-32px">
+    
+        <div class="profile-order-product-items__table-heading">
+            <div class="row gx-3">
+                <div class="col-lg-3">
+                    <span class="fw-semibold">Товаров (6)</span>
+                </div>
+                <div class="col-lg d-none d-lg-block">
+                    <div class="row gx-3">
+                        <div class="col-lg-7">
+                            <div class="row gy-2 gx-3">
+                                <div class="col-12 text-lg-center">
+                                    <div class="fw-semibold">Кол-во</div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="small">Остаток м<sup>2</sup></div>
+                                    <div class="fs-14px text-muted-light">приход</div>
+                                    <div class="fs-14px text-muted-light">резерв</div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="small">м<sup>2</sup></div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="small">шт</div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="small">упак.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto">
+                            <div class="fw-semibold">Цена</div>
+                        </div>
+                        <div class="col-lg text-end">
+                            <div class="fw-semibold">Итог</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <!-- Заглушка для правильного позиционирования -->
+                    <div style="width: 21px; height: 21px;"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="profile-order-product-items__table-body">
+
+            <!-- item -->
+            <div class="profile-order-product-item-card">
+                <div class="card-body">
+                    <div class="row gy-2 gx-3">
+                        <!-- Изображение + Название -->
+                        <div class="col-lg-3">
+                            <div class="row gx-3">
+                                <div class="col-4">
+                                    <div class="card-img-wrapper">
+                                        <a href="#">
+                                            <img class="img-fluid w-100" src="img/order/card-profile-orders-item-01.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-title">
+                                        <a href="#">Керамогранит Laparet Adelaida белый AD 0070 60х60 см (1.44 м2)</a>
+                                    </div>
+                                </div>
+                                <div class="col-auto d-lg-none">
+                                    <button type="button" class="btn border-0 p-0" data-bs-toggle="tooltip" data-bs-title="Удалить товар">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                            <path d="M20 1L1 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1 1L20 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="row gy-2 gx-3">
+                                <div class="col-lg-7">
+                                    <div class="row gy-2 gx-3">
+                                        <div class="col-12 col-lg">
+                                            <div class="fs-6 mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <div class="d-lg-none">Остаток м2</div>
+                                                    <div>109 990.67</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between fs-12px text-muted-light mb-1">
+                                                    <div class="d-lg-none">приход</div>
+                                                    <div>10 990.67 от 14.04.2025</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between fs-12px text-muted-light mb-1">
+                                                    <div class="d-lg-none">резер</div>
+                                                    <div>10 990.67</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn p-0 border-0" data-bs-toggle="collapse" data-bs-target="#collapseInfoOrderID001" aria-expanded="false">
+                                                <span class="fs-12px">подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-4 col-lg">
+                                            <div class="text-center fs-16px mb-2 d-lg-none">м2</div>
+                                            <div class="counter-drop counter-small" data-quantity>
+                                                <button type="button" class="counter__btn counter-decrease">
+                                                    <span>-</span>
+                                                </button>
+                                                <input type="number" class="counter__input" value="945" readonly>
+                                                <button type="button" class="counter__btn counter-increase">
+                                                    <span>+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg">
+                                            <div class="text-center fs-16px mb-2 d-lg-none">шт</div>
+                                            <div class="counter-drop counter-small" data-quantity>
+                                                <button type="button" class="counter__btn counter-decrease">
+                                                    <span>-</span>
+                                                </button>
+                                                <input type="number" class="counter__input" value="45" readonly>
+                                                <button type="button" class="counter__btn counter-increase">
+                                                    <span>+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg">
+                                            <div class="text-center fs-16px mb-2 d-lg-none">уп</div>
+                                            <div class="counter-drop counter-small" data-quantity>
+                                                <button type="button" class="counter__btn counter-decrease">
+                                                    <span>-</span>
+                                                </button>
+                                                <input type="number" class="counter__input" value="1" readonly>
+                                                <button type="button" class="counter__btn counter-increase">
+                                                    <span>+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fs-14px d-lg-none">Цена</div>
+                                        <div>1 234,67 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg text-end">
+                                    <div class="d-flex justify-content-between justify-content-lg-end">
+                                        <div class="fs-14px d-lg-none">Итог</div>
+                                        <div class="card-order-price">1 2345,66 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <button type="button" class="btn border-0 p-0" data-bs-toggle="tooltip" data-bs-title="Удалить товар">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                    <path d="M20 1L1 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L20 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- collapsing box -->
+                    <div class="collapse" id="collapseInfoOrderID001">
+                        <div class="mt-3">
+                            <div class="bg-light">
+                                <div class="d-flex justify-content-end p-3">
+                                    <button class="btn p-0 border-0" data-bs-toggle="collapse" data-bs-target="#collapseInfoOrderID001">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M18.945 1.05469L1 18.9997" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.05469 1L18.9997 18.9451" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="p-3">
+                                    <div class="row gy-3">
+                                        <div class="col-lg-4 offset-lg-1">
+                                            <div class="fw-medium mb-3">Свободно</div>
+                                            <div class="mb-3">На 22.04.2025</div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="px-0 w-100">На складе</th>
+                                                        <td class="px-0">60</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-0 w-100">Тюмень СВХ</th>
+                                                        <td class="px-0">60</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-lg-4 offset-lg-1">
+                                            <div class="fw-medium mb-3">Резервы</div>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="px-0 w-100">Колл-во м2</td>
+                                                        <td class="px-0">до( дата)</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="px-0">23.04</th>
+                                                        <td class="px-0">03.04.2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-0">23.04</th>
+                                                        <td class="px-0">03.04.2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-0">23.04</th>
+                                                        <td class="px-0">03.04.2025</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- item -->
+            <div class="profile-order-product-item-card">
+                <div class="card-body">
+                    <div class="row gy-2 gx-3">
+                        <!-- Изображение + Название -->
+                        <div class="col-lg-3">
+                            <div class="row gx-3">
+                                <div class="col-4">
+                                    <div class="card-img-wrapper">
+                                        <a href="#">
+                                            <img class="img-fluid w-100" src="img/order/card-profile-orders-item-01.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-title">
+                                        <a href="#">Керамогранит Laparet Adelaida белый AD 0070 60х60 см (1.44 м2)</a>
+                                    </div>
+                                </div>
+                                <div class="col-auto d-lg-none">
+                                    <button type="button" class="btn border-0 p-0" data-bs-toggle="tooltip" data-bs-title="Удалить товар">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                            <path d="M20 1L1 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M1 1L20 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="row gy-2 gx-3">
+                                <div class="col-lg-7">
+                                    <div class="row gy-2 gx-3">
+                                        <div class="col-12 col-lg">
+                                            <div class="fs-6 mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <div class="d-lg-none">Остаток м2</div>
+                                                    <div>109 990.67</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between fs-12px text-muted-light mb-1">
+                                                    <div class="d-lg-none">приход</div>
+                                                    <div>10 990.67 от 14.04.2025</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between fs-12px text-muted-light mb-1">
+                                                    <div class="d-lg-none">резер</div>
+                                                    <div>10 990.67</div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn p-0 border-0" data-bs-toggle="collapse" data-bs-target="#collapseInfoOrderID002" aria-expanded="false">
+                                                <span class="fs-12px">подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-4 col-lg">
+                                            <div class="text-center fs-16px mb-2 d-lg-none">м2</div>
+                                            <div class="counter-drop counter-small" data-quantity>
+                                                <button type="button" class="counter__btn counter-decrease">
+                                                    <span>-</span>
+                                                </button>
+                                                <input type="number" class="counter__input" value="945" readonly>
+                                                <button type="button" class="counter__btn counter-increase">
+                                                    <span>+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg">
+                                            <div class="text-center fs-16px mb-2 d-lg-none">шт</div>
+                                            <div class="counter-drop counter-small" data-quantity>
+                                                <button type="button" class="counter__btn counter-decrease">
+                                                    <span>-</span>
+                                                </button>
+                                                <input type="number" class="counter__input" value="45" readonly>
+                                                <button type="button" class="counter__btn counter-increase">
+                                                    <span>+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg">
+                                            <div class="text-center fs-16px mb-2 d-lg-none">уп</div>
+                                            <div class="counter-drop counter-small" data-quantity>
+                                                <button type="button" class="counter__btn counter-decrease">
+                                                    <span>-</span>
+                                                </button>
+                                                <input type="number" class="counter__input" value="1" readonly>
+                                                <button type="button" class="counter__btn counter-increase">
+                                                    <span>+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fs-14px d-lg-none">Цена</div>
+                                        <div>1 234,67 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg text-end">
+                                    <div class="d-flex justify-content-between justify-content-lg-end">
+                                        <div class="fs-14px d-lg-none">Итог</div>
+                                        <div class="card-order-price">1 2345,66 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <button type="button" class="btn border-0 p-0" data-bs-toggle="tooltip" data-bs-title="Удалить товар">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                    <path d="M20 1L1 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M1 1L20 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- collapsing box -->
+                    <div class="collapse" id="collapseInfoOrderID002">
+                        <div class="mt-3">
+                            <div class="bg-light">
+                                <div class="d-flex justify-content-end p-3">
+                                    <button class="btn p-0 border-0" data-bs-toggle="collapse" data-bs-target="#collapseInfoOrderID002">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M18.945 1.05469L1 18.9997" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.05469 1L18.9997 18.9451" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="p-3">
+                                    <div class="row gy-3">
+                                        <div class="col-lg-4 offset-lg-1">
+                                            <div class="fw-medium mb-3">Свободно</div>
+                                            <div class="mb-3">На 22.04.2025</div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="px-0 w-100">На складе</th>
+                                                        <td class="px-0">60</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-0 w-100">Тюмень СВХ</th>
+                                                        <td class="px-0">60</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-lg-4 offset-lg-1">
+                                            <div class="fw-medium mb-3">Резервы</div>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="px-0 w-100">Колл-во м2</td>
+                                                        <td class="px-0">до( дата)</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="px-0">23.04</th>
+                                                        <td class="px-0">03.04.2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-0">23.04</th>
+                                                        <td class="px-0">03.04.2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-0">23.04</th>
+                                                        <td class="px-0">03.04.2025</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="account-content-widget max-w-600px">
+    <h4>Заказ</h4>
+    <table class="table table-profile-orders-summary">
+        <tbody>
+            <tr>
+                <th>Товары (6)</th>
+                <td>380 200 ₽</td>
+            </tr>
+            <tr>
+                <th>Скидки на товары:</th>
+                <td>
+                    <div class="text-danger">-116 200 ₽</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Общий вес</th>
+                <td>30.973 кг</td>
+            </tr>
+            <tr>
+                <th>Способ оплаты</th>
+                <td>онлайн</td>
+            </tr>
+            <tr>
+                <th>Способ отгрузки</th>
+                <td>самовывоз</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="account-content-widget max-w-600px">
+    <div class="text-muted-light fs-6">Общая стоимость:</div>
+    <div class="h2 text-primary ff-title fw-bold mb-0">560 000 ₽</div>
+</div>
+
+<div class="account-content-widget max-w-600px">
+    <button type="button" class="btn btn-secondary w-100 max-w-300px">оплатить заказ</button>
+</div>

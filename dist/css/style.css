@@ -244,6 +244,10 @@ body {
   max-width: 850px;
 }
 
+.max-w-900px {
+  max-width: 900px;
+}
+
 .max-w-1000px {
   max-width: 1000px;
 }
@@ -1842,20 +1846,10 @@ textarea {
   --bs-link-hover-color-rgb: 2,55,143;
 }
 
-.profile-order-product-item-card .card-img-wrapper {
-  flex-shrink: 0;
-  width: 114px;
-}
-
 .card-order-star-rating {
   display: flex;
   gap: 3px;
   margin-bottom: 8px;
-}
-
-.profile-order-product-item-card .card-content {
-  display: flex;
-  gap: 12px;
 }
 
 .profile-order-product-item-card .card-order-sku,
@@ -1876,18 +1870,6 @@ textarea {
 }
 
 @media (min-width: 992px) {
-  .profile-order-product-item-card {
-    --bs-card-title-size: 24px;
-  }
-  .profile-order-product-item-card .card-img-wrapper {
-    width: 138px;
-  }
-  .profile-order-product-item-card .card-content {
-    gap: 22px;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
   .profile-order-product-item-card .card-order-sku,
   .profile-order-product-item-card .card-order-country,
   .profile-order-product-item-card .card-order-quantity {
@@ -3800,6 +3782,12 @@ textarea {
   transition: background-color 0.3s ease;
   z-index: 10;
 }
+@media (min-width: 992px) {
+  .swiperRecommendProduct-next,
+  .swiperRecommendProduct-prev {
+    display: flex;
+  }
+}
 
 .swiperRecommendProduct-next:hover,
 .swiperRecommendProduct-prev:hover {
@@ -3835,50 +3823,32 @@ textarea {
   width: 320px;
   height: auto;
 }
-
-.recommend-item {
-  position: relative;
-  display: flex;
-  padding: 12px;
-  border: 1px solid var(--bs-border-color);
-}
-
-.swiperRecommendProduct .recommend-item,
-.swiperRecommendProduct02 .recommend-item {
-  height: 100%;
-}
-
-.recommend-item__title {
-  font-size: 1rem;
-}
-
-.recommend-item__btn {
-  padding: 0;
-  border: none;
-}
-
-.recommend-item__btn svg {
-  width: 24px;
-  height: 24px;
-}
-
-.recommend-item__btn.active svg path {
-  stroke: #02378F;
-}
-
-.recommend-item__btn.active svg path.svg-path-wheel {
-  fill: #02378F;
-}
-
 @media (min-width: 992px) {
-  .swiperRecommendProduct-next,
-  .swiperRecommendProduct-prev {
-    display: flex;
-  }
   .swiperRecommendProduct .swiper-slide,
   .swiperRecommendProduct02 .swiper-slide {
     width: 440px;
   }
+}
+
+.recommend-item {
+  position: relative;
+  display: flex;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid var(--bs-border-color);
+}
+.recommend-item__title {
+  font-size: 1rem;
+}
+.recommend-item__btn {
+  padding: 0;
+  border: none;
+}
+.recommend-item__btn svg {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 992px) {
   .recommend-item__title {
     font-size: 1.25rem;
   }
@@ -3887,6 +3857,7 @@ textarea {
     height: 32px;
   }
 }
+
 /* section-categories-circles ============================ */
 .section-categories-circles {
   overflow: hidden;
@@ -4474,28 +4445,34 @@ textarea {
   display: flex;
   height: 50px;
 }
-
 .counter-drop .counter__btn {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  padding: 0;
+  padding: 0 14px;
   border: none;
   background: #F8F8F8;
 }
-
 .counter-drop .counter__input {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  padding: 0;
   border: none;
   text-align: center;
   font-size: 18px;
   background: #F8F8F8;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.counter-drop .counter__input::-webkit-outer-spin-button, .counter-drop .counter__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.counter-drop.counter-small {
+  height: 30px;
+}
+.counter-drop.counter-small .counter__btn {
+  padding: 0 6px;
+}
+.counter-drop.counter-small .counter__input {
+  font-size: 16px;
 }
 
 .counter-measure {
@@ -5385,6 +5362,7 @@ textarea {
   }
 }
 
+/* account-widgets-orders-edit ============================ */
 /* checkout-radio-card */
 .checkout-radio-card {
   position: relative;
@@ -5427,6 +5405,15 @@ textarea {
 @media (min-width: 992px) {
   .checkout-radio-card .item-pickup-option__body {
     padding: 16px 24px;
+  }
+}
+
+.section-cart-success {
+  padding: 60px 0;
+}
+@media (min-width: 992px) {
+  .section-cart-success {
+    padding: 120px 0;
   }
 }
 

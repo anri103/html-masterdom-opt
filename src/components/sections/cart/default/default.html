@@ -12,7 +12,7 @@
                             <!-- item -->
                             <div class="product-cart-item">
                                 <div class="product-cart-card">
-                                    <div class="row flex-nowrap gy-3" style="--bs-gutter-x: 12px;">
+                                    <div class="row" style="--bs-gutter-x: 12px;">
                                         <div class="col-4 col-lg-2">
                                             <a href="#">
                                                 <img class="img-fluid w-100" src="img/cart/product-gallery-01.jpg"
@@ -36,35 +36,12 @@
                                                         <div class="product-cart-card__quantity-wrapper">
                                                             <div>
                                                                 <div class="counter-drop">
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-decrease">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="6" height="2" viewBox="0 0 6 2"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M5.48733 0.151936V1.45414H0.183819V0.151936H5.48733Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <button type="button" class="counter__btn counter-decrease">
+                                                                        <span>-</span>
                                                                     </button>
-                                                                    <input type="text" style="display: none;">
-                                                                    <div class="counter__input" data-product="76578"
-                                                                        data-quantity="1" data-measure="м2"
-                                                                        data-measurecode="m2" data-measureproduct="м2"
-                                                                        data-multiplicity="0.5"
-                                                                        data-multiplicityvupakovke="22">
-                                                                        <span class="counter__value">900.59</span>
-                                                                        <span
-                                                                            class="counter__volume ms-1">м<sup>2</sup></span>
-                                                                    </div>
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-increase">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="9" height="9" viewBox="0 0 9 9"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M3.82998 8.17133V0.358123H5.15586V8.17133H3.82998ZM0.586317 4.92766V3.60179H8.39952V4.92766H0.586317Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <input type="number" class="counter__input" value="45" readonly>
+                                                                    <button type="button" class="counter__btn counter-increase">
+                                                                        <span>+</span>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -73,7 +50,7 @@
                                                                     <button type="button"
                                                                         class="counter-measure__item active"
                                                                         data-measure="m2"
-                                                                        data-measurename="м2">м<sup>2</sup></button>
+                                                                        data-measurename="м2">м2</button>
                                                                     <button type="button" class="counter-measure__item"
                                                                         data-measure="pieces"
                                                                         data-measurename="шт">шт</button>
@@ -110,7 +87,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
+                                    <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
                                         <div>
                                             <button type="button"
                                                 class="btn btn-with-collapsing-arrow border-0 p-0 fw-normal collapsed"
@@ -133,9 +110,12 @@
                                             <div class="text-muted-light">3 250 ₽ / 1 м2 <span
                                                     class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                         </div>
+                                    </div> -->
+                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-end mt-4">
+                                        <div class="text-muted-light">3 250 ₽ / 1 м2 <span class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="product-modal-recommend-items-01">
+                                <!-- <div class="collapse" id="product-modal-recommend-items-01">
                                     <div style="height: 22px;"></div>
                                     <div class="swiper swiperRecommendProduct02">
                                         <div class="swiper-wrapper">
@@ -368,7 +348,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-next" style="right: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none">
@@ -377,7 +356,6 @@
                                                     fill="white" />
                                             </svg>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-prev" style="left: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none" style="transform: rotate(180deg);">
@@ -387,12 +365,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- item -->
                             <div class="product-cart-item">
                                 <div class="product-cart-card">
-                                    <div class="row flex-nowrap gy-3" style="--bs-gutter-x: 12px;">
+                                    <div class="row" style="--bs-gutter-x: 12px;">
                                         <div class="col-4 col-lg-2">
                                             <a href="#">
                                                 <img class="img-fluid w-100" src="img/cart/product-gallery-01.jpg"
@@ -416,35 +394,12 @@
                                                         <div class="product-cart-card__quantity-wrapper">
                                                             <div>
                                                                 <div class="counter-drop">
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-decrease">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="6" height="2" viewBox="0 0 6 2"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M5.48733 0.151936V1.45414H0.183819V0.151936H5.48733Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <button type="button" class="counter__btn counter-decrease">
+                                                                        <span>-</span>
                                                                     </button>
-                                                                    <input type="text" style="display: none;">
-                                                                    <div class="counter__input" data-product="76578"
-                                                                        data-quantity="1" data-measure="м2"
-                                                                        data-measurecode="m2" data-measureproduct="м2"
-                                                                        data-multiplicity="0.5"
-                                                                        data-multiplicityvupakovke="22">
-                                                                        <span class="counter__value">900.59</span>
-                                                                        <span
-                                                                            class="counter__volume ms-1">м<sup>2</sup></span>
-                                                                    </div>
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-increase">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="9" height="9" viewBox="0 0 9 9"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M3.82998 8.17133V0.358123H5.15586V8.17133H3.82998ZM0.586317 4.92766V3.60179H8.39952V4.92766H0.586317Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <input type="number" class="counter__input" value="145" readonly>
+                                                                    <button type="button" class="counter__btn counter-increase">
+                                                                        <span>+</span>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -453,7 +408,7 @@
                                                                     <button type="button"
                                                                         class="counter-measure__item active"
                                                                         data-measure="m2"
-                                                                        data-measurename="м2">м<sup>2</sup></button>
+                                                                        data-measurename="м2">м2</button>
                                                                     <button type="button" class="counter-measure__item"
                                                                         data-measure="pieces"
                                                                         data-measurename="шт">шт</button>
@@ -490,7 +445,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
+                                    <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
                                         <div>
                                             <button type="button"
                                                 class="btn btn-with-collapsing-arrow border-0 p-0 fw-normal collapsed"
@@ -513,9 +468,12 @@
                                             <div class="text-muted-light">3 250 ₽ / 1 м2 <span
                                                     class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                         </div>
+                                    </div> -->
+                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-end mt-4">
+                                        <div class="text-muted-light">3 250 ₽ / 1 м2 <span class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="product-modal-recommend-items-02">
+                                <!-- <div class="collapse" id="product-modal-recommend-items-02">
                                     <div style="height: 22px;"></div>
                                     <div class="swiper swiperRecommendProduct02">
                                         <div class="swiper-wrapper">
@@ -748,7 +706,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-next" style="right: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none">
@@ -757,7 +714,6 @@
                                                     fill="white" />
                                             </svg>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-prev" style="left: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none" style="transform: rotate(180deg);">
@@ -767,12 +723,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- item -->
                             <div class="product-cart-item">
                                 <div class="product-cart-card">
-                                    <div class="row flex-nowrap gy-3" style="--bs-gutter-x: 12px;">
+                                    <div class="row" style="--bs-gutter-x: 12px;">
                                         <div class="col-4 col-lg-2">
                                             <a href="#">
                                                 <img class="img-fluid w-100" src="img/cart/product-gallery-01.jpg"
@@ -796,35 +752,12 @@
                                                         <div class="product-cart-card__quantity-wrapper">
                                                             <div>
                                                                 <div class="counter-drop">
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-decrease">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="6" height="2" viewBox="0 0 6 2"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M5.48733 0.151936V1.45414H0.183819V0.151936H5.48733Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <button type="button" class="counter__btn counter-decrease">
+                                                                        <span>-</span>
                                                                     </button>
-                                                                    <input type="text" style="display: none;">
-                                                                    <div class="counter__input" data-product="76578"
-                                                                        data-quantity="1" data-measure="м2"
-                                                                        data-measurecode="m2" data-measureproduct="м2"
-                                                                        data-multiplicity="0.5"
-                                                                        data-multiplicityvupakovke="22">
-                                                                        <span class="counter__value">900.59</span>
-                                                                        <span
-                                                                            class="counter__volume ms-1">м<sup>2</sup></span>
-                                                                    </div>
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-increase">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="9" height="9" viewBox="0 0 9 9"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M3.82998 8.17133V0.358123H5.15586V8.17133H3.82998ZM0.586317 4.92766V3.60179H8.39952V4.92766H0.586317Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <input type="number" class="counter__input" value="245" readonly>
+                                                                    <button type="button" class="counter__btn counter-increase">
+                                                                        <span>+</span>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -833,7 +766,7 @@
                                                                     <button type="button"
                                                                         class="counter-measure__item active"
                                                                         data-measure="m2"
-                                                                        data-measurename="м2">м<sup>2</sup></button>
+                                                                        data-measurename="м2">м2</button>
                                                                     <button type="button" class="counter-measure__item"
                                                                         data-measure="pieces"
                                                                         data-measurename="шт">шт</button>
@@ -870,7 +803,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
+                                    <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
                                         <div>
                                             <button type="button"
                                                 class="btn btn-with-collapsing-arrow border-0 p-0 fw-normal collapsed"
@@ -893,9 +826,12 @@
                                             <div class="text-muted-light">3 250 ₽ / 1 м2 <span
                                                     class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                         </div>
+                                    </div> -->
+                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-end mt-4">
+                                        <div class="text-muted-light">3 250 ₽ / 1 м2 <span class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="product-modal-recommend-items-03">
+                                <!-- <div class="collapse" id="product-modal-recommend-items-03">
                                     <div style="height: 22px;"></div>
                                     <div class="swiper swiperRecommendProduct02">
                                         <div class="swiper-wrapper">
@@ -1128,7 +1064,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-next" style="right: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none">
@@ -1137,7 +1072,6 @@
                                                     fill="white" />
                                             </svg>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-prev" style="left: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none" style="transform: rotate(180deg);">
@@ -1147,7 +1081,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -1159,7 +1093,7 @@
                             <!-- item -->
                             <div class="product-cart-item">
                                 <div class="product-cart-card">
-                                    <div class="row flex-nowrap gy-3" style="--bs-gutter-x: 12px;">
+                                    <div class="row" style="--bs-gutter-x: 12px;">
                                         <div class="col-4 col-lg-2">
                                             <a href="#">
                                                 <img class="img-fluid w-100" src="img/cart/product-gallery-01.jpg"
@@ -1183,35 +1117,12 @@
                                                         <div class="product-cart-card__quantity-wrapper">
                                                             <div>
                                                                 <div class="counter-drop">
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-decrease">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="6" height="2" viewBox="0 0 6 2"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M5.48733 0.151936V1.45414H0.183819V0.151936H5.48733Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <button type="button" class="counter__btn counter-decrease">
+                                                                        <span>-</span>
                                                                     </button>
-                                                                    <input type="text" style="display: none;">
-                                                                    <div class="counter__input" data-product="76578"
-                                                                        data-quantity="1" data-measure="м2"
-                                                                        data-measurecode="m2" data-measureproduct="м2"
-                                                                        data-multiplicity="0.5"
-                                                                        data-multiplicityvupakovke="22">
-                                                                        <span class="counter__value">900.59</span>
-                                                                        <span
-                                                                            class="counter__volume ms-1">м<sup>2</sup></span>
-                                                                    </div>
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-increase">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="9" height="9" viewBox="0 0 9 9"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M3.82998 8.17133V0.358123H5.15586V8.17133H3.82998ZM0.586317 4.92766V3.60179H8.39952V4.92766H0.586317Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <input type="number" class="counter__input" value="345" readonly>
+                                                                    <button type="button" class="counter__btn counter-increase">
+                                                                        <span>+</span>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -1220,7 +1131,7 @@
                                                                     <button type="button"
                                                                         class="counter-measure__item active"
                                                                         data-measure="m2"
-                                                                        data-measurename="м2">м<sup>2</sup></button>
+                                                                        data-measurename="м2">м2</button>
                                                                     <button type="button" class="counter-measure__item"
                                                                         data-measure="pieces"
                                                                         data-measurename="шт">шт</button>
@@ -1257,7 +1168,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
+                                    <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
                                         <div>
                                             <button type="button"
                                                 class="btn btn-with-collapsing-arrow border-0 p-0 fw-normal collapsed"
@@ -1280,9 +1191,12 @@
                                             <div class="text-muted-light">3 250 ₽ / 1 м2 <span
                                                     class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                         </div>
+                                    </div> -->
+                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-end mt-4">
+                                        <div class="text-muted-light">3 250 ₽ / 1 м2 <span class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="product-modal-recommend-items-04">
+                                <!-- <div class="collapse" id="product-modal-recommend-items-04">
                                     <div style="height: 22px;"></div>
                                     <div class="swiper swiperRecommendProduct02">
                                         <div class="swiper-wrapper">
@@ -1515,7 +1429,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-next" style="right: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none">
@@ -1524,7 +1437,6 @@
                                                     fill="white" />
                                             </svg>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-prev" style="left: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none" style="transform: rotate(180deg);">
@@ -1534,12 +1446,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- item -->
                             <div class="product-cart-item">
                                 <div class="product-cart-card">
-                                    <div class="row flex-nowrap gy-3" style="--bs-gutter-x: 12px;">
+                                    <div class="row" style="--bs-gutter-x: 12px;">
                                         <div class="col-4 col-lg-2">
                                             <a href="#">
                                                 <img class="img-fluid w-100" src="img/cart/product-gallery-01.jpg"
@@ -1563,35 +1475,12 @@
                                                         <div class="product-cart-card__quantity-wrapper">
                                                             <div>
                                                                 <div class="counter-drop">
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-decrease">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="6" height="2" viewBox="0 0 6 2"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M5.48733 0.151936V1.45414H0.183819V0.151936H5.48733Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <button type="button" class="counter__btn counter-decrease">
+                                                                        <span>-</span>
                                                                     </button>
-                                                                    <input type="text" style="display: none;">
-                                                                    <div class="counter__input" data-product="76578"
-                                                                        data-quantity="1" data-measure="м2"
-                                                                        data-measurecode="m2" data-measureproduct="м2"
-                                                                        data-multiplicity="0.5"
-                                                                        data-multiplicityvupakovke="22">
-                                                                        <span class="counter__value">900.59</span>
-                                                                        <span
-                                                                            class="counter__volume ms-1">м<sup>2</sup></span>
-                                                                    </div>
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-increase">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="9" height="9" viewBox="0 0 9 9"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M3.82998 8.17133V0.358123H5.15586V8.17133H3.82998ZM0.586317 4.92766V3.60179H8.39952V4.92766H0.586317Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <input type="number" class="counter__input" value="445" readonly>
+                                                                    <button type="button" class="counter__btn counter-increase">
+                                                                        <span>+</span>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -1600,7 +1489,7 @@
                                                                     <button type="button"
                                                                         class="counter-measure__item active"
                                                                         data-measure="m2"
-                                                                        data-measurename="м2">м<sup>2</sup></button>
+                                                                        data-measurename="м2">м2</button>
                                                                     <button type="button" class="counter-measure__item"
                                                                         data-measure="pieces"
                                                                         data-measurename="шт">шт</button>
@@ -1637,7 +1526,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
+                                    <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
                                         <div>
                                             <button type="button"
                                                 class="btn btn-with-collapsing-arrow border-0 p-0 fw-normal collapsed"
@@ -1660,9 +1549,12 @@
                                             <div class="text-muted-light">3 250 ₽ / 1 м2 <span
                                                     class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                         </div>
+                                    </div> -->
+                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-end mt-4">
+                                        <div class="text-muted-light">3 250 ₽ / 1 м2 <span class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="product-modal-recommend-items-05">
+                                <!-- <div class="collapse" id="product-modal-recommend-items-05">
                                     <div style="height: 22px;"></div>
                                     <div class="swiper swiperRecommendProduct02">
                                         <div class="swiper-wrapper">
@@ -1895,7 +1787,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-next" style="right: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none">
@@ -1904,7 +1795,6 @@
                                                     fill="white" />
                                             </svg>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-prev" style="left: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none" style="transform: rotate(180deg);">
@@ -1914,12 +1804,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- item -->
                             <div class="product-cart-item">
                                 <div class="product-cart-card">
-                                    <div class="row flex-nowrap gy-3" style="--bs-gutter-x: 12px;">
+                                    <div class="row" style="--bs-gutter-x: 12px;">
                                         <div class="col-4 col-lg-2">
                                             <a href="#">
                                                 <img class="img-fluid w-100" src="img/cart/product-gallery-01.jpg"
@@ -1943,35 +1833,12 @@
                                                         <div class="product-cart-card__quantity-wrapper">
                                                             <div>
                                                                 <div class="counter-drop">
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-decrease">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="6" height="2" viewBox="0 0 6 2"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M5.48733 0.151936V1.45414H0.183819V0.151936H5.48733Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <button type="button" class="counter__btn counter-decrease">
+                                                                        <span>-</span>
                                                                     </button>
-                                                                    <input type="text" style="display: none;">
-                                                                    <div class="counter__input" data-product="76578"
-                                                                        data-quantity="1" data-measure="м2"
-                                                                        data-measurecode="m2" data-measureproduct="м2"
-                                                                        data-multiplicity="0.5"
-                                                                        data-multiplicityvupakovke="22">
-                                                                        <span class="counter__value">900.59</span>
-                                                                        <span
-                                                                            class="counter__volume ms-1">м<sup>2</sup></span>
-                                                                    </div>
-                                                                    <button type="button"
-                                                                        class="counter__btn counter-increase">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="9" height="9" viewBox="0 0 9 9"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M3.82998 8.17133V0.358123H5.15586V8.17133H3.82998ZM0.586317 4.92766V3.60179H8.39952V4.92766H0.586317Z"
-                                                                                fill="black"></path>
-                                                                        </svg>
+                                                                    <input type="number" class="counter__input" value="545" readonly>
+                                                                    <button type="button" class="counter__btn counter-increase">
+                                                                        <span>+</span>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -1980,7 +1847,7 @@
                                                                     <button type="button"
                                                                         class="counter-measure__item active"
                                                                         data-measure="m2"
-                                                                        data-measurename="м2">м<sup>2</sup></button>
+                                                                        data-measurename="м2">м2</button>
                                                                     <button type="button" class="counter-measure__item"
                                                                         data-measure="pieces"
                                                                         data-measurename="шт">шт</button>
@@ -2017,7 +1884,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
+                                    <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-between mt-4">
                                         <div>
                                             <button type="button"
                                                 class="btn btn-with-collapsing-arrow border-0 p-0 fw-normal collapsed"
@@ -2040,9 +1907,12 @@
                                             <div class="text-muted-light">3 250 ₽ / 1 м2 <span
                                                     class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                         </div>
+                                    </div> -->
+                                    <div class="d-flex gap-2 flex-wrap align-items-center justify-content-end mt-4">
+                                        <div class="text-muted-light">3 250 ₽ / 1 м2 <span class="fs-5 text-black fw-semibold ms-2">12 400 ₽</span></div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="product-modal-recommend-items-06">
+                                <!-- <div class="collapse" id="product-modal-recommend-items-06">
                                     <div style="height: 22px;"></div>
                                     <div class="swiper swiperRecommendProduct02">
                                         <div class="swiper-wrapper">
@@ -2275,7 +2145,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-next" style="right: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none">
@@ -2284,7 +2153,6 @@
                                                     fill="white" />
                                             </svg>
                                         </div>
-                                        <!-- Навигация слайдера -->
                                         <div class="swiper-custom-prev" style="left: 30px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="36"
                                                 viewBox="0 0 22 36" fill="none" style="transform: rotate(180deg);">
@@ -2294,7 +2162,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
