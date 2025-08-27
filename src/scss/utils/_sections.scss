@@ -726,6 +726,7 @@
     --bs-card-title-spacer-y: 12px;
     --bs-link-color-rgb: 26,26,22;
     --bs-link-hover-color-rgb: 2,55,143;
+    font-size: 16px;
 }
 
 .card-order-star-rating {
@@ -754,6 +755,30 @@
 
 .card-rate-order-btn-desk {
     display: none;
+}
+
+table.reservation_order_product {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 1px 1px;
+    background: #d5d5d5;
+}
+
+table.reservation_order_product tr {
+    border: 1px solid #333;
+    background: #f1f1f1;
+}
+
+table.reservation_order_product td {
+    vertical-align: top;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.theader td {
+    text-align: center;
 }
 
 @media (min-width: 992px) {
