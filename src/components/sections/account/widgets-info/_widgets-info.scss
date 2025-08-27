@@ -26,10 +26,14 @@
 .users-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 24px;
 }
 
 .item-user {
+    padding: 24px 0;
+
+    &:not(:last-of-type) {
+        border-bottom: 1px solid var(--bs-border-color);
+    }
 
     &__body {
 

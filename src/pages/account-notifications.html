@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/layout/head/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "Вёрстка ОПТ - ЛК Уведомления",
+})
+
+<body>
+
+    <!-- HEADER -->
+    @@include('../components/layout/header/header.html')
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- section-breadcrumbs -->
+        @@include('../components/sections/breadcrumbs/breadcrumbs.html')
+
+        <!-- section-notifications -->
+        <section class="section section-notifications">
+            <div class="container">
+                <div class="row" style="--bs-gutter-y: 2rem;">
+                    <div class="col-lg-3">
+                        <!-- account-sidebar -->
+                        @@include('../components/sections/account/sidebar/sidebar.html', {
+                            "activeLink": "account-notifications"
+                        })
+                    </div>
+                    <div class="col-lg-9">
+                        <!-- account-widgets -->
+                        @@include('../components/sections/account/widgets-notifications/widgets-notifications.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    @@include('../components/layout/footer/footer.html')
+</body>
+
+</html>

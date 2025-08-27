@@ -5123,9 +5123,14 @@ textarea {
 .users-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 
+.item-user {
+  padding: 24px 0;
+}
+.item-user:not(:last-of-type) {
+  border-bottom: 1px solid var(--bs-border-color);
+}
 .item-user__body .row {
   align-items: center;
 }
