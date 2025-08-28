@@ -73,6 +73,14 @@
             transform: rotate(180deg);
         }
     }
+
+    &.user-admin {
+
+        .item-user__body {
+            padding: 14px 24px;
+            background-color: #F8F8F8;
+        }
+    }
 }
 
 /* File Upload */

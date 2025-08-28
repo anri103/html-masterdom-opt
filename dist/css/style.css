@@ -260,6 +260,10 @@ body {
   max-width: 100%;
 }
 
+.g-12px, .gx-12px {
+  --bs-gutter-x: 12px;
+}
+
 @media (min-width: 992px) {
   .col-lg-20 {
     width: 20%;
@@ -5178,6 +5182,10 @@ table.reservation_order_product td {
 }
 .item-user__button .btn:not(.collapsed) svg {
   transform: rotate(180deg);
+}
+.item-user.user-admin .item-user__body {
+  padding: 14px 24px;
+  background-color: #F8F8F8;
 }
 
 /* File Upload */
