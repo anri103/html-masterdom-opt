@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
     <link rel="stylesheet" href="css/style.css">
 
     <!-- title -->
@@ -1223,9 +1225,9 @@
         <section class="section section-cart-checkout">
     <div class="container">
 
-        <!-- widget «Плательщик» -->
+        <!-- widget «Покупатель» -->
         <div class="content-widget max-w-600px">
-            <div class="h4 mb-22px">Плательщик</div>
+            <div class="h4 mb-22px">Покупатель</div>
             <div class="mb-22px">
                 <select class="form-select">
                     <option selected="">Выберите из списка</option>
@@ -1234,11 +1236,6 @@
                     <option value="2">Плательщик 3</option>
                 </select>
             </div>
-        </div>
-
-        <!-- widget «Покупатель» -->
-        <div class="content-widget max-w-600px">
-            <div class="h4 mb-22px">Покупатель</div>
             <div class="mb-22px">
                 <input type="text" class="form-control" placeholder="Имя профиля*" required=""
                     value="«Дизайн-студия Лотос» г. Ориенбург">
@@ -1523,6 +1520,10 @@
                         <label class="d-flex gap-2 align-items-center">
                             <input type="checkbox" class="form-checkbox" value="">
                             <span>паркинг</span>
+                        </label>
+                        <label class="d-flex gap-2 align-items-center">
+                            <span>высота паркинга</span>
+                            <input type="text" class="input-text-custom-sm" style="max-width: 50px;" placeholder="2 м">
                         </label>
                     </div>
                 </div>
@@ -1924,6 +1925,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

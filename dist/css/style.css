@@ -5206,6 +5206,26 @@ table.reservation_order_product td {
   font-size: 16px;
 }
 
+.input-text-custom-sm {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: var(--bs-body-color);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.15rem 0.25rem;
+  border-radius: 0;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+}
+
 /* account-widgets-orders ============================ */
 .profile-order-card {
   --bs-card-spacer-y: 22px;
