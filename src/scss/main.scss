@@ -4,57 +4,28 @@
  * Version: 1.0.0
  */
 
-// utils
-@use 'utils/fonts';
-@use 'utils/variables';
-@use 'utils/general';
-@use 'utils/typography';
-@use 'utils/links';
-@use 'utils/forms';
-@use 'utils/buttons';
-@use 'utils/navs';
-@use 'utils/swiper';
-@use 'utils/cards';
-@use 'utils/accordion';
-@use 'utils/modals';
-@use 'utils/popover';
-@use 'utils/sections';
-
-// components > layout
-@use '../components/layout/header/header';
-@use '../components/layout/footer/footer';
-
-// components > sections
-@use '../components/sections/hero/hero';
-@use '../components/sections/blog-slider/blog-slider';
-@use '../components/sections/breadcrumbs/breadcrumbs';
-@use '../components/sections/catalog/catalog';
-@use '../components/sections/categories-circles/categories-circles';
-@use '../components/sections/collection/collection';
-@use '../components/sections/featured-collections/featured-collections';
-@use '../components/sections/featured-products/featured-products';
-@use '../components/sections/popular-products/popular-products';
-@use '../components/sections/product/product';
-@use '../components/sections/shops-grid/shops-grid';
-@use '../components/sections/shops-location/shops-location';
-
-// components > sections > account
-@use '../components/sections/account/login/login';
-@use '../components/sections/account/sidebar/sidebar';
-@use '../components/sections/account/widgets-info/widgets-info';
-@use '../components/sections/account/widgets-orders/widgets-orders';
-@use '../components/sections/account/widgets-order/widgets-order';
-@use '../components/sections/account/widgets-order-edit/widgets-order-edit';
-
-// components > sections > cart
-@use '../components/sections/cart/default/default';
-@use '../components/sections/cart/checkout/checkout';
-@use '../components/sections/cart/success/success';
-
-// components > ui
-@use '../components/ui/product-item/product-item';
-@use '../components/ui/product-cat-oboi/product-cat-oboi';
-@use '../components/ui/pagination/pagination';
-
-// pages
-@use 'pages/account';
+// components
+@import 'components/fonts';
+@import 'components/variables';
+@import 'components/general';
+@import 'components/typography';
+@import 'components/links';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/navs';
+@import 'components/swiper';
+@import 'components/cards';
+@import 'components/product-item';
+@import 'components/product-cat-oboi';
+@import 'components/accordion';
+@import 'components/pagination';
+@import 'components/modals';
+@import 'components/popover';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sections';
+@import 'components/breadcrumbs';
+@import 'components/catalog';
+@import 'components/product';
+@import 'components/account';
+@import 'components/cart';

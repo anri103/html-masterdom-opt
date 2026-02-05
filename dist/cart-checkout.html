@@ -22,8 +22,6 @@
 
     <!-- title -->
     <title>Вёрстка ОПТ - Оформление заказа</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
 </head>
 
 <body>
@@ -111,15 +109,6 @@
                         <!-- Выбор города -->
                         <div class="mobile-collapse-menu__header">
                             <div class="title">Меню</div>
-                            <div class="city-select-invoker d-none">
-                                <div>Ваш город:</div>
-                                <div class="city-select__current-city" data-src="#city-selector-modal" fancybox-dialog>
-                                    <div>Москва</div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
-                                        <path d="M1 1L5.0931 5.81382C5.14102 5.87267 5.19858 5.91951 5.26232 5.95151C5.32604 5.9835 5.39461 6 5.4639 6C5.53319 6 5.60177 5.9835 5.66549 5.95151C5.72921 5.91951 5.78677 5.87267 5.83471 5.81382L9.92778 0.999999" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </div>
                         </div>
     
                         <!-- Контейнер для двух меню -->
@@ -1091,15 +1080,6 @@
                                 </a>
                             </div>
                             <!-- icon -->
-                            <!-- <div class="navbar-desktop__icon icon-location">
-                                <a href="#city-selector-modal" fancybox-dialog>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                        <path d="M28.0687 13.0343C28.0687 21.0572 16.0343 30.4172 16.0343 30.4172C16.0343 30.4172 4 21.0572 4 13.0343C4 6.47963 9.47963 1 16.0343 1C22.589 1 28.0687 6.47963 28.0687 13.0343Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M16.0349 17.0453C18.2503 17.0453 20.0463 15.2494 20.0463 13.0339C20.0463 10.8184 18.2503 9.02246 16.0349 9.02246C13.8194 9.02246 12.0234 10.8184 12.0234 13.0339C12.0234 15.2494 13.8194 17.0453 16.0349 17.0453Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div> -->
-                            <!-- icon -->
                             <div class="navbar-desktop__icon icon-profile">
                                 <a href="account-login.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -1221,455 +1201,455 @@
 
         <!-- section-cart-checkout -->
         <section class="section section-cart-checkout">
-    <div class="container">
+            <div class="container">
 
-        <!-- widget «Покупатель» -->
-        <div class="content-widget max-w-600px">
-            <div class="h4 mb-22px">Покупатель</div>
-            <div class="mb-22px">
-                <select class="form-select">
-                    <option selected="">Выберите из списка</option>
-                    <option value="1">Плательщик 1</option>
-                    <option value="2">Плательщик 2</option>
-                    <option value="2">Плательщик 3</option>
-                </select>
-            </div>
-            <div class="mb-22px">
-                <input type="text" class="form-control" placeholder="Имя профиля*" required=""
-                    value="«Дизайн-студия Лотос» г. Ориенбург">
-            </div>
-            <div class="mb-22px">
-                <input type="email" class="form-control" placeholder="E-mail*" required="" value="trade-luvr@mail.ru">
-            </div>
-            <div class="mb-22px">
-                <input type="text" class="form-control" placeholder="Телефон" required="" value="8 (925) 689-15-19"
-                    readonly="" disabled="">
-                <div class="text-muted-light small mt-12px">
-                    <a href="#" class="text-decoration-underline">сменить номер телефона</a>
-                </div>
-            </div>
-            <div class="mb-22px">
-                <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
-            </div>
-        </div>
-
-        <!-- widget «Способ отгрузки» -->
-        <div class="content-widget max-w-800px">
-            <div class="h4 mb-22px">Способ отгрузки</div>
-            <div class="row" style="--bs-gutter-y: 22px;">
-
-                <div class="col-lg-12">
-                    <!-- Самовывоз -->
-                    <div class="checkout-radio-card" data-group="delivery">
-                        <div class="checkout-radio-card__header">
-                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                <div class="h4 fw-normal text-uppercase mb-0">Самовывоз</div>
-                                <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
-                            </label>
-                            <div class="text-success fw-semibold mb-2">Бесплатно</div>
-                        </div>
-                        <div class="checkout-radio-card__body">
-
-                            <!-- item «Забрать из магазина» -->
-                            <div class="item-pickup-option">
-                                <!-- Кнопка -->
-                                <label class="item-pickup-option__btn">
-                                    <div class="d-flex align-items-center gap-12px">
-                                        <!-- icon-map-marker -->
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                                            </svg>
-                                        </span>
-                                        <div class="fw-medium">Забрать из магазина</div>
-                                    </div>
-                                    <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
-                                </label>
-                                <div class="item-pickup-option__body">
-                                    <!-- Адрес -->
-                                    <div class="mb-3">
-                                        <p class="h4 ff-title fw-normal mb-12px">МастерДом на Профсоюзной</p>
-                                        <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а</p>
-                                        <div class="d-flex flex-wrap gap-2 mb-12px">
-                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                        </div>
-                                        <div class="d-flex flex-wrap gap-22px mb-12px"
-                                            style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
-                                            <a href="tel:88003503243" class="item-phone">8 (800) 350-32-43</a>
-                                            <a href="mailto:info@mail.ru" class="item-email">info@mail.ru</a>
-                                        </div>
-                                        <div class="text-primary fw-medium">c 18 января</div>
-                                    </div>
-                                    <!-- Инфо условий и оплаты -->
-                                    <div>
-                                        <p class="fw-medium mb-1">Условия получения заказа со склада</p>
-                                        <p class="text-muted-light">Заказ пропуска (ФИО + номер документа + гос.
-                                            номер машины).Ежедневно с 10:00 до 17:00.</p>
-                                        <p class="fw-medium mb-1">Оплата</p>
-                                        <p class="text-muted-light">Онлайн, Оплата в фирменном салоне наличным или
-                                            безналичным способами оплаты в кассе.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- item «Центральный склад» -->
-                            <div class="item-pickup-option">
-                                <!-- Кнопка -->
-                                <label class="item-pickup-option__btn">
-                                    <div class="d-flex align-items-center gap-12px">
-                                        <!-- icon-map-marker -->
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                                            </svg>
-                                        </span>
-                                        <div class="fw-medium">Центральный склад</div>
-                                    </div>
-                                    <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
-                                </label>
-                                <div class="item-pickup-option__body">
-                                    <!-- Адрес -->
-                                    <div class="mb-3">
-                                        <p class="h4 ff-title fw-normal mb-12px">Адрес</p>
-                                        <p class="mb-12px">Московская область, Зелёное шоссе, 2</p>
-                                        <div class="d-flex flex-wrap gap-22px mb-12px"
-                                            style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
-                                            <a href="tel:88003503243" class="item-phone">8 (800) 350-32-43</a>
-                                        </div>
-                                        <div class="text-primary fw-medium">c 18 января</div>
-                                    </div>
-                                    <!-- Инфо условий и оплаты -->
-                                    <div>
-                                        <p class="fw-medium mb-1">Условия получения заказа со склада</p>
-                                        <p class="text-muted-light">Заказ пропуска (ФИО + номер документа + гос.
-                                            номер машины).Ежедневно с 10:00 до 17:00.</p>
-                                        <p class="fw-medium mb-1">Оплата</p>
-                                        <p class="text-muted-light">Онлайн, Оплата в фирменном салоне наличным или
-                                            безналичным способами оплаты в кассе.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- item «Склад в Тюмени» -->
-                            <div class="item-pickup-option">
-                                <!-- Кнопка -->
-                                <label class="item-pickup-option__btn">
-                                    <div class="d-flex align-items-center gap-12px">
-                                        <!-- icon-map-marker -->
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                                            </svg>
-                                        </span>
-                                        <div class="fw-medium">Склад в Тюмени</div>
-                                    </div>
-                                    <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
-                                </label>
-                                <div class="item-pickup-option__body">
-                                    <!-- Адрес -->
-                                    <div class="mb-3">
-                                        <p class="h4 ff-title fw-normal mb-12px">МастерДом на Профсоюзной</p>
-                                        <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а</p>
-                                        <div class="d-flex flex-wrap gap-2 mb-12px">
-                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                        </div>
-                                        <div class="d-flex flex-wrap gap-22px mb-12px"
-                                            style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
-                                            <a href="tel:88003503243" class="item-phone">8 (800) 350-32-43</a>
-                                            <a href="mailto:info@mail.ru" class="item-email">info@mail.ru</a>
-                                        </div>
-                                        <div class="text-primary fw-medium">c 18 января</div>
-                                    </div>
-                                    <!-- Инфо условий и оплаты -->
-                                    <div>
-                                        <p class="fw-medium mb-1">Условия получения заказа со склада</p>
-                                        <p class="text-muted-light">Заказ пропуска (ФИО + номер документа + гос.
-                                            номер машины).Ежедневно с 10:00 до 17:00.</p>
-                                        <p class="fw-medium mb-1">Оплата</p>
-                                        <p class="text-muted-light">Онлайн, Оплата в фирменном салоне наличным или
-                                            безналичным способами оплаты в кассе.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Доставка транспортной компанией -->
-                    <div class="checkout-radio-card" data-group="delivery">
-                        <div class="checkout-radio-card__header">
-                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                <div class="h4 fw-normal text-uppercase mb-0">Доставка транспортной компанией</div>
-                                <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
-                            </label>
-                            <div class="text-primary fw-semibold mb-2">от 1000 ₽</div>
-                            <div class="mb-1">от 2-7 дней с 10-18 часов</div>
-                            <div class="fs-6 text-muted-light">*Точное время лоставки уточняйте у менеждера</div>
-                        </div>
-                        <div class="checkout-radio-card__body">
-                            <div class="mb-5">
-                                <div class="mb-12px">
-                                    <select class="form-select">
-                                        <option selected="">Выбрать ТК</option>
-                                        <option value="1">ТК «Название 1»</option>
-                                        <option value="2">ТК «Название 2»</option>
-                                        <option value="2">ТК «Название 3»</option>
-                                        <option value="2">ТК «Название 4»</option>
-                                        <option value="2">ТК «Название 5»</option>
-                                    </select>
-                                </div>
-                                <div class="mb-12px">
-                                    <label class="d-flex gap-2 align-items-center">
-                                        <input type="radio" name="checkout-delivery-tc" class="form-radio" data-child-radio>
-                                        <span>Доставка до терминала ТК</span>
-                                    </label>
-                                </div>
-                                <div class="mb-12px">
-                                    <label class="d-flex gap-2 align-items-center">
-                                        <input type="radio" name="checkout-delivery-tc" class="form-radio" data-child-radio>
-                                        <span>Доставка до покупателя средствами ТК</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="fs-6">
-                                <p class="fw-medium mb-1">Условия получения заказа</p>
-                                <p>1. На месте, где предполагается разгрузка, необходимо иметь доступ для грузового
-                                    автомобиля.</p>
-                                <p>2. Чтобы избежать повторной платной доставки, пожалуйста, будьте на месте для приема
-                                    товара в указанное время, так как водитель не может ждать более 20 минут из-за его
-                                    графика.</p>
-                                <p>3. При расчете стоимости доставки учитывается общий вес и объем товаров.</p>
-                                <p class="fw-medium mb-1">Оплата</p>
-                                <p class="text-muted-light">Онлайн, наличными при получении</p>
-                                <p class="text-primary">*Доставка разных категорий товаров считается по максимальной:
-                                    обои-свет, плитка-сантехника, крупный формат.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Доставка до Торговой точки/Склада -->
-                    <div class="checkout-radio-card" data-group="delivery">
-                        <div class="checkout-radio-card__header">
-                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                <div class="h4 fw-normal text-uppercase mb-0">Доставка до Торговой точки/Склада</div>
-                                <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
-                            </label>
-                            <div class="text-success fw-semibold mb-2">Бесплатно</div>
-                            <!-- <div class="mb-1">Условия получения заказа со склада</div> -->
-                            <div class="fs-6 text-muted-light">Заказ пропуска (ФИО + номер документа + гос. номер
-                                машины).<br> Ежедневно с 10:00 до 17:00.</div>
-                        </div>
-                        <!-- <div class="checkout-radio-card__body">
-                        </div> -->
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- widget «Адрес доставки» -->
-        <div class="content-widget max-w-600px">
-            <div class="h4 mb-22px">Адрес доставки</div>
-            <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                <div class="col-12">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="Адрес*" required="">
-                        <label>Адрес*</label>
-                    </div>
-                </div>
-                <div class="col-6 col-lg">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="Дом">
-                        <label>Дом</label>
-                    </div>
-                </div>
-                <div class="col-6 col-lg">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="Квартира">
-                        <label>Квартира</label>
-                    </div>
-                </div>
-                <div class="col-6 col-lg">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="Этаж">
-                        <label>Этаж</label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="d-flex flex-wrap gap-3">
-                        <label class="d-flex gap-2 align-items-center">
-                            <input type="checkbox" class="form-checkbox" value="">
-                            <span>нужна разгрузка</span>
-                        </label>
-                        <label class="d-flex gap-2 align-items-center">
-                            <input type="checkbox" class="form-checkbox" value="">
-                            <span>подьем на этаж</span>
-                        </label>
-                        <label class="d-flex gap-2 align-items-center">
-                            <input type="checkbox" class="form-checkbox" value="">
-                            <span>нет лифта</span>
-                        </label>
-                        <label class="d-flex gap-2 align-items-center">
-                            <input type="checkbox" class="form-checkbox" value="">
-                            <span>паркинг</span>
-                        </label>
-                        <label class="d-flex gap-2 align-items-center">
-                            <span>высота паркинга</span>
-                            <input type="text" class="input-text-custom-sm" style="max-width: 50px;" placeholder="2 м">
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <textarea class="form-control" rows="3" placeholder="Добавить комментарий для курьера"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <!-- widget «Способы оплаты» -->
-        <div class="content-widget max-w-800px">
-            <div class="h4 mb-22px">Способ оплаты</div>
-            <div class="row" style="--bs-gutter-y: 22px;">
-
-                <div class="col-lg-12">
-                    <!-- Оплата онлайн -->
-                    <div class="checkout-radio-card" data-group="payment">
-                        <div class="checkout-radio-card__header">
-                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                <div class="h4 fw-normal text-uppercase mb-0">Онлайн</div>
-                                <input type="radio" name="checkout-payment" class="form-radio" data-parent-radio>
-                            </label>
-                            <div class="d-flex flex-wrap align-items-center gap-2">
-                                <img class="img-fluid" src="img/cart/payment-logo-visa.png" alt="visa">
-                                <img class="img-fluid" src="img/cart/payment-logo-mc.png" alt="mastercard">
-                                <img class="img-fluid" src="img/cart/payment-logo-mir.png" alt="mir">
-                            </div>
-                        </div>
-                        <!-- <div class="checkout-radio-card__body">
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Оплата при получении -->
-                    <div class="checkout-radio-card" data-group="payment">
-                        <div class="checkout-radio-card__header">
-                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                <div class="h4 fw-normal text-uppercase mb-0">При получении</div>
-                                <input type="radio" name="checkout-payment" class="form-radio" data-parent-radio>
-                            </label>
-                            <ol class="fs-6 text-muted-light mb-0">
-                                <li>Оплата в фирменном салоне наличным или безналичным способами оплаты в кассе.</li>
-                                <li>Наличный расчет курьеру при получении</li>
-                            </ol>
-                        </div>
-                        <!-- <div class="checkout-radio-card__body">
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- В кредит -->
-                    <div class="checkout-radio-card" data-group="payment">
-                        <div class="checkout-radio-card__header">
-                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                <div class="h4 fw-normal text-uppercase mb-0">В кредит</div>
-                                <input type="radio" name="checkout-payment" class="form-radio" data-parent-radio>
-                            </label>
-                            <!-- <div class="fs-6 text-muted-light mb-2">Условия прописаны для этого способа оплаты при
-                                необходимости</div> -->
-                            <div class="d-flex justify-content-between">
-                                <div class="text-muted-light">Сумма кредита</div>
-                                <div class="fw-medium">380 200 ₽</div>
-                            </div>
-                        </div>
-                        <div class="checkout-radio-card__body">
-                            <div class="d-flex flex-column flex-lg-row gap-12px">
-                                <label class="d-flex gap-2 align-items-center">
-                                    <input type="radio" name="checkout-payment-credit" class="form-radio"
-                                        data-child-radio>
-                                    <span>Онлайн</span>
-                                </label>
-                                <label class="d-flex gap-2 align-items-center">
-                                    <input type="radio" name="checkout-payment-credit" class="form-radio"
-                                        data-child-radio>
-                                    <span>При получении</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- widget «О заказе» -->
-        <div class="content-widget max-w-600px">
-            <div class="h4 mb-22px">О заказе</div>
-            <div class="d-flex flex-column gap-32px">
-
-                <div class="max-w-470px">
-                    <table class="table table-profile-orders-summary">
-                        <tbody>
-                            <tr>
-                                <th>Товары (6)</th>
-                                <td>380 200 ₽</td>
-                            </tr>
-                            <tr>
-                                <th>Скидки на товары:</th>
-                                <td>
-                                    <div class="text-danger">-116 200 ₽</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Сумма НДС:</th>
-                                <td>13 867 ₽</td>
-                            </tr>
-                            <tr>
-                                <th>Общий вес:</th>
-                                <td>30.973 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Оплата</th>
-                                <td>онлайн</td>
-                            </tr>
-                            <tr>
-                                <th>Доставка</th>
-                                <td>курьером</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div>
-                    <div class="text-muted-light fs-6">Итого:</div>
-                    <div class="h2 text-primary ff-title fw-bold mb-0">560 000 ₽</div>
-                </div>
-
-                <div>
+                <!-- widget «Покупатель» -->
+                <div class="content-widget max-w-600px">
+                    <div class="h4 mb-22px">Покупатель</div>
                     <div class="mb-22px">
-                        <a href="cart-success.html" class="btn btn-secondary w-100 max-w-300px">оформить заказ</a>
+                        <select class="form-select">
+                            <option selected="">Выберите из списка</option>
+                            <option value="1">Плательщик 1</option>
+                            <option value="2">Плательщик 2</option>
+                            <option value="2">Плательщик 3</option>
+                        </select>
                     </div>
+                    <div class="mb-22px">
+                        <input type="text" class="form-control" placeholder="Имя профиля*" required=""
+                            value="«Дизайн-студия Лотос» г. Ориенбург">
+                    </div>
+                    <div class="mb-22px">
+                        <input type="email" class="form-control" placeholder="E-mail*" required="" value="trade-luvr@mail.ru">
+                    </div>
+                    <div class="mb-22px">
+                        <input type="text" class="form-control" placeholder="Телефон" required="" value="8 (925) 689-15-19"
+                            readonly="" disabled="">
+                        <div class="text-muted-light small mt-12px">
+                            <a href="#" class="text-decoration-underline">сменить номер телефона</a>
+                        </div>
+                    </div>
+                    <div class="mb-22px">
+                        <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
+                    </div>
+                </div>
 
-                    <div>
-                        <label class="d-flex gap-2 align-items-center">
-                            <input type="checkbox" class="form-checkbox">
-                            <span>Принимаю условия <a href="#" class="text-decoration-underline">обработки персональных
-                                    данных</a>.</span>
-                        </label>
+                <!-- widget «Способ отгрузки» -->
+                <div class="content-widget max-w-800px">
+                    <div class="h4 mb-22px">Способ отгрузки</div>
+                    <div class="row" style="--bs-gutter-y: 22px;">
+
+                        <div class="col-lg-12">
+                            <!-- Самовывоз -->
+                            <div class="checkout-radio-card" data-group="delivery">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Самовывоз</div>
+                                        <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <div class="text-success fw-semibold mb-2">Бесплатно</div>
+                                </div>
+                                <div class="checkout-radio-card__body">
+
+                                    <!-- item «Забрать из магазина» -->
+                                    <div class="item-pickup-option">
+                                        <!-- Кнопка -->
+                                        <label class="item-pickup-option__btn">
+                                            <div class="d-flex align-items-center gap-12px">
+                                                <!-- icon-map-marker -->
+                                                <span>
+                                                    <svg width="32" height="32">
+                                                        <use xlink:href="img/sprite.svg#icon-map-marker"></use>
+                                                    </svg>
+                                                </span>
+                                                <div class="fw-medium">Забрать из магазина</div>
+                                            </div>
+                                            <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
+                                        </label>
+                                        <div class="item-pickup-option__body">
+                                            <!-- Адрес -->
+                                            <div class="mb-3">
+                                                <p class="h4 ff-title fw-normal mb-12px">МастерДом на Профсоюзной</p>
+                                                <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а</p>
+                                                <div class="d-flex flex-wrap gap-2 mb-12px">
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                </div>
+                                                <div class="d-flex flex-wrap gap-22px mb-12px"
+                                                    style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
+                                                    <a href="tel:88003503243" class="item-phone">8 (800) 350-32-43</a>
+                                                    <a href="mailto:info@mail.ru" class="item-email">info@mail.ru</a>
+                                                </div>
+                                                <div class="text-primary fw-medium">c 18 января</div>
+                                            </div>
+                                            <!-- Инфо условий и оплаты -->
+                                            <div>
+                                                <p class="fw-medium mb-1">Условия получения заказа со склада</p>
+                                                <p class="text-muted-light">Заказ пропуска (ФИО + номер документа + гос.
+                                                    номер машины).Ежедневно с 10:00 до 17:00.</p>
+                                                <p class="fw-medium mb-1">Оплата</p>
+                                                <p class="text-muted-light">Онлайн, Оплата в фирменном салоне наличным или
+                                                    безналичным способами оплаты в кассе.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- item «Центральный склад» -->
+                                    <div class="item-pickup-option">
+                                        <!-- Кнопка -->
+                                        <label class="item-pickup-option__btn">
+                                            <div class="d-flex align-items-center gap-12px">
+                                                <!-- icon-map-marker -->
+                                                <span>
+                                                    <svg width="32" height="32">
+                                                        <use xlink:href="img/sprite.svg#icon-map-marker"></use>
+                                                    </svg>
+                                                </span>
+                                                <div class="fw-medium">Центральный склад</div>
+                                            </div>
+                                            <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
+                                        </label>
+                                        <div class="item-pickup-option__body">
+                                            <!-- Адрес -->
+                                            <div class="mb-3">
+                                                <p class="h4 ff-title fw-normal mb-12px">Адрес</p>
+                                                <p class="mb-12px">Московская область, Зелёное шоссе, 2</p>
+                                                <div class="d-flex flex-wrap gap-22px mb-12px"
+                                                    style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
+                                                    <a href="tel:88003503243" class="item-phone">8 (800) 350-32-43</a>
+                                                </div>
+                                                <div class="text-primary fw-medium">c 18 января</div>
+                                            </div>
+                                            <!-- Инфо условий и оплаты -->
+                                            <div>
+                                                <p class="fw-medium mb-1">Условия получения заказа со склада</p>
+                                                <p class="text-muted-light">Заказ пропуска (ФИО + номер документа + гос.
+                                                    номер машины).Ежедневно с 10:00 до 17:00.</p>
+                                                <p class="fw-medium mb-1">Оплата</p>
+                                                <p class="text-muted-light">Онлайн, Оплата в фирменном салоне наличным или
+                                                    безналичным способами оплаты в кассе.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- item «Склад в Тюмени» -->
+                                    <div class="item-pickup-option">
+                                        <!-- Кнопка -->
+                                        <label class="item-pickup-option__btn">
+                                            <div class="d-flex align-items-center gap-12px">
+                                                <!-- icon-map-marker -->
+                                                <span>
+                                                    <svg width="32" height="32">
+                                                        <use xlink:href="img/sprite.svg#icon-map-marker"></use>
+                                                    </svg>
+                                                </span>
+                                                <div class="fw-medium">Склад в Тюмени</div>
+                                            </div>
+                                            <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
+                                        </label>
+                                        <div class="item-pickup-option__body">
+                                            <!-- Адрес -->
+                                            <div class="mb-3">
+                                                <p class="h4 ff-title fw-normal mb-12px">МастерДом на Профсоюзной</p>
+                                                <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а</p>
+                                                <div class="d-flex flex-wrap gap-2 mb-12px">
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                </div>
+                                                <div class="d-flex flex-wrap gap-22px mb-12px"
+                                                    style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
+                                                    <a href="tel:88003503243" class="item-phone">8 (800) 350-32-43</a>
+                                                    <a href="mailto:info@mail.ru" class="item-email">info@mail.ru</a>
+                                                </div>
+                                                <div class="text-primary fw-medium">c 18 января</div>
+                                            </div>
+                                            <!-- Инфо условий и оплаты -->
+                                            <div>
+                                                <p class="fw-medium mb-1">Условия получения заказа со склада</p>
+                                                <p class="text-muted-light">Заказ пропуска (ФИО + номер документа + гос.
+                                                    номер машины).Ежедневно с 10:00 до 17:00.</p>
+                                                <p class="fw-medium mb-1">Оплата</p>
+                                                <p class="text-muted-light">Онлайн, Оплата в фирменном салоне наличным или
+                                                    безналичным способами оплаты в кассе.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- Доставка транспортной компанией -->
+                            <div class="checkout-radio-card" data-group="delivery">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Доставка транспортной компанией</div>
+                                        <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <div class="text-primary fw-semibold mb-2">от 1000 ₽</div>
+                                    <div class="mb-1">от 2-7 дней с 10-18 часов</div>
+                                    <div class="fs-6 text-muted-light">*Точное время лоставки уточняйте у менеждера</div>
+                                </div>
+                                <div class="checkout-radio-card__body">
+                                    <div class="mb-5">
+                                        <div class="mb-12px">
+                                            <select class="form-select">
+                                                <option selected="">Выбрать ТК</option>
+                                                <option value="1">ТК «Название 1»</option>
+                                                <option value="2">ТК «Название 2»</option>
+                                                <option value="2">ТК «Название 3»</option>
+                                                <option value="2">ТК «Название 4»</option>
+                                                <option value="2">ТК «Название 5»</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-12px">
+                                            <label class="d-flex gap-2 align-items-center">
+                                                <input type="radio" name="checkout-delivery-tc" class="form-radio" data-child-radio>
+                                                <span>Доставка до терминала ТК</span>
+                                            </label>
+                                        </div>
+                                        <div class="mb-12px">
+                                            <label class="d-flex gap-2 align-items-center">
+                                                <input type="radio" name="checkout-delivery-tc" class="form-radio" data-child-radio>
+                                                <span>Доставка до покупателя средствами ТК</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="fs-6">
+                                        <p class="fw-medium mb-1">Условия получения заказа</p>
+                                        <p>1. На месте, где предполагается разгрузка, необходимо иметь доступ для грузового
+                                            автомобиля.</p>
+                                        <p>2. Чтобы избежать повторной платной доставки, пожалуйста, будьте на месте для приема
+                                            товара в указанное время, так как водитель не может ждать более 20 минут из-за его
+                                            графика.</p>
+                                        <p>3. При расчете стоимости доставки учитывается общий вес и объем товаров.</p>
+                                        <p class="fw-medium mb-1">Оплата</p>
+                                        <p class="text-muted-light">Онлайн, наличными при получении</p>
+                                        <p class="text-primary">*Доставка разных категорий товаров считается по максимальной:
+                                            обои-свет, плитка-сантехника, крупный формат.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- Доставка до Торговой точки/Склада -->
+                            <div class="checkout-radio-card" data-group="delivery">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Доставка до Торговой точки/Склада</div>
+                                        <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <div class="text-success fw-semibold mb-2">Бесплатно</div>
+                                    <!-- <div class="mb-1">Условия получения заказа со склада</div> -->
+                                    <div class="fs-6 text-muted-light">Заказ пропуска (ФИО + номер документа + гос. номер
+                                        машины).<br> Ежедневно с 10:00 до 17:00.</div>
+                                </div>
+                                <!-- <div class="checkout-radio-card__body">
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- widget «Адрес доставки» -->
+                <div class="content-widget max-w-600px">
+                    <div class="h4 mb-22px">Адрес доставки</div>
+                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Адрес*" required="">
+                                <label>Адрес*</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Дом">
+                                <label>Дом</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Квартира">
+                                <label>Квартира</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Этаж">
+                                <label>Этаж</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-wrap gap-3">
+                                <label class="d-flex gap-2 align-items-center">
+                                    <input type="checkbox" class="form-checkbox" value="">
+                                    <span>нужна разгрузка</span>
+                                </label>
+                                <label class="d-flex gap-2 align-items-center">
+                                    <input type="checkbox" class="form-checkbox" value="">
+                                    <span>подьем на этаж</span>
+                                </label>
+                                <label class="d-flex gap-2 align-items-center">
+                                    <input type="checkbox" class="form-checkbox" value="">
+                                    <span>нет лифта</span>
+                                </label>
+                                <label class="d-flex gap-2 align-items-center">
+                                    <input type="checkbox" class="form-checkbox" value="">
+                                    <span>паркинг</span>
+                                </label>
+                                <label class="d-flex gap-2 align-items-center">
+                                    <span>высота паркинга</span>
+                                    <input type="text" class="input-text-custom-sm" style="max-width: 50px;" placeholder="2 м">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="3" placeholder="Добавить комментарий для курьера"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- widget «Способы оплаты» -->
+                <div class="content-widget max-w-800px">
+                    <div class="h4 mb-22px">Способ оплаты</div>
+                    <div class="row" style="--bs-gutter-y: 22px;">
+
+                        <div class="col-lg-12">
+                            <!-- Оплата онлайн -->
+                            <div class="checkout-radio-card" data-group="payment">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Онлайн</div>
+                                        <input type="radio" name="checkout-payment" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <div class="d-flex flex-wrap align-items-center gap-2">
+                                        <img class="img-fluid" src="img/cart/payment-logo-visa.png" alt="visa">
+                                        <img class="img-fluid" src="img/cart/payment-logo-mc.png" alt="mastercard">
+                                        <img class="img-fluid" src="img/cart/payment-logo-mir.png" alt="mir">
+                                    </div>
+                                </div>
+                                <!-- <div class="checkout-radio-card__body">
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- Оплата при получении -->
+                            <div class="checkout-radio-card" data-group="payment">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">При получении</div>
+                                        <input type="radio" name="checkout-payment" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <ol class="fs-6 text-muted-light mb-0">
+                                        <li>Оплата в фирменном салоне наличным или безналичным способами оплаты в кассе.</li>
+                                        <li>Наличный расчет курьеру при получении</li>
+                                    </ol>
+                                </div>
+                                <!-- <div class="checkout-radio-card__body">
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- В кредит -->
+                            <div class="checkout-radio-card" data-group="payment">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">В кредит</div>
+                                        <input type="radio" name="checkout-payment" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <!-- <div class="fs-6 text-muted-light mb-2">Условия прописаны для этого способа оплаты при
+                                        необходимости</div> -->
+                                    <div class="d-flex justify-content-between">
+                                        <div class="text-muted-light">Сумма кредита</div>
+                                        <div class="fw-medium">380 200 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-radio-card__body">
+                                    <div class="d-flex flex-column flex-lg-row gap-12px">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="checkout-payment-credit" class="form-radio"
+                                                data-child-radio>
+                                            <span>Онлайн</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="checkout-payment-credit" class="form-radio"
+                                                data-child-radio>
+                                            <span>При получении</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- widget «О заказе» -->
+                <div class="content-widget max-w-600px">
+                    <div class="h4 mb-22px">О заказе</div>
+                    <div class="d-flex flex-column gap-32px">
+
+                        <div class="max-w-470px">
+                            <table class="table table-profile-orders-summary">
+                                <tbody>
+                                    <tr>
+                                        <th>Товары (6)</th>
+                                        <td>380 200 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Скидки на товары:</th>
+                                        <td>
+                                            <div class="text-danger">-116 200 ₽</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Сумма НДС:</th>
+                                        <td>13 867 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Общий вес:</th>
+                                        <td>30.973 кг</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Оплата</th>
+                                        <td>онлайн</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Доставка</th>
+                                        <td>курьером</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div>
+                            <div class="text-muted-light fs-6">Итого:</div>
+                            <div class="h2 text-primary ff-title fw-bold mb-0">560 000 ₽</div>
+                        </div>
+
+                        <div>
+                            <div class="mb-22px">
+                                <a href="cart-success.html" class="btn btn-secondary w-100 max-w-300px">оформить заказ</a>
+                            </div>
+
+                            <div>
+                                <label class="d-flex gap-2 align-items-center">
+                                    <input type="checkbox" class="form-checkbox">
+                                    <span>Принимаю условия <a href="#" class="text-decoration-underline">обработки персональных
+                                            данных</a>.</span>
+                                </label>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
-        </div>
-
-    </div>
-</section>
+        </section>
 
     </main>
 
@@ -1881,41 +1861,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Модалка "Выбор города" -->
-    <!-- <div class="fancybox-custom-modal" id="city-selector-modal">
-        <div class="city-selector__container">
-            <p class="h5 city-selector__title">Выберете город</p>
-            <div class="city-selector__input-wrapper">
-                <form class="form-city-selector" action="#">
-                    <input type="text" class="form-control" placeholder="Найти город">
-                    <button type="submit" class="btn form-city-selector__btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                            <g>
-                                <path class="path-stroke-dynamic" d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02943 14.9706 1 10 1C5.02943 1 1 5.02943 1 10C1 14.9706 5.02943 19 10 19Z" stroke="#7C7D80" stroke-width="1.18421" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path class="path-stroke-dynamic" d="M21.999 21.9995L16.3867 16.4121" stroke="#7C7D80" stroke-width="1.18421" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-            <div class="city-selector__popular-cities">
-                <p class="h6 city-selector__popular-cities-title">Популярные города</p>
-                <ul class="city-selector__popular-cities-list">
-                    <li><a href="#">Город 1</a></li>
-                    <li><a href="#">Город 2</a></li>
-                    <li><a href="#">Город 3</a></li>
-                    <li><a href="#">Город 4</a></li>
-                    <li><a href="#">Город 5</a></li>
-                    <li><a href="#">Город 6</a></li>
-                    <li><a href="#">Город 7</a></li>
-                    <li><a href="#">Город 8</a></li>
-                    <li><a href="#">Город 9</a></li>
-                    <li><a href="#">Город 10</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
 
     <!-- SCRIPTS -->
     

@@ -22,8 +22,6 @@
 
     <!-- title -->
     <title>Вёрстка ОПТ - ЛК История заказов</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
 </head>
 
 <body>
@@ -111,15 +109,6 @@
                         <!-- Выбор города -->
                         <div class="mobile-collapse-menu__header">
                             <div class="title">Меню</div>
-                            <div class="city-select-invoker d-none">
-                                <div>Ваш город:</div>
-                                <div class="city-select__current-city" data-src="#city-selector-modal" fancybox-dialog>
-                                    <div>Москва</div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
-                                        <path d="M1 1L5.0931 5.81382C5.14102 5.87267 5.19858 5.91951 5.26232 5.95151C5.32604 5.9835 5.39461 6 5.4639 6C5.53319 6 5.60177 5.9835 5.66549 5.95151C5.72921 5.91951 5.78677 5.87267 5.83471 5.81382L9.92778 0.999999" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </div>
                         </div>
     
                         <!-- Контейнер для двух меню -->
@@ -1091,15 +1080,6 @@
                                 </a>
                             </div>
                             <!-- icon -->
-                            <!-- <div class="navbar-desktop__icon icon-location">
-                                <a href="#city-selector-modal" fancybox-dialog>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                        <path d="M28.0687 13.0343C28.0687 21.0572 16.0343 30.4172 16.0343 30.4172C16.0343 30.4172 4 21.0572 4 13.0343C4 6.47963 9.47963 1 16.0343 1C22.589 1 28.0687 6.47963 28.0687 13.0343Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M16.0349 17.0453C18.2503 17.0453 20.0463 15.2494 20.0463 13.0339C20.0463 10.8184 18.2503 9.02246 16.0349 9.02246C13.8194 9.02246 12.0234 10.8184 12.0234 13.0339C12.0234 15.2494 13.8194 17.0453 16.0349 17.0453Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div> -->
-                            <!-- icon -->
                             <div class="navbar-desktop__icon icon-profile">
                                 <a href="account-login.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -1243,342 +1223,409 @@
 </nav>
                     </div>
                     <div class="col-lg-9">
+
                         <!-- account-widgets -->
+                        
                         <!-- Фильтры -->
-<div class="account-content-widget max-w-full">
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-22px">
-        <div class="d-flex align-items-center flex-wrap gap-22px">
-            <div>
-                <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Статус заказа
-                    <span class="icon-arrow-down">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495"
-                                stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </span>
+                        <div class="account-content-widget max-w-full">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-22px">
+    <div class="d-flex align-items-center flex-wrap gap-22px">
+        <div>
+            <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Статус заказа
+                <span class="icon-arrow-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495"
+                            stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-select">
+                <li><a class="dropdown-item" href="#">Ожидает подтверждения</a></li>
+                <li><a class="dropdown-item" href="#">Подтвержден</a></li>
+                <li><a class="dropdown-item" href="#">Собран</a></li>
+                <li><a class="dropdown-item" href="#">В доставке</a></li>
+                <li><a class="dropdown-item" href="#">Доставлен</a></li>
+                <li><a class="dropdown-item" href="#">Отменен</a></li>
+            </ul>
+        </div>
+        <div>
+            <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                Статус оплаты
+                <span class="icon-arrow-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495"
+                            stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-select">
+                <li><a class="dropdown-item" href="#">Оплачен</a></li>
+                <li><a class="dropdown-item" href="#">Не оплачен</a></li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="btn d-inline-flex align-items-center gap-2 border-0 p-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <path d="M22 6L6.44365 21.5564" stroke="#1A1A16" stroke-width="0.853923" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 6L21.5564 21.5564" stroke="#1A1A16" stroke-width="0.853923" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Сбросить фильтры</span>
+    </button>
+</div>
+                        </div>
+
+                        <!-- Поиск -->
+                        <div class="account-content-widget max-w-850px">
+                            <form class="form-order-search" action="#">
+    <div class="row align-items-end gy-4">
+        <div class="col-lg position-relative">
+            <input type="text" autocomplete="off" class="form-control"
+                placeholder="Поиск по артикулу, коллекции или названию">
+        </div>
+        <div class="col-lg-auto">
+            <button type="submit" class="btn btn-outline">
+                <span>Поиск</span>
+            </button>
+        </div>
+    </div>
+</form>
+                        </div>
+
+                        <!-- Заказы -->
+                        <div class="account-content-widget max-w-850px">
+                            <div class="d-flex flex-column gap-32px">
+
+                                <!-- item -->
+                                <div class="card profile-order-card">
+    <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between mb-12px">
+            <div class="profile-order-card__date">от 21.01.2024</div>
+            <div class="dropdown dropdown-card-options">
+                <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false"
+                    data-bs-offset="0,5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="path-bg"
+                            d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                            fill="#DEE5ED" />
+                        <path
+                            d="M24.4497 14.483H22.478C22.3697 14.483 22.3047 14.418 22.2613 14.3313C22.1097 13.768 21.893 13.248 21.6113 12.7497C21.568 12.663 21.568 12.5547 21.633 12.4897L23.0197 11.103C23.1063 11.0163 23.1063 10.8863 23.0197 10.7997L21.1997 8.95801C21.113 8.87134 20.983 8.87134 20.8963 8.95801L19.5097 10.3447C19.4447 10.4097 19.3363 10.4313 19.2497 10.388C18.7513 10.1063 18.2313 9.88967 17.668 9.73801C17.5813 9.71634 17.5163 9.62967 17.5163 9.52134V7.54967C17.5163 7.41967 17.4297 7.33301 17.2997 7.33301H14.6997C14.5697 7.33301 14.483 7.41967 14.483 7.54967V9.52134C14.483 9.62967 14.418 9.69467 14.3313 9.73801C13.768 9.88967 13.248 10.1063 12.7497 10.388C12.663 10.4313 12.5547 10.4313 12.4897 10.3663C12.1863 10.063 11.428 9.30467 11.103 8.97967C11.0163 8.89301 10.8863 8.89301 10.7997 8.97967L8.95801 10.7997C8.87134 10.8863 8.87134 11.0163 8.95801 11.103L10.3447 12.4897C10.4097 12.5547 10.4313 12.663 10.388 12.7497C10.1063 13.248 9.88967 13.768 9.73801 14.3313C9.71634 14.418 9.62967 14.483 9.52134 14.483H7.54967C7.41967 14.483 7.33301 14.5697 7.33301 14.6997V17.2997C7.33301 17.4297 7.41967 17.5163 7.54967 17.5163H9.52134C9.62967 17.5163 9.69467 17.5813 9.73801 17.668C9.88967 18.2313 10.1063 18.7513 10.388 19.2497C10.4313 19.3363 10.4313 19.4447 10.3663 19.5097C10.063 19.813 9.30467 20.5713 8.97967 20.8963C8.89301 20.983 8.89301 21.113 8.97967 21.1997L10.8213 23.0413C10.908 23.128 11.038 23.128 11.1247 23.0413L12.5113 21.6547C12.5763 21.5897 12.6847 21.568 12.7713 21.6113C13.2697 21.893 13.7897 22.1097 14.353 22.2613C14.4397 22.283 14.483 22.3913 14.483 22.4997V24.4497C14.483 24.5797 14.5913 24.6663 14.7213 24.6663H17.3213C17.4513 24.6663 17.5163 24.5797 17.5163 24.4497V22.4997C17.5163 22.3913 17.603 22.3047 17.6897 22.2613C18.253 22.1097 18.773 21.893 19.2713 21.6113C19.358 21.568 19.4663 21.568 19.5313 21.633C19.8347 21.9363 20.593 22.6947 20.918 23.0197C21.0047 23.1063 21.1347 23.1063 21.2213 23.0197L23.063 21.178C23.1497 21.0913 23.1497 20.9613 23.063 20.8747L21.6763 19.488C21.6113 19.423 21.5897 19.3147 21.633 19.228C21.9147 18.7297 22.1313 18.2313 22.283 17.668C22.3047 17.5813 22.3913 17.5163 22.4997 17.5163H24.4713C24.5797 17.538 24.6663 17.4297 24.6663 17.2997V14.6997C24.6663 14.5697 24.5797 14.483 24.4497 14.483ZM15.9997 19.8997C13.8547 19.8997 12.0997 18.1447 12.0997 15.9997C12.0997 13.8547 13.8547 12.0997 15.9997 12.0997C18.1447 12.0997 19.8997 13.8547 19.8997 15.9997C19.8997 18.1447 18.1447 19.8997 15.9997 19.8997Z"
+                            fill="#474A51" />
+                    </svg>
                 </button>
-                <ul class="dropdown-menu dropdown-select">
-                    <li><a class="dropdown-item" href="#">Ожидает подтверждения</a></li>
-                    <li><a class="dropdown-item" href="#">Подтвержден</a></li>
-                    <li><a class="dropdown-item" href="#">Собран</a></li>
-                    <li><a class="dropdown-item" href="#">В доставке</a></li>
-                    <li><a class="dropdown-item" href="#">Доставлен</a></li>
-                    <li><a class="dropdown-item" href="#">Отменен</a></li>
-                </ul>
-            </div>
-            <div>
-                <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Статус оплаты
-                    <span class="icon-arrow-down">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495"
-                                stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </span>
-                </button>
-                <ul class="dropdown-menu dropdown-select">
-                    <li><a class="dropdown-item" href="#">Оплачен</a></li>
-                    <li><a class="dropdown-item" href="#">Не оплачен</a></li>
-                </ul>
-            </div>
-            <div>
-                <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    По умолчанию
-                    <span class="icon-arrow-down">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495"
-                                stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </span>
-                </button>
-                <ul class="dropdown-menu dropdown-select">
-                    <li><a class="dropdown-item" href="#">По умолчанию</a></li>
-                    <li><a class="dropdown-item" href="#">По умолчанию</a></li>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="account-order-history.html">Подробнее о заказе</a></li>
+                    <li><a class="dropdown-item" href="cart.html">Повторить заказ</a></li>
+                    <li><a class="dropdown-item" href="#">Печать</a></li>
                 </ul>
             </div>
         </div>
-        <button type="button" class="btn d-inline-flex align-items-center gap-2 border-0 p-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
-                <path d="M22 6L6.44365 21.5564" stroke="#1A1A16" stroke-width="0.853923" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                <path d="M6 6L21.5564 21.5564" stroke="#1A1A16" stroke-width="0.853923" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-            <span>Сбросить фильтры</span>
-        </button>
+        <div class="profile-order-card__heading">
+            <div class="profile-order-card__title title">
+                <a href="account-order-history.html">Заказ №780</a>
+            </div>
+            
+            <div class="profile-order-card__status text-primary">доставлен</div>
+            
+            
+        </div>
+        <div class="profile-order-card__amount">360 000 ₽</div>
+        
+        <div class="profile-order-card__pay-status text-success mb-12px">оплачен</div>
+        
+        
+        <div class="mb-4">
+            <div class="mb-12px">
+                <span class="text-muted-light">тип создания: </span>
+                <span>онлайн</span>
+            </div>
+            <div class="mb-12px">
+                <span class="text-muted-light">способ отгрузки: </span>
+                <span>курьерская доставка</span>
+            </div>
+        </div>
+        <div class="profile-order-card__goods-list">
+            <div class="swiper swiper-profile-order-card-goods-list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/001.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/002.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-32px">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4>Счета на оплату</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>SD999999959/5 - цена.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <h4>УПД</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Поиск -->
-<div class="account-content-widget max-w-850px">
-    <form class="form-order-search" action="#">
-        <div class="row align-items-end gy-4">
-            <div class="col-lg position-relative">
-                <input type="text" autocomplete="off" class="form-control" placeholder="Поиск по артикулу, коллекции или названию">
-            </div>
-            <div class="col-lg-auto">
-                <button type="submit" class="btn btn-outline">
-                    <span>Поиск</span>
+                                <!-- item -->
+                                <div class="card profile-order-card">
+    <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between mb-12px">
+            <div class="profile-order-card__date">от 21.01.2024</div>
+            <div class="dropdown dropdown-card-options">
+                <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false"
+                    data-bs-offset="0,5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="path-bg"
+                            d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                            fill="#DEE5ED" />
+                        <path
+                            d="M24.4497 14.483H22.478C22.3697 14.483 22.3047 14.418 22.2613 14.3313C22.1097 13.768 21.893 13.248 21.6113 12.7497C21.568 12.663 21.568 12.5547 21.633 12.4897L23.0197 11.103C23.1063 11.0163 23.1063 10.8863 23.0197 10.7997L21.1997 8.95801C21.113 8.87134 20.983 8.87134 20.8963 8.95801L19.5097 10.3447C19.4447 10.4097 19.3363 10.4313 19.2497 10.388C18.7513 10.1063 18.2313 9.88967 17.668 9.73801C17.5813 9.71634 17.5163 9.62967 17.5163 9.52134V7.54967C17.5163 7.41967 17.4297 7.33301 17.2997 7.33301H14.6997C14.5697 7.33301 14.483 7.41967 14.483 7.54967V9.52134C14.483 9.62967 14.418 9.69467 14.3313 9.73801C13.768 9.88967 13.248 10.1063 12.7497 10.388C12.663 10.4313 12.5547 10.4313 12.4897 10.3663C12.1863 10.063 11.428 9.30467 11.103 8.97967C11.0163 8.89301 10.8863 8.89301 10.7997 8.97967L8.95801 10.7997C8.87134 10.8863 8.87134 11.0163 8.95801 11.103L10.3447 12.4897C10.4097 12.5547 10.4313 12.663 10.388 12.7497C10.1063 13.248 9.88967 13.768 9.73801 14.3313C9.71634 14.418 9.62967 14.483 9.52134 14.483H7.54967C7.41967 14.483 7.33301 14.5697 7.33301 14.6997V17.2997C7.33301 17.4297 7.41967 17.5163 7.54967 17.5163H9.52134C9.62967 17.5163 9.69467 17.5813 9.73801 17.668C9.88967 18.2313 10.1063 18.7513 10.388 19.2497C10.4313 19.3363 10.4313 19.4447 10.3663 19.5097C10.063 19.813 9.30467 20.5713 8.97967 20.8963C8.89301 20.983 8.89301 21.113 8.97967 21.1997L10.8213 23.0413C10.908 23.128 11.038 23.128 11.1247 23.0413L12.5113 21.6547C12.5763 21.5897 12.6847 21.568 12.7713 21.6113C13.2697 21.893 13.7897 22.1097 14.353 22.2613C14.4397 22.283 14.483 22.3913 14.483 22.4997V24.4497C14.483 24.5797 14.5913 24.6663 14.7213 24.6663H17.3213C17.4513 24.6663 17.5163 24.5797 17.5163 24.4497V22.4997C17.5163 22.3913 17.603 22.3047 17.6897 22.2613C18.253 22.1097 18.773 21.893 19.2713 21.6113C19.358 21.568 19.4663 21.568 19.5313 21.633C19.8347 21.9363 20.593 22.6947 20.918 23.0197C21.0047 23.1063 21.1347 23.1063 21.2213 23.0197L23.063 21.178C23.1497 21.0913 23.1497 20.9613 23.063 20.8747L21.6763 19.488C21.6113 19.423 21.5897 19.3147 21.633 19.228C21.9147 18.7297 22.1313 18.2313 22.283 17.668C22.3047 17.5813 22.3913 17.5163 22.4997 17.5163H24.4713C24.5797 17.538 24.6663 17.4297 24.6663 17.2997V14.6997C24.6663 14.5697 24.5797 14.483 24.4497 14.483ZM15.9997 19.8997C13.8547 19.8997 12.0997 18.1447 12.0997 15.9997C12.0997 13.8547 13.8547 12.0997 15.9997 12.0997C18.1447 12.0997 19.8997 13.8547 19.8997 15.9997C19.8997 18.1447 18.1447 19.8997 15.9997 19.8997Z"
+                            fill="#474A51" />
+                    </svg>
                 </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="account-order-history.html">Подробнее о заказе</a></li>
+                    <li><a class="dropdown-item" href="cart.html">Повторить заказ</a></li>
+                    <li><a class="dropdown-item" href="#">Печать</a></li>
+                </ul>
             </div>
         </div>
-    </form>
+        <div class="profile-order-card__heading">
+            <div class="profile-order-card__title title">
+                <a href="account-order-history.html">Заказ №780</a>
+            </div>
+            
+            
+            <div class="profile-order-card__status text-danger">отменен</div>
+            
+        </div>
+        <div class="profile-order-card__amount">360 000 ₽</div>
+        
+        
+        <div class="profile-order-card__pay-status text-success mb-12px">возврат денежных средств</div>
+        
+        <div class="mb-4">
+            <div class="mb-12px">
+                <span class="text-muted-light">тип создания: </span>
+                <span>онлайн</span>
+            </div>
+            <div class="mb-12px">
+                <span class="text-muted-light">способ отгрузки: </span>
+                <span>курьерская доставка</span>
+            </div>
+        </div>
+        <div class="profile-order-card__goods-list">
+            <div class="swiper swiper-profile-order-card-goods-list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/001.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/002.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-32px">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4>Счета на оплату</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>SD999999959/5 - цена.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <h4>УПД</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <svg width="32" height="32">
+                                        <use xlink:href="img/sprite.svg#file-type-pdf"></use>
+                                    </svg>
+                                </span>
+                                <span>Название.pdf</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Заказы -->
-<div class="account-content-widget max-w-850px">
-    <div class="d-flex flex-column gap-32px">
+                            </div>
 
-        <!-- item -->
-        <div class="card profile-order-card">
-            <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between mb-12px">
-                    <div class="profile-order-card__date">от 21.01.2024</div>
-                    <div class="dropdown dropdown-card-options">
-                        <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false"
-                            data-bs-offset="0,5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-                                fill="none">
-                                <path class="path-bg"
-                                    d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
-                                    fill="#DEE5ED" />
-                                <path
-                                    d="M24.4497 14.483H22.478C22.3697 14.483 22.3047 14.418 22.2613 14.3313C22.1097 13.768 21.893 13.248 21.6113 12.7497C21.568 12.663 21.568 12.5547 21.633 12.4897L23.0197 11.103C23.1063 11.0163 23.1063 10.8863 23.0197 10.7997L21.1997 8.95801C21.113 8.87134 20.983 8.87134 20.8963 8.95801L19.5097 10.3447C19.4447 10.4097 19.3363 10.4313 19.2497 10.388C18.7513 10.1063 18.2313 9.88967 17.668 9.73801C17.5813 9.71634 17.5163 9.62967 17.5163 9.52134V7.54967C17.5163 7.41967 17.4297 7.33301 17.2997 7.33301H14.6997C14.5697 7.33301 14.483 7.41967 14.483 7.54967V9.52134C14.483 9.62967 14.418 9.69467 14.3313 9.73801C13.768 9.88967 13.248 10.1063 12.7497 10.388C12.663 10.4313 12.5547 10.4313 12.4897 10.3663C12.1863 10.063 11.428 9.30467 11.103 8.97967C11.0163 8.89301 10.8863 8.89301 10.7997 8.97967L8.95801 10.7997C8.87134 10.8863 8.87134 11.0163 8.95801 11.103L10.3447 12.4897C10.4097 12.5547 10.4313 12.663 10.388 12.7497C10.1063 13.248 9.88967 13.768 9.73801 14.3313C9.71634 14.418 9.62967 14.483 9.52134 14.483H7.54967C7.41967 14.483 7.33301 14.5697 7.33301 14.6997V17.2997C7.33301 17.4297 7.41967 17.5163 7.54967 17.5163H9.52134C9.62967 17.5163 9.69467 17.5813 9.73801 17.668C9.88967 18.2313 10.1063 18.7513 10.388 19.2497C10.4313 19.3363 10.4313 19.4447 10.3663 19.5097C10.063 19.813 9.30467 20.5713 8.97967 20.8963C8.89301 20.983 8.89301 21.113 8.97967 21.1997L10.8213 23.0413C10.908 23.128 11.038 23.128 11.1247 23.0413L12.5113 21.6547C12.5763 21.5897 12.6847 21.568 12.7713 21.6113C13.2697 21.893 13.7897 22.1097 14.353 22.2613C14.4397 22.283 14.483 22.3913 14.483 22.4997V24.4497C14.483 24.5797 14.5913 24.6663 14.7213 24.6663H17.3213C17.4513 24.6663 17.5163 24.5797 17.5163 24.4497V22.4997C17.5163 22.3913 17.603 22.3047 17.6897 22.2613C18.253 22.1097 18.773 21.893 19.2713 21.6113C19.358 21.568 19.4663 21.568 19.5313 21.633C19.8347 21.9363 20.593 22.6947 20.918 23.0197C21.0047 23.1063 21.1347 23.1063 21.2213 23.0197L23.063 21.178C23.1497 21.0913 23.1497 20.9613 23.063 20.8747L21.6763 19.488C21.6113 19.423 21.5897 19.3147 21.633 19.228C21.9147 18.7297 22.1313 18.2313 22.283 17.668C22.3047 17.5813 22.3913 17.5163 22.4997 17.5163H24.4713C24.5797 17.538 24.6663 17.4297 24.6663 17.2997V14.6997C24.6663 14.5697 24.5797 14.483 24.4497 14.483ZM15.9997 19.8997C13.8547 19.8997 12.0997 18.1447 12.0997 15.9997C12.0997 13.8547 13.8547 12.0997 15.9997 12.0997C18.1447 12.0997 19.8997 13.8547 19.8997 15.9997C19.8997 18.1447 18.1447 19.8997 15.9997 19.8997Z"
-                                    fill="#474A51" />
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="account-order-history.html">Подробнее о заказе</a></li>
-                            <li><a class="dropdown-item" href="cart.html">Повторить заказ</a></li>
-                            <li><a class="dropdown-item" href="#">Печать</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="profile-order-card__heading">
-                    <div class="profile-order-card__title title">
-                        <a href="account-order-history.html">Заказ №780</a>
-                    </div>
-                    <div class="profile-order-card__status text-primary">доставлен</div>
-                </div>
-                <div class="profile-order-card__amount">360 000 ₽</div>
-                <div class="profile-order-card__pay-status text-success mb-12px">оплачен</div>
-                <div class="mb-4">
-                    <div class="mb-12px">
-                        <span class="text-muted-light">тип создания: </span>
-                        <span>онлайн</span>
-                    </div>
-                    <div class="mb-12px">
-                        <span class="text-muted-light">способ отгрузки: </span>
-                        <span>курьерская доставка</span>
-                    </div>
-                </div>
-                <div class="profile-order-card__goods-list">
-                    <div class="swiper swiper-profile-order-card-goods-list">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/001.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/002.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-32px">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <h4>Счета на оплату</h4>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
-                                            </svg>
-                                        </span>
-                                        <span>SD999999959/5 - цена.pdf</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
-                                            </svg>
-                                        </span>
-                                        <span>Название.pdf</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
-                                            </svg>
-                                        </span>
-                                        <span>Название.pdf</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-5">
-                            <h4>УПД</h4>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
-                                            </svg>
-                                        </span>
-                                        <span>Название.pdf</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
-                                            </svg>
-                                        </span>
-                                        <span>Название.pdf</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>
-                                            <svg width="32" height="32">
-                                                <use xlink:href="img/sprite.svg#file-type-pdf"></use>
-                                            </svg>
-                                        </span>
-                                        <span>Название.pdf</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="card profile-order-card">
-            <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between mb-12px">
-                    <div class="profile-order-card__date">от 21.01.2024</div>
-                    <div class="dropdown dropdown-card-options">
-                        <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false"
-                            data-bs-offset="0,5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-                                fill="none">
-                                <path class="path-bg"
-                                    d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
-                                    fill="#DEE5ED" />
-                                <path
-                                    d="M24.4497 14.483H22.478C22.3697 14.483 22.3047 14.418 22.2613 14.3313C22.1097 13.768 21.893 13.248 21.6113 12.7497C21.568 12.663 21.568 12.5547 21.633 12.4897L23.0197 11.103C23.1063 11.0163 23.1063 10.8863 23.0197 10.7997L21.1997 8.95801C21.113 8.87134 20.983 8.87134 20.8963 8.95801L19.5097 10.3447C19.4447 10.4097 19.3363 10.4313 19.2497 10.388C18.7513 10.1063 18.2313 9.88967 17.668 9.73801C17.5813 9.71634 17.5163 9.62967 17.5163 9.52134V7.54967C17.5163 7.41967 17.4297 7.33301 17.2997 7.33301H14.6997C14.5697 7.33301 14.483 7.41967 14.483 7.54967V9.52134C14.483 9.62967 14.418 9.69467 14.3313 9.73801C13.768 9.88967 13.248 10.1063 12.7497 10.388C12.663 10.4313 12.5547 10.4313 12.4897 10.3663C12.1863 10.063 11.428 9.30467 11.103 8.97967C11.0163 8.89301 10.8863 8.89301 10.7997 8.97967L8.95801 10.7997C8.87134 10.8863 8.87134 11.0163 8.95801 11.103L10.3447 12.4897C10.4097 12.5547 10.4313 12.663 10.388 12.7497C10.1063 13.248 9.88967 13.768 9.73801 14.3313C9.71634 14.418 9.62967 14.483 9.52134 14.483H7.54967C7.41967 14.483 7.33301 14.5697 7.33301 14.6997V17.2997C7.33301 17.4297 7.41967 17.5163 7.54967 17.5163H9.52134C9.62967 17.5163 9.69467 17.5813 9.73801 17.668C9.88967 18.2313 10.1063 18.7513 10.388 19.2497C10.4313 19.3363 10.4313 19.4447 10.3663 19.5097C10.063 19.813 9.30467 20.5713 8.97967 20.8963C8.89301 20.983 8.89301 21.113 8.97967 21.1997L10.8213 23.0413C10.908 23.128 11.038 23.128 11.1247 23.0413L12.5113 21.6547C12.5763 21.5897 12.6847 21.568 12.7713 21.6113C13.2697 21.893 13.7897 22.1097 14.353 22.2613C14.4397 22.283 14.483 22.3913 14.483 22.4997V24.4497C14.483 24.5797 14.5913 24.6663 14.7213 24.6663H17.3213C17.4513 24.6663 17.5163 24.5797 17.5163 24.4497V22.4997C17.5163 22.3913 17.603 22.3047 17.6897 22.2613C18.253 22.1097 18.773 21.893 19.2713 21.6113C19.358 21.568 19.4663 21.568 19.5313 21.633C19.8347 21.9363 20.593 22.6947 20.918 23.0197C21.0047 23.1063 21.1347 23.1063 21.2213 23.0197L23.063 21.178C23.1497 21.0913 23.1497 20.9613 23.063 20.8747L21.6763 19.488C21.6113 19.423 21.5897 19.3147 21.633 19.228C21.9147 18.7297 22.1313 18.2313 22.283 17.668C22.3047 17.5813 22.3913 17.5163 22.4997 17.5163H24.4713C24.5797 17.538 24.6663 17.4297 24.6663 17.2997V14.6997C24.6663 14.5697 24.5797 14.483 24.4497 14.483ZM15.9997 19.8997C13.8547 19.8997 12.0997 18.1447 12.0997 15.9997C12.0997 13.8547 13.8547 12.0997 15.9997 12.0997C18.1447 12.0997 19.8997 13.8547 19.8997 15.9997C19.8997 18.1447 18.1447 19.8997 15.9997 19.8997Z"
-                                    fill="#474A51" />
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="account-order-history.html">Подробнее о заказе</a></li>
-                            <li><a class="dropdown-item" href="cart.html">Повторить заказ</a></li>
-                            <li><a class="dropdown-item" href="#">Печать</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="profile-order-card__heading">
-                    <div class="profile-order-card__title title">
-                        <a href="account-order-history.html">Заказ №780</a>
-                    </div>
-                    <div class="profile-order-card__status text-danger">отменен</div>
-                </div>
-                <div class="profile-order-card__amount">360 000 ₽</div>
-                <div class="profile-order-card__pay-status text-success mb-12px">возврат денежных средств</div>
-                <div class="mb-4">
-                    <div class="mb-12px">
-                        <span class="text-muted-light">тип создания: </span>
-                        <span>онлайн</span>
-                    </div>
-                    <div class="mb-12px">
-                        <span class="text-muted-light">способ отгрузки: </span>
-                        <span>курьерская доставка</span>
-                    </div>
-                </div>
-                <div class="profile-order-card__goods-list">
-                    <div class="swiper swiper-profile-order-card-goods-list">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/001.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/002.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/003.png" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img class="img-fluid w-100" src="img/swiper-order/004.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Пагинация -->
-    <div class="d-flex justify-content-center mt-5">
-        <nav class="pagination-nav">
+                            <!-- Пагинация -->
+                            <div class="d-flex justify-content-center mt-5">
+                                <nav class="pagination-nav">
     <ul class="pagination-list">
         <li>
             <a href="#" class="pagination-item prev">
@@ -1623,8 +1670,9 @@
         </li>
     </ul>
 </nav>
-    </div>
-</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1840,41 +1888,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Модалка "Выбор города" -->
-    <!-- <div class="fancybox-custom-modal" id="city-selector-modal">
-        <div class="city-selector__container">
-            <p class="h5 city-selector__title">Выберете город</p>
-            <div class="city-selector__input-wrapper">
-                <form class="form-city-selector" action="#">
-                    <input type="text" class="form-control" placeholder="Найти город">
-                    <button type="submit" class="btn form-city-selector__btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                            <g>
-                                <path class="path-stroke-dynamic" d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02943 14.9706 1 10 1C5.02943 1 1 5.02943 1 10C1 14.9706 5.02943 19 10 19Z" stroke="#7C7D80" stroke-width="1.18421" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path class="path-stroke-dynamic" d="M21.999 21.9995L16.3867 16.4121" stroke="#7C7D80" stroke-width="1.18421" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-            <div class="city-selector__popular-cities">
-                <p class="h6 city-selector__popular-cities-title">Популярные города</p>
-                <ul class="city-selector__popular-cities-list">
-                    <li><a href="#">Город 1</a></li>
-                    <li><a href="#">Город 2</a></li>
-                    <li><a href="#">Город 3</a></li>
-                    <li><a href="#">Город 4</a></li>
-                    <li><a href="#">Город 5</a></li>
-                    <li><a href="#">Город 6</a></li>
-                    <li><a href="#">Город 7</a></li>
-                    <li><a href="#">Город 8</a></li>
-                    <li><a href="#">Город 9</a></li>
-                    <li><a href="#">Город 10</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
 
     <!-- SCRIPTS -->
     

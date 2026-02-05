@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('partials/layout-head.html', {
+    "title": "Вёрстка ОПТ - ЛК Уведомления"
+})
+
+<body>
+
+    <!-- HEADER -->
+    @@include('partials/layout-header.html')
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- section-breadcrumbs -->
+        @@include('partials/ui-breadcrumbs.html')
+
+        <!-- section-notifications -->
+        <section class="section section-notifications">
+            <div class="container">
+                <div class="row" style="--bs-gutter-y: 2rem;">
+                    <div class="col-lg-3">
+                        <!-- account-sidebar -->
+                        @@include('partials/account-sidebar.html', {
+                            "activeLink": "account-notifications"
+                        })
+                    </div>
+                    <div class="col-lg-9">
+
+                        <!-- account-widgets -->
+                        
+                        <p>Уведомлений нет</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    @@include('partials/layout-footer.html')
+</body>
+
+</html>

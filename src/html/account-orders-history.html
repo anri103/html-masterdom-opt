@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('partials/layout-head.html', {
+    "title": "Вёрстка ОПТ - ЛК История заказов"
+})
+
+<body>
+
+    <!-- HEADER -->
+    @@include('partials/layout-header.html')
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- section-breadcrumbs -->
+        @@include('partials/ui-breadcrumbs.html')
+
+        <!-- section-account -->
+        <section class="section section-account">
+            <div class="container">
+                <div class="row" style="--bs-gutter-y: 2rem;">
+                    <div class="col-lg-3">
+                        <!-- account-sidebar -->
+                        @@include('partials/account-sidebar.html', {
+                            "activeLink": "account-orders-history"
+                        })
+                    </div>
+                    <div class="col-lg-9">
+
+                        <!-- account-widgets -->
+                        
+                        <!-- Фильтры -->
+                        <div class="account-content-widget max-w-full">
+                            @@include('partials/account-widget-filters.html')
+                        </div>
+
+                        <!-- Поиск -->
+                        <div class="account-content-widget max-w-850px">
+                            @@include('partials/account-widget-search.html')
+                        </div>
+
+                        <!-- Заказы -->
+                        <div class="account-content-widget max-w-850px">
+                            <div class="d-flex flex-column gap-32px">
+
+                                <!-- item -->
+                                @@include('partials/account-history-card.html', {
+                                    "orderStatus": "delivered",
+                                    "payStatus": "success"
+                                })
+
+                                <!-- item -->
+                                @@include('partials/account-history-card.html', {
+                                    "orderStatus": "cancelled",
+                                    "payStatus": "refund"
+                                })
+
+                            </div>
+
+                            <!-- Пагинация -->
+                            <div class="d-flex justify-content-center mt-5">
+                                @@include('partials/ui-pagination.html')
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    @@include('partials/layout-footer.html')
+</body>
+
+</html>
