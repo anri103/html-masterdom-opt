@@ -119,17 +119,19 @@ const invokerCatalogBtn = document.querySelector('.mobile-catalog-menu-invoker')
 const closeCatalogBtn = document.querySelector('.mobile-catalog-menu-close');
 const catalogContainer = document.querySelector('.mobile-collapse-menu__catalog-container');
 
-invokerCatalogBtn.addEventListener('click', function () {
-    catalogContainer.classList.add('open');
-    catalogContainer.style.animation = 'slideLeft 0.5s ease forwards';
-});
+if (invokerCatalogBtn && closeCatalogBtn && catalogContainer) {
+    invokerCatalogBtn.addEventListener('click', function () {
+        catalogContainer.classList.add('open');
+        catalogContainer.style.animation = 'slideLeft 0.5s ease forwards';
+    });
 
-closeCatalogBtn.addEventListener('click', function () {
-    setTimeout(() => {
-        catalogContainer.classList.remove('open');
-    }, 300);
-    catalogContainer.style.animation = 'slideRight 0.5s ease forwards';
-});
+    closeCatalogBtn.addEventListener('click', function () {
+        setTimeout(() => {
+            catalogContainer.classList.remove('open');
+        }, 300);
+        catalogContainer.style.animation = 'slideRight 0.5s ease forwards';
+    });
+}
 
 document.querySelectorAll('.catalog-menu-item__link').forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -650,24 +652,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    reviewLink.addEventListener('click', (e) => {
-        e.preventDefault();
+    if (reviewLink && reviewsTab && tabs[2]) {
+        reviewLink.addEventListener('click', (e) => {
+            e.preventDefault();
 
-        tabs.forEach((tab) => {
-            tab.classList.remove('active');
-        });
-        tabs[2].classList.add('active');
+            tabs.forEach((tab) => {
+                tab.classList.remove('active');
+            });
+            tabs[2].classList.add('active');
 
-        tabContents.forEach((content) => {
-            content.classList.remove('show');
-        });
-        reviewsTab.classList.add('show');
+            tabContents.forEach((content) => {
+                content.classList.remove('show');
+            });
+            reviewsTab.classList.add('show');
 
-        window.scrollTo({
-            top: reviewsTab.offsetTop - 200,
-            behavior: 'smooth'
+            window.scrollTo({
+                top: reviewsTab.offsetTop - 200,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 });
 
 //////////////////////////////////////////////////////////////////

@@ -118,3 +118,7 @@ textarea {
     --bs-dropdown-link-active-bg: #DEE5ED;
     --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
 }
+
+.small-floating-labels .form-floating>label {
+    font-size: 12px;
+}

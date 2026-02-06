@@ -79,14 +79,17 @@
                                 </svg>
                             </a>
                         </div>
-                        <!--<div class="navbar-mobile__icon icon-heart">
+                        <!-- icon -->
+                        <div class="navbar-mobile__icon icon-notifications">
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                    <path d="M16.5091 28.2013L4.20238 17.054C-2.48607 10.3655 7.34593 -2.47625 16.5091 7.91311C25.6722 -2.47625 35.4598 10.4101 28.8159 17.054L16.5091 28.2013Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13.4219 29C13.5912 29.5769 13.9429 30.0835 14.4242 30.4437C14.9055 30.8041 15.4907 30.9989 16.0919 30.9989C16.6931 30.9989 17.2783 30.8041 17.7595 30.4437C18.2408 30.0835 18.5925 29.5769 18.7619 29" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M16.0879 3.73633V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M25.7921 14.0001C26.1343 22.2377 28.0879 25.0001 28.0879 25.0001H4.08789C4.08789 25.0001 6.08789 22.4454 6.08789 14.0001C6.08938 12.4334 6.4586 10.889 7.16581 9.49111C7.87302 8.09321 8.8985 6.88082 10.1597 5.9515C11.4209 5.02219 12.8827 4.4019 14.4274 4.14054C15.972 3.87885 16.1877 3.90023 17.7214 4.14172" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
+                                <div class="notification-count">0</div>
                             </a>
-                            <div class="notification-count">99</div>
-                        </div>-->
+                        </div>
                         <div class="navbar-mobile__icon icon-cart">
                             <a href="cart.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -118,23 +121,41 @@
                             <div class="mobile-collapse-menu__menu-container">
 
                                 <!-- Кнопка "Каталог >" -->
-                                <button type="button" class="btn-catalog mobile-catalog-menu-invoker">
+                                <!-- <button type="button" class="btn-catalog mobile-catalog-menu-invoker">
                                     <span>Каталог</span>
                                     <svg width="20" height="20">
                                         <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
                                     </svg>
-                                </button>
+                                </button> -->
+
+                                <div class="mb-3">
+                                    <div class="prices-switch">
+                                        <a href="#"><span class="sbtn active">РРЦ</span><span class="sbtn">ОПТ</span></a>
+                                    </div>
+                                </div>
 
                                 <!-- Основное меню -->
                                 <ul class="mobile-main-menu-section">
-                                    <li>
-                                        <a href="#" class="d-flex gap-2 align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M10.0054 17.2414L2.64031 10.5701C-1.36248 6.56735 4.52161 -1.11798 10.0054 5.09966C15.4892 -1.11798 21.3467 6.59405 17.3706 10.5701L10.0054 17.2414Z" fill="#02378F" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <span>Избраное (<span class="notification-count favorites-counter">0</span>)</span>
-                                        </a>
+                                    <li class="has-submenu">
+                                        <a href="#">Плитка</a>
+                                        <button type="button" class="submenu-toggler"></button>
+                                        <ul class="submenu">
+                                            <li><a href="#">Каталог плитки</a></li>
+                                            <li><a href="#">Распродажа плитки</a></li>
+                                            <li><a href="#">Стенды</a></li>
+                                            <li><a href="#">Экспозиторы</a></li>
+                                        </ul>
                                     </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Обои</a>
+                                        <button type="button" class="submenu-toggler"></button>
+                                        <ul class="submenu">
+                                            <li><a href="#">Каталог обоев</a></li>
+                                            <li><a href="#">Распродажа обоев</a></li>
+                                            <li><a href="#">Каталоги</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Краска</a></li>
                                     <li><a href="#">Бренды и Фабрики</a></li>
                                     <li><a href="#">Коллекции</a></li>
                                     <li class="has-submenu">
@@ -147,23 +168,6 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">Контакты</a></li>
-                                    <li class="has-submenu">
-                                        <a href="#">Пример выпадающего меню</a>
-                                        <button type="button" class="submenu-toggler"></button>
-                                        <ul class="submenu">
-                                            <li><a href="#">Пример 1</a></li>
-                                            <li class="has-submenu">
-                                                <a href="#">Пример выпадающего меню</a>
-                                                <button type="button" class="submenu-toggler"></button>
-                                                <ul class="submenu">
-                                                    <li><a href="#">Пример 1</a></li>
-                                                    <li><a href="#">Пример 2</a></li>
-                                                    <li><a href="#">Пример 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Пример 3</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </div>
                             
@@ -721,6 +725,7 @@
                                         <path d="M1 20.8301L20.799 1.03109" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
+                                <span class="navbar-desktop__offcanvas-toggle-title">О нас</span>
                             </a>
                             <!-- Меню -->
                             <ul class="navbar-nav">
@@ -1033,16 +1038,6 @@
                                         <span>Краски</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="nav-link">
-                                        <span>Коллекции</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link">
-                                        <span>Контакты</span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                         <!-- Переключатель -->
@@ -1080,6 +1075,26 @@
                                 </a>
                             </div>
                             <!-- icon -->
+                            <div class="navbar-desktop__icon icon-notifications">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M13.4219 29C13.5912 29.5769 13.9429 30.0835 14.4242 30.4437C14.9055 30.8041 15.4907 30.9989 16.0919 30.9989C16.6931 30.9989 17.2783 30.8041 17.7595 30.4437C18.2408 30.0835 18.5925 29.5769 18.7619 29" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M16.0879 3.73633V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M25.7921 14.0001C26.1343 22.2377 28.0879 25.0001 28.0879 25.0001H4.08789C4.08789 25.0001 6.08789 22.4454 6.08789 14.0001C6.08938 12.4334 6.4586 10.889 7.16581 9.49111C7.87302 8.09321 8.8985 6.88082 10.1597 5.9515C11.4209 5.02219 12.8827 4.4019 14.4274 4.14054C15.972 3.87885 16.1877 3.90023 17.7214 4.14172" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <div class="notification-count">0</div>
+                                </a>
+                            </div>
+                            <!-- icon -->
+                            <div class="navbar-desktop__icon icon-location">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M28.0687 13.0343C28.0687 21.0572 16.0343 30.4172 16.0343 30.4172C16.0343 30.4172 4 21.0572 4 13.0343C4 6.47963 9.47963 1 16.0343 1C22.589 1 28.0687 6.47963 28.0687 13.0343Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M16.0349 17.0453C18.2503 17.0453 20.0463 15.2494 20.0463 13.0339C20.0463 10.8184 18.2503 9.02246 16.0349 9.02246C13.8194 9.02246 12.0234 10.8184 12.0234 13.0339C12.0234 15.2494 13.8194 17.0453 16.0349 17.0453Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- icon -->
                             <div class="navbar-desktop__icon icon-profile">
                                 <a href="account-login.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -1087,15 +1102,6 @@
                                         <path d="M4 29.8903H28.564V28.505C28.5422 26.5573 27.9936 24.6464 26.9693 22.9512C25.945 21.2557 24.4784 19.831 22.7066 18.8102C20.9348 17.7893 18.9155 17.2056 16.8375 17.1134C16.6522 17.1052 16.467 17.1009 16.282 17.1006C16.097 17.1009 15.9118 17.1052 15.7265 17.1134C13.6484 17.2056 11.6292 17.7893 9.85733 18.8102C8.08553 19.831 6.61898 21.2557 5.59467 22.9512C4.57037 24.6464 4.02173 26.5573 4 28.505V29.8903Z" fill="white" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </a>
-                            </div>
-                            <!-- icon -->
-                            <div class="navbar-desktop__icon icon-whishlist">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                        <path d="M16.5091 28.2013L4.20238 17.054C-2.48607 10.3655 7.34593 -2.47625 16.5091 7.91311C25.6722 -2.47625 35.4598 10.4101 28.8159 17.054L16.5091 28.2013Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                                <div class="notification-count">2</div>
                             </div>
                             <!-- icon -->
                             <div class="navbar-desktop__icon icon-cart">
@@ -1336,18 +1342,18 @@
                             <h4 class="mb-22px">Товары в заказе</h4>
 
                             <div class="mb-32px max-w-800px">
-                                <form class="form-order-add-product" action="#">
-                                    <div class="row align-items-end gy-4">
-                                        <div class="col-lg position-relative">
-                                            <input type="text" autocomplete="off" class="form-control" placeholder="Поиск по артикулу, коллекции или названию">
-                                        </div>
-                                        <div class="col-lg-auto">
-                                            <button type="submit" class="btn btn-outline">
-                                                <span>Добавить</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <form class="form-order-search" action="#">
+    <div class="row align-items-end gy-4">
+        <div class="col-lg position-relative">
+            <input type="text" autocomplete="off" class="form-control" placeholder="Поиск по артикулу, коллекции или названию">
+        </div>
+        <div class="col-lg-auto">
+            <button type="submit" class="btn btn-outline">
+                <span>Поиск</span>
+            </button>
+        </div>
+    </div>
+</form>
                             </div>
                             <!-- Группа товаров -->
                             <div class="mb-32px">
@@ -1816,623 +1822,727 @@
                             </div>
                         </div>
 
-                        <!-- Модалки Заказа Отгрузки -->
-                        <!-- addOrderShipmentModal -->
-                        <div class="modal fade" id="addOrderShipmentModal" tabindex="-1"
-                            aria-labelledby="addOrderShipmentModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <div class="modal-title h5" id="addNewPayerModalLabel">Заполните необходимые поля</div>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="content-widget max-w-700px">
-                                                <p class="fw-medium mb-12px">Способ отгрузки</p>
-                                                <div class="d-flex flex-column gap-3" role="tablist">
-                                                    <label class="d-flex gap-2 align-items-center active" role="tab"
-                                                        data-bs-toggle="tab" data-bs-target="#selfPickup">
-                                                        <input type="radio" name="deliveryMethod" class="form-radio"
-                                                            checked>
-                                                        <span>самовывоз</span>
-                                                    </label>
-                                                    <label class="d-flex gap-2 align-items-center" role="tab"
-                                                        data-bs-toggle="tab" data-bs-target="#deliveryByTK">
-                                                        <input type="radio" name="deliveryMethod" class="form-radio">
-                                                        <span>доставка ТК (<b>Наименование ТК</b>, доставка до терминала
-                                                            ТК)</span>
-                                                    </label>
-                                                    <label class="d-flex gap-2 align-items-center" role="tab"
-                                                        data-bs-toggle="tab" data-bs-target="#deliveryByTT">
-                                                        <input type="radio" name="deliveryMethod" class="form-radio">
-                                                        <span>доставка до Торговой точки/Склада</span>
-                                                    </label>
-                                                </div>
-                                                <div class="mt-4">
-                                                    <a href="#" class="btn btn-outline" data-bs-toggle="modal"
-                                                        data-bs-target="#changeMethodShipmentModal">изменить</a>
-                                                </div>
-                                            </div>
-                                            <div class="content-widget max-w-700px">
-                                                <div class="tab-content">
-                                                    <!-- самовывоз -->
-                                                    <div class="tab-pane fade show active" role="tabpanel" id="selfPickup">
-                                                        <!-- Время и дата самовывоза -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <p class="fw-medium mb-12px">Время и дата самовывоза</p>
-                                                            <div class="mb-12px">
-                                                                <select class="form-select">
-                                                                    <option selected="">Выберите интервал времени</option>
-                                                                    <option value="1">9:00 - 10:00</option>
-                                                                    <option value="2">10:00 - 11:00</option>
-                                                                    <option value="2">11:00 - 12:00</option>
-                                                                    <option value="2">12:00 - 13:00</option>
-                                                                    <option value="2">13:00 - 14:00</option>
-                                                                    <option value="2">14:00 - 15:00</option>
-                                                                    <option value="2">15:00 - 16:00</option>
-                                                                    <option value="2">16:00 - 17:00</option>
-                                                                    <option value="2">17:00 - 18:00</option>
-                                                                    <option value="2">18:00 - 19:00</option>
-                                                                    <option value="2">19:00 - 20:00</option>
-                                                                    <option value="2">20:00 - 21:00</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="mb-12px">
-                                                                <input type="date" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                        <!-- Данные для пропуска -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <p class="fw-medium mb-12px">Данные для пропуска</p>
-                                                            <p class="small text-muted-light">Пропуск необходимо заказывать на
-                                                                водителя с машиной<br> и на каждого пассажира отдельно.</p>
-                                                            <div class="visitorPass">
-                                                                <div class="visitorPass__data">
-                                                                    <div class="mb-12px">
-                                                                        <div class="form-floating">
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="ФИО (водителя)">
-                                                                            <label>ФИО (водителя)</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="mb-12px">
-                                                                        <div class="form-floating">
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="Тип документа">
-                                                                            <label>Тип документа</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="mb-12px">
-                                                                        <div class="form-floating">
-                                                                            <input type="text" class="form-control"
-                                                                                placeholder="Номер документа">
-                                                                            <label>Номер документа</label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="visitorPass__button mb-12px">
-                                                                    <button type="button" class="btn btn-text p-0 border-0">
-                                                                        <svg class="me-1" xmlns="http://www.w3.org/2000/svg"
-                                                                            width="16" height="16" viewBox="0 0 16 16"
-                                                                            fill="none">
-                                                                            <path
-                                                                                d="M16 9.13208H9.15862V16H6.84138V9.13208H0V6.90566H6.84138V0H9.15862V6.90566H16V9.13208Z"
-                                                                                fill="currentColor"></path>
-                                                                        </svg>
-                                                                        <span class="align-middle">Добавить пассажира</span>
-                                                                    </button>
-                                                                    <p class="small text-muted-light mt-12px">пропуск
-                                                                        оформляется на каждого пассажира</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mb-12px">
-                                                                <div class="form-floating">
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Номер автомобиля">
-                                                                    <label>Номер автомобиля</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mb-12px">
-                                                                <div class="form-floating">
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Номер прицепа">
-                                                                    <label>Номер прицепа</label>
-                                                                </div>
-                                                                <label class="d-flex gap-2 align-items-center mt-12px">
-                                                                    <input type="checkbox" class="form-checkbox" value="">
-                                                                    <span class="small text-muted-light">иностранный номер
-                                                                        машины/прицепа</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- доставка ТК -->
-                                                    <div class="tab-pane fade" role="tabpanel" id="deliveryByTK">
-                                                        <!-- Адрес доставки -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <p class="fw-medium mb-12px">Адрес доставки</p>
-                                                            <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                                                                <div class="col-12">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Адрес*" required>
-                                                                        <label>Адрес*</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6 col-lg">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Дом">
-                                                                        <label>Дом</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6 col-lg">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Квартира">
-                                                                        <label>Квартира</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6 col-lg">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Этаж">
-                                                                        <label>Этаж</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <div class="d-flex flex-wrap gap-3">
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>нужна разгрузка</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>подьем на этаж</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>нет лифта</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>паркинг</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <span>высота паркинга</span>
-                                                                            <input type="text" class="input-text-custom-sm" style="max-width: 50px;" placeholder="2 м">
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Дата доставки -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <p class="fw-medium mb-12px">Дата доставки</p>
-                                                            <p class="small text-muted-light">доставка осуществляется в течении
-                                                                выбранного дня</p>
-                                                            <div class="d-flex flex-wrap gap-3">
-                                                                <label class="d-flex gap-2 align-items-center">
-                                                                    <input type="radio" name="deliveryDate" class="form-radio"
-                                                                        checked>
-                                                                    <span>дата</span>
-                                                                </label>
-                                                                <label class="d-flex gap-2 align-items-center">
-                                                                    <input type="radio" name="deliveryDate" class="form-radio">
-                                                                    <span>дата</span>
-                                                                </label>
-                                                                <label class="d-flex gap-2 align-items-center">
-                                                                    <input type="radio" name="deliveryDate" class="form-radio">
-                                                                    <span>дата</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Комментарий к заказу -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <textarea class="form-control" rows="3"
-                                                                placeholder="Комментарий к заказу"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <!-- доставка до Торговой точки/Склада -->
-                                                    <div class="tab-pane fade" role="tabpanel" id="deliveryByTT">
-                                                        <!-- Адрес доставки -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <p class="fw-medium mb-12px">Адрес доставки</p>
-                                                            <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                                                                <div class="col-12">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Адрес*" required>
-                                                                        <label>Адрес*</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6 col-lg">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Дом">
-                                                                        <label>Дом</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6 col-lg">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Квартира">
-                                                                        <label>Квартира</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6 col-lg">
-                                                                    <div class="form-floating">
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Этаж">
-                                                                        <label>Этаж</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <div class="d-flex flex-wrap gap-3">
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>нужна разгрузка</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>подьем на этаж</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>нет лифта</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <input type="checkbox" class="form-checkbox"
-                                                                                value="">
-                                                                            <span>паркинг</span>
-                                                                        </label>
-                                                                        <label class="d-flex gap-2 align-items-center">
-                                                                            <span>высота паркинга</span>
-                                                                            <input type="text" class="input-text-custom-sm" style="max-width: 50px;" placeholder="2 м">
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Дата доставки -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <p class="fw-medium mb-12px">Дата доставки</p>
-                                                            <p class="small text-muted-light">доставка осуществляется в течении
-                                                                выбранного дня</p>
-                                                            <div class="d-flex flex-wrap gap-3">
-                                                                <label class="d-flex gap-2 align-items-center">
-                                                                    <input type="radio" name="deliveryDate" class="form-radio"
-                                                                        checked>
-                                                                    <span>дата</span>
-                                                                </label>
-                                                                <label class="d-flex gap-2 align-items-center">
-                                                                    <input type="radio" name="deliveryDate" class="form-radio">
-                                                                    <span>дата</span>
-                                                                </label>
-                                                                <label class="d-flex gap-2 align-items-center">
-                                                                    <input type="radio" name="deliveryDate" class="form-radio">
-                                                                    <span>дата</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Комментарий к заказу -->
-                                                        <div class="mb-4 mb-lg-5">
-                                                            <textarea class="form-control" rows="3"
-                                                                placeholder="Комментарий к заказу"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="content-widget max-w-700px">
-                                                <button type="submit" class="btn btn-secondary">оформить отгрузку</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- changeMethodShipmentModal -->
-                        <div class="modal fade" id="changeMethodShipmentModal" tabindex="-1"
-                            aria-labelledby="changeMethodShipmentModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <a href="#addOrderShipmentModal" class="btn-back" data-bs-toggle="modal">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="51" height="9" viewBox="0 0 51 9"
-                                                    fill="none">
-                                                    <path
-                                                        d="M0.646446 4.14644C0.451183 4.3417 0.451183 4.65829 0.646446 4.85355L3.82843 8.03553C4.02369 8.23079 4.34027 8.23079 4.53553 8.03553C4.7308 7.84027 4.7308 7.52369 4.53553 7.32842L1.70711 4.5L4.53553 1.67157C4.7308 1.47631 4.7308 1.15972 4.53553 0.964462C4.34027 0.7692 4.02369 0.7692 3.82843 0.964462L0.646446 4.14644ZM51 4L1 4L1 5L51 5L51 4Z"
-                                                        fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <span class="fw-medium">назад</span>
-                                        </a>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="content-widget max-w-800px">
-                                            <div class="h4 mb-22px">Изменить способ отгрузки</div>
-                                            <div class="row" style="--bs-gutter-y: 22px;">
-
-                                                <div class="col-lg-12">
-                                                    <!-- Самовывоз -->
-                                                    <div class="checkout-radio-card" data-group="delivery">
-                                                        <div class="checkout-radio-card__header">
-                                                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                                                <div class="h4 fw-normal text-uppercase mb-0">Самовывоз</div>
-                                                                <input type="radio" name="checkout-delivery" class="form-radio"
-                                                                    data-parent-radio>
-                                                            </label>
-                                                            <div class="text-success fw-semibold mb-2">Бесплатно</div>
-                                                        </div>
-                                                        <div class="checkout-radio-card__body">
-
-                                                            <!-- item «Забрать из магазина» -->
-                                                            <div class="item-pickup-option">
-                                                                <!-- Кнопка -->
-                                                                <label class="item-pickup-option__btn">
-                                                                    <div class="d-flex align-items-center gap-12px">
-                                                                        <!-- icon-map-marker -->
-                                                                        <span>
-                                                                            <svg width="32" height="32">
-                                                                                <use xlink:href="img/sprite.svg#icon-map-marker">
-                                                                                </use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <div class="fw-medium">Забрать из магазина</div>
-                                                                    </div>
-                                                                    <input type="radio" name="checkout-delivery-pickup"
-                                                                        class="form-radio" data-child-radio>
-                                                                </label>
-                                                                <div class="item-pickup-option__body">
-                                                                    <!-- Адрес -->
-                                                                    <div class="mb-3">
-                                                                        <p class="h4 ff-title fw-normal mb-12px">МастерДом на
-                                                                            Профсоюзной</p>
-                                                                        <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а
-                                                                        </p>
-                                                                        <div class="d-flex flex-wrap gap-2 mb-12px">
-                                                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                                                        </div>
-                                                                        <div class="d-flex flex-wrap gap-22px mb-12px"
-                                                                            style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
-                                                                            <a href="tel:88003503243" class="item-phone">8 (800)
-                                                                                350-32-43</a>
-                                                                            <a href="mailto:info@mail.ru"
-                                                                                class="item-email">info@mail.ru</a>
-                                                                        </div>
-                                                                        <div class="text-primary fw-medium">c 18 января</div>
-                                                                    </div>
-                                                                    <!-- Инфо условий и оплаты -->
-                                                                    <div>
-                                                                        <p class="fw-medium mb-1">Условия получения заказа со склада
-                                                                        </p>
-                                                                        <p class="text-muted-light">Заказ пропуска (ФИО + номер
-                                                                            документа + гос.
-                                                                            номер машины).Ежедневно с 10:00 до 17:00.</p>
-                                                                        <p class="fw-medium mb-1">Оплата</p>
-                                                                        <p class="text-muted-light">Онлайн, Оплата в фирменном
-                                                                            салоне наличным или
-                                                                            безналичным способами оплаты в кассе.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- item «Центральный склад» -->
-                                                            <div class="item-pickup-option">
-                                                                <!-- Кнопка -->
-                                                                <label class="item-pickup-option__btn">
-                                                                    <div class="d-flex align-items-center gap-12px">
-                                                                        <!-- icon-map-marker -->
-                                                                        <span>
-                                                                            <svg width="32" height="32">
-                                                                                <use xlink:href="img/sprite.svg#icon-map-marker">
-                                                                                </use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <div class="fw-medium">Центральный склад</div>
-                                                                    </div>
-                                                                    <input type="radio" name="checkout-delivery-pickup"
-                                                                        class="form-radio" data-child-radio>
-                                                                </label>
-                                                                <div class="item-pickup-option__body">
-                                                                    <!-- Адрес -->
-                                                                    <div class="mb-3">
-                                                                        <p class="h4 ff-title fw-normal mb-12px">Адрес</p>
-                                                                        <p class="mb-12px">Московская область, Зелёное шоссе, 2</p>
-                                                                        <div class="d-flex flex-wrap gap-22px mb-12px"
-                                                                            style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
-                                                                            <a href="tel:88003503243" class="item-phone">8 (800)
-                                                                                350-32-43</a>
-                                                                        </div>
-                                                                        <div class="text-primary fw-medium">c 18 января</div>
-                                                                    </div>
-                                                                    <!-- Инфо условий и оплаты -->
-                                                                    <div>
-                                                                        <p class="fw-medium mb-1">Условия получения заказа со склада
-                                                                        </p>
-                                                                        <p class="text-muted-light">Заказ пропуска (ФИО + номер
-                                                                            документа + гос.
-                                                                            номер машины).Ежедневно с 10:00 до 17:00.</p>
-                                                                        <p class="fw-medium mb-1">Оплата</p>
-                                                                        <p class="text-muted-light">Онлайн, Оплата в фирменном
-                                                                            салоне наличным или
-                                                                            безналичным способами оплаты в кассе.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- item «Склад в Тюмени» -->
-                                                            <div class="item-pickup-option">
-                                                                <!-- Кнопка -->
-                                                                <label class="item-pickup-option__btn">
-                                                                    <div class="d-flex align-items-center gap-12px">
-                                                                        <!-- icon-map-marker -->
-                                                                        <span>
-                                                                            <svg width="32" height="32">
-                                                                                <use xlink:href="img/sprite.svg#icon-map-marker">
-                                                                                </use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <div class="fw-medium">Склад в Тюмени</div>
-                                                                    </div>
-                                                                    <input type="radio" name="checkout-delivery-pickup"
-                                                                        class="form-radio" data-child-radio>
-                                                                </label>
-                                                                <div class="item-pickup-option__body">
-                                                                    <!-- Адрес -->
-                                                                    <div class="mb-3">
-                                                                        <p class="h4 ff-title fw-normal mb-12px">МастерДом на
-                                                                            Профсоюзной</p>
-                                                                        <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а
-                                                                        </p>
-                                                                        <div class="d-flex flex-wrap gap-2 mb-12px">
-                                                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                                                            <div class="item-metro">Профсоюзная, 15 м</div>
-                                                                        </div>
-                                                                        <div class="d-flex flex-wrap gap-22px mb-12px"
-                                                                            style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
-                                                                            <a href="tel:88003503243" class="item-phone">8 (800)
-                                                                                350-32-43</a>
-                                                                            <a href="mailto:info@mail.ru"
-                                                                                class="item-email">info@mail.ru</a>
-                                                                        </div>
-                                                                        <div class="text-primary fw-medium">c 18 января</div>
-                                                                    </div>
-                                                                    <!-- Инфо условий и оплаты -->
-                                                                    <div>
-                                                                        <p class="fw-medium mb-1">Условия получения заказа со склада
-                                                                        </p>
-                                                                        <p class="text-muted-light">Заказ пропуска (ФИО + номер
-                                                                            документа + гос.
-                                                                            номер машины).Ежедневно с 10:00 до 17:00.</p>
-                                                                        <p class="fw-medium mb-1">Оплата</p>
-                                                                        <p class="text-muted-light">Онлайн, Оплата в фирменном
-                                                                            салоне наличным или
-                                                                            безналичным способами оплаты в кассе.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-12">
-                                                    <!-- Доставка транспортной компанией -->
-                                                    <div class="checkout-radio-card" data-group="delivery">
-                                                        <div class="checkout-radio-card__header">
-                                                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                                                <div class="h4 fw-normal text-uppercase mb-0">Доставка транспортной
-                                                                    компанией</div>
-                                                                <input type="radio" name="checkout-delivery" class="form-radio"
-                                                                    data-parent-radio>
-                                                            </label>
-                                                            <div class="text-primary fw-semibold mb-2">от 1000 ₽</div>
-                                                            <div class="mb-1">от 2-7 дней с 10-18 часов</div>
-                                                            <div class="fs-6 text-muted-light">*Точное время лоставки уточняйте у
-                                                                менеждера</div>
-                                                        </div>
-                                                        <div class="checkout-radio-card__body">
-                                                            <div class="mb-5">
-                                                                <div class="mb-12px">
-                                                                    <select class="form-select">
-                                                                        <option selected="">Выбрать ТК</option>
-                                                                        <option value="1">ТК «Название 1»</option>
-                                                                        <option value="2">ТК «Название 2»</option>
-                                                                        <option value="2">ТК «Название 3»</option>
-                                                                        <option value="2">ТК «Название 4»</option>
-                                                                        <option value="2">ТК «Название 5»</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="mb-12px">
-                                                                    <label
-                                                                        class="d-flex gap-2 align-items-center">
-                                                                        <input type="radio" name="checkout-delivery-tc"
-                                                                            class="form-radio" data-child-radio>
-                                                                        <span>Доставка до терминала ТК</span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="mb-12px">
-                                                                    <label
-                                                                        class="d-flex gap-2 align-items-center">
-                                                                        <input type="radio" name="checkout-delivery-tc"
-                                                                            class="form-radio" data-child-radio>
-                                                                        <span>Доставка до покупателя средствами ТК</span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="fs-6">
-                                                                <p class="fw-medium mb-1">Условия получения заказа</p>
-                                                                <p>1. На месте, где предполагается разгрузка, необходимо иметь
-                                                                    доступ для грузового
-                                                                    автомобиля.</p>
-                                                                <p>2. Чтобы избежать повторной платной доставки, пожалуйста, будьте
-                                                                    на месте для приема
-                                                                    товара в указанное время, так как водитель не может ждать более
-                                                                    20 минут из-за его
-                                                                    графика.</p>
-                                                                <p>3. При расчете стоимости доставки учитывается общий вес и объем
-                                                                    товаров.</p>
-                                                                <p class="fw-medium mb-1">Оплата</p>
-                                                                <p class="text-muted-light">Онлайн, наличными при получении</p>
-                                                                <p class="text-primary">*Доставка разных категорий товаров считается
-                                                                    по максимальной:
-                                                                    обои-свет, плитка-сантехника, крупный формат.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-12">
-                                                    <!-- Доставка до Торговой точки/Склада -->
-                                                    <div class="checkout-radio-card" data-group="delivery">
-                                                        <div class="checkout-radio-card__header">
-                                                            <label class="d-flex justify-content-between gap-2 mb-12px">
-                                                                <div class="h4 fw-normal text-uppercase mb-0">Доставка до Торговой
-                                                                    точки/Склада</div>
-                                                                <input type="radio" name="checkout-delivery" class="form-radio"
-                                                                    data-parent-radio>
-                                                            </label>
-                                                            <div class="text-success fw-semibold mb-2">Бесплатно</div>
-                                                            <!-- <div class="mb-1">Условия получения заказа со склада</div> -->
-                                                            <div class="fs-6 text-muted-light">Заказ пропуска (ФИО + номер документа
-                                                                + гос. номер
-                                                                машины).<br> Ежедневно с 10:00 до 17:00.</div>
-                                                        </div>
-                                                        <!-- <div class="checkout-radio-card__body">
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="content-widget max-w-full">
-                                            <button type="submit" class="btn btn-secondary">сохранить изменения</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
     </main>
+
+    <!-- Модалки Заказа Отгрузки -->
+
+    <!-- addOrderShipmentModal -->
+    <div class="modal fade" id="addOrderShipmentModal" tabindex="-1" aria-labelledby="addOrderShipmentModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title h5" id="addNewPayerModalLabel">Заполните необходимые поля</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="small-floating-labels">
+                    <div class="content-widget max-w-700px">
+                        <p class="fw-medium mb-12px">Способ отгрузки</p>
+                        <div class="d-flex flex-column gap-3" role="tablist">
+                            <label class="d-flex gap-2 align-items-center active" role="tab" data-bs-toggle="tab" data-bs-target="#selfPickup">
+                                <input type="radio" name="deliveryMethod" class="form-radio" checked>
+                                <span>Самовывоз</span>
+                            </label>
+                            <label class="d-flex gap-2 align-items-center" role="tab" data-bs-toggle="tab" data-bs-target="#deliveryByTK">
+                                <input type="radio" name="deliveryMethod" class="form-radio">
+                                <span>Доставка транспортной компанией</span>
+                            </label>
+                            <label class="d-flex gap-2 align-items-center" role="tab" data-bs-toggle="tab" data-bs-target="#deliveryByTT">
+                                <input type="radio" name="deliveryMethod" class="form-radio">
+                                <span>Доставка до торговой точки / склада</span>
+                            </label>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#changeMethodShipmentModal">изменить</a>
+                        </div>
+                    </div>
+                    <div class="content-widget max-w-700px">
+                        <div class="tab-content">
+
+                            <!-- Самовывоз -->
+                            <div class="tab-pane fade show active" role="tabpanel" id="selfPickup">
+                                <!-- Время и дата самовывоза -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Время и дата самовывоза</p>
+                                    <div class="mb-12px">
+                                        <select class="form-select">
+                                            <option selected="">Выберите интервал времени</option>
+                                            <option value="1">9:00 - 10:00</option>
+                                            <option value="2">10:00 - 11:00</option>
+                                            <option value="2">11:00 - 12:00</option>
+                                            <option value="2">12:00 - 13:00</option>
+                                            <option value="2">13:00 - 14:00</option>
+                                            <option value="2">14:00 - 15:00</option>
+                                            <option value="2">15:00 - 16:00</option>
+                                            <option value="2">16:00 - 17:00</option>
+                                            <option value="2">17:00 - 18:00</option>
+                                            <option value="2">18:00 - 19:00</option>
+                                            <option value="2">19:00 - 20:00</option>
+                                            <option value="2">20:00 - 21:00</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Данные для пропуска -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Данные для пропуска</p>
+                                    <p class="small text-muted-light">Пропуск необходимо заказывать на водителя с машиной<br> и на каждого пассажира отдельно.</p>
+                                    <div class="visitorPass">
+                                        <div class="visitorPass__data">
+                                            <div class="mb-12px">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="ФИО (водителя)">
+                                                    <label>ФИО (водителя)</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-12px">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" placeholder="Тип документа">
+                                                    <label>Тип документа</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-12px">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Номер документа">
+                                                    <label>Номер документа</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visitorPass__button mb-12px">
+                                            <button type="button" class="btn btn-text p-0 border-0">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16"
+                                                    height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path
+                                                        d="M16 9.13208H9.15862V16H6.84138V9.13208H0V6.90566H6.84138V0H9.15862V6.90566H16V9.13208Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                                <span class="align-middle">Добавить пассажира</span>
+                                            </button>
+                                            <p class="small text-muted-light mt-12px">пропуск
+                                                оформляется на каждого пассажира</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Номер автомобиля">
+                                            <label>Номер автомобиля</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Номер прицепа">
+                                            <label>Номер прицепа</label>
+                                        </div>
+                                        <label class="d-flex gap-2 align-items-center mt-12px">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span class="small text-muted-light">иностранный номер
+                                                машины/прицепа</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Доставка транспортной компанией -->
+                            <div class="tab-pane fade" role="tabpanel" id="deliveryByTK">
+                                <!-- Alert -->
+                                <div class="mb-4 mb-lg-5">
+                                    <div class="bg-danger-subtle text-danger-emphasis p-3 mb-0">Заявку на доставку необходимо подать <b>не позднее 16:00 за день до планируемой доставки!</b></div>
+                                </div>
+                                <!-- Транспортная компания: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Транспортная компания:</p>
+                                    <div class="mb-12px">
+                                        <select class="form-select">
+                                            <option selected="">Выбрать ТК</option>
+                                            <option value="1">ТК «Название 1»</option>
+                                            <option value="3">ТК «Название 2»</option>
+                                            <option value="4">ТК «Название 3»</option>
+                                            <option value="5">ТК «Название 4»</option>
+                                            <option value="6">ТК «Название 5»</option>
+                                            <option value="nolist">НЕТ В СПИСКЕ</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Ваша транспортная компания">
+                                            <label>Ваша транспортная компания</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Адрес терминала: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Адрес терминала:</p>
+                                    <div class="fs-4 fw-medium text-primary">Москва, Рябиновая ул., 37, стр. 5</div>
+                                </div>
+                                <!-- Адрес терминала (Москва и МО): -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Адрес терминала (Москва и МО):</p>
+                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Адрес*" required>
+                                                <label>Адрес*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Дом">
+                                                <label>Дом*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Квартира">
+                                                <label>Корпус/Владение</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Вид доставки: -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Вид доставки:</p>
+                                    <div class="d-flex flex-column gap-3">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryMyTransferCompanyType" class="form-radio">
+                                            <span>Доставка до терминала</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryMyTransferCompanyType" class="form-radio">
+                                            <span>Доставка до адреса</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Информация о получателе: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Информация о получателе:</p>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Организация*" required>
+                                            <label>Организация*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="ИНН*" required>
+                                            <label>ИНН*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="ОГРН*" required>
+                                            <label>ОГРН*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Город*" required>
+                                            <label>Город*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Телефон*" required>
+                                            <label>Телефон*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Адрес доставки: -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Адрес доставки:</p>
+                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Адрес*" required>
+                                                <label>Адрес*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Дом*" required>
+                                                <label>Дом*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Корпус/Владение">
+                                                <label>Корпус/Владение</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Офис">
+                                                <label>Офис</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Название торговой точки*" required>
+                                                <label>Название торговой точки*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Комментарий к заказу -->
+                                <div class="mb-4 mb-lg-5">
+                                    <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Доставка до торговой точки / склада -->
+                            <div class="tab-pane fade" role="tabpanel" id="deliveryByTT">
+                                <!-- Адрес: -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Адрес:</p>
+                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                                        <div class="col-12">
+                                            <select class="form-select">
+                                                <option selected="">Выберите адрес доставки</option>
+                                                <option value="1">Адрес доставки 1</option>
+                                                <option value="2">Адрес доставки 2</option>
+                                                <option value="3">Адрес доставки 3</option>
+                                                <option value="nolist">Новый адрес</option>
+                                            </select>
+                                            <div>
+                                                <a href="#" class="fs-14px text-danger">удалить этот адрес</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Адрес*" required>
+                                                <label>Адрес*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Дом*" required>
+                                                <label>Дом*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Корпус/Владение">
+                                                <label>Корпус/Владение</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Вход">
+                                                <label>Вход</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Павильон">
+                                                <label>Павильон</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-secondary">Сохранить этот адрес</button>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex flex-column flex-lg-row flex-wrap gap-3">
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>нужна разгрузка</span>
+                                                </label>
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>подьем на этаж</span>
+                                                </label>
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>нет лифта</span>
+                                                </label>
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>паркинг</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Дата доставки: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Дата доставки:</p>
+                                    <div class="mb-12px">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Время работы: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Время работы:</p>
+                                    <div class="mb-12px">
+                                        <select class="form-select">
+                                            <option selected="">Выберите интервал времени</option>
+                                            <option value="1">9:00 - 10:00</option>
+                                            <option value="2">10:00 - 11:00</option>
+                                            <option value="2">11:00 - 12:00</option>
+                                            <option value="2">12:00 - 13:00</option>
+                                            <option value="2">13:00 - 14:00</option>
+                                            <option value="2">14:00 - 15:00</option>
+                                            <option value="2">15:00 - 16:00</option>
+                                            <option value="2">16:00 - 17:00</option>
+                                            <option value="2">17:00 - 18:00</option>
+                                            <option value="2">18:00 - 19:00</option>
+                                            <option value="2">19:00 - 20:00</option>
+                                            <option value="2">20:00 - 21:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Информация о получателе: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Информация о получателе:</p>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Организация*" required="">
+                                            <label>Организация*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Телефон*" required="">
+                                            <label>Телефон*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Дата доставки</p>
+                                    <p class="small text-muted-light">доставка осуществляется в течении
+                                        выбранного дня</p>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryDate" class="form-radio" checked>
+                                            <span>дата</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryDate" class="form-radio">
+                                            <span>дата</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryDate" class="form-radio">
+                                            <span>дата</span>
+                                        </label>
+                                    </div>
+                                </div> -->
+                                <!-- Комментарий к заказу -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
+                                </div>
+                                <div class="mb-4 mb-lg-5">
+                                    <div class="mb-12px">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span>отгрузить по готовности</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content-widget max-w-700px">
+                        <button type="submit" class="btn btn-secondary">оформить отгрузку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- changeMethodShipmentModal -->
+    <div class="modal fade" id="changeMethodShipmentModal" tabindex="-1"
+    aria-labelledby="changeMethodShipmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#addOrderShipmentModal" class="btn-back" data-bs-toggle="modal">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="9" viewBox="0 0 51 9" fill="none">
+                            <path
+                                d="M0.646446 4.14644C0.451183 4.3417 0.451183 4.65829 0.646446 4.85355L3.82843 8.03553C4.02369 8.23079 4.34027 8.23079 4.53553 8.03553C4.7308 7.84027 4.7308 7.52369 4.53553 7.32842L1.70711 4.5L4.53553 1.67157C4.7308 1.47631 4.7308 1.15972 4.53553 0.964462C4.34027 0.7692 4.02369 0.7692 3.82843 0.964462L0.646446 4.14644ZM51 4L1 4L1 5L51 5L51 4Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                    <span class="fw-medium">назад</span>
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="content-widget max-w-800px">
+                    <div class="h4 mb-22px">Изменить способ отгрузки</div>
+                    <div class="row" style="--bs-gutter-y: 22px;">
+
+                        <div class="col-lg-12">
+                            <!-- Самовывоз -->
+                            <div class="checkout-radio-card" data-group="delivery">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Самовывоз</div>
+                                        <input type="radio" name="checkout-delivery" class="form-radio" data-parent-radio>
+                                    </label>
+                                    <div class="text-success fw-semibold mb-2">Бесплатно</div>
+                                </div>
+                                <div class="checkout-radio-card__body">
+
+                                    <!-- item «Забрать из магазина» -->
+                                    <div class="item-pickup-option">
+                                        <!-- Кнопка -->
+                                        <label class="item-pickup-option__btn">
+                                            <div class="d-flex align-items-center gap-12px">
+                                                <!-- icon-map-marker -->
+                                                <span>
+                                                    <svg width="32" height="32">
+                                                        <use xlink:href="img/sprite.svg#icon-map-marker">
+                                                        </use>
+                                                    </svg>
+                                                </span>
+                                                <div class="fw-medium">Забрать из магазина</div>
+                                            </div>
+                                            <input type="radio" name="checkout-delivery-pickup" class="form-radio" data-child-radio>
+                                        </label>
+                                        <div class="item-pickup-option__body">
+                                            <!-- Адрес -->
+                                            <div class="mb-3">
+                                                <p class="h4 ff-title fw-normal mb-12px">МастерДом на
+                                                    Профсоюзной</p>
+                                                <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а
+                                                </p>
+                                                <div class="d-flex flex-wrap gap-2 mb-12px">
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                </div>
+                                                <div class="d-flex flex-wrap gap-22px mb-12px"
+                                                    style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
+                                                    <a href="tel:88003503243" class="item-phone">8 (800)
+                                                        350-32-43</a>
+                                                    <a href="mailto:info@mail.ru"
+                                                        class="item-email">info@mail.ru</a>
+                                                </div>
+                                                <div class="text-primary fw-medium">c 18 января</div>
+                                            </div>
+                                            <!-- Инфо условий и оплаты -->
+                                            <div>
+                                                <p class="fw-medium mb-1">Условия получения заказа со склада</p>
+                                                <p class="text-muted-light">Заказ пропуска (ФИО + номер
+                                                    документа + гос.
+                                                    номер машины).Ежедневно с 10:00 до 17:00.</p>
+                                                <p class="fw-medium mb-1">Оплата</p>
+                                                <p class="text-muted-light">Онлайн, Оплата в фирменном
+                                                    салоне наличным или
+                                                    безналичным способами оплаты в кассе.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- item «Центральный склад» -->
+                                    <div class="item-pickup-option">
+                                        <!-- Кнопка -->
+                                        <label class="item-pickup-option__btn">
+                                            <div class="d-flex align-items-center gap-12px">
+                                                <!-- icon-map-marker -->
+                                                <span>
+                                                    <svg width="32" height="32">
+                                                        <use xlink:href="img/sprite.svg#icon-map-marker">
+                                                        </use>
+                                                    </svg>
+                                                </span>
+                                                <div class="fw-medium">Центральный склад</div>
+                                            </div>
+                                            <input type="radio" name="checkout-delivery-pickup"
+                                                class="form-radio" data-child-radio>
+                                        </label>
+                                        <div class="item-pickup-option__body">
+                                            <!-- Адрес -->
+                                            <div class="mb-3">
+                                                <p class="h4 ff-title fw-normal mb-12px">Адрес</p>
+                                                <p class="mb-12px">Московская область, Зелёное шоссе, 2</p>
+                                                <div class="d-flex flex-wrap gap-22px mb-12px"
+                                                    style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
+                                                    <a href="tel:88003503243" class="item-phone">8 (800)
+                                                        350-32-43</a>
+                                                </div>
+                                                <div class="text-primary fw-medium">c 18 января</div>
+                                            </div>
+                                            <!-- Инфо условий и оплаты -->
+                                            <div>
+                                                <p class="fw-medium mb-1">Условия получения заказа со склада
+                                                </p>
+                                                <p class="text-muted-light">Заказ пропуска (ФИО + номер
+                                                    документа + гос.
+                                                    номер машины).Ежедневно с 10:00 до 17:00.</p>
+                                                <p class="fw-medium mb-1">Оплата</p>
+                                                <p class="text-muted-light">Онлайн, Оплата в фирменном
+                                                    салоне наличным или
+                                                    безналичным способами оплаты в кассе.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- item «Склад в Тюмени» -->
+                                    <div class="item-pickup-option">
+                                        <!-- Кнопка -->
+                                        <label class="item-pickup-option__btn">
+                                            <div class="d-flex align-items-center gap-12px">
+                                                <!-- icon-map-marker -->
+                                                <span>
+                                                    <svg width="32" height="32">
+                                                        <use xlink:href="img/sprite.svg#icon-map-marker">
+                                                        </use>
+                                                    </svg>
+                                                </span>
+                                                <div class="fw-medium">Склад в Тюмени</div>
+                                            </div>
+                                            <input type="radio" name="checkout-delivery-pickup"
+                                                class="form-radio" data-child-radio>
+                                        </label>
+                                        <div class="item-pickup-option__body">
+                                            <!-- Адрес -->
+                                            <div class="mb-3">
+                                                <p class="h4 ff-title fw-normal mb-12px">МастерДом на
+                                                    Профсоюзной</p>
+                                                <p class="mb-12px">г. Москва, Нахимовский проспект, д.59а
+                                                </p>
+                                                <div class="d-flex flex-wrap gap-2 mb-12px">
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                    <div class="item-metro">Профсоюзная, 15 м</div>
+                                                </div>
+                                                <div class="d-flex flex-wrap gap-22px mb-12px"
+                                                    style="--bs-link-color-rgb: var(--bs-secondary-rgb); --bs-link-hover-color-rgb: var(--bs-primary-rgb);">
+                                                    <a href="tel:88003503243" class="item-phone">8 (800)
+                                                        350-32-43</a>
+                                                    <a href="mailto:info@mail.ru"
+                                                        class="item-email">info@mail.ru</a>
+                                                </div>
+                                                <div class="text-primary fw-medium">c 18 января</div>
+                                            </div>
+                                            <!-- Инфо условий и оплаты -->
+                                            <div>
+                                                <p class="fw-medium mb-1">Условия получения заказа со склада
+                                                </p>
+                                                <p class="text-muted-light">Заказ пропуска (ФИО + номер
+                                                    документа + гос.
+                                                    номер машины).Ежедневно с 10:00 до 17:00.</p>
+                                                <p class="fw-medium mb-1">Оплата</p>
+                                                <p class="text-muted-light">Онлайн, Оплата в фирменном
+                                                    салоне наличным или
+                                                    безналичным способами оплаты в кассе.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- Доставка транспортной компанией -->
+                            <div class="checkout-radio-card" data-group="delivery">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Доставка транспортной
+                                            компанией</div>
+                                        <input type="radio" name="checkout-delivery" class="form-radio"
+                                            data-parent-radio>
+                                    </label>
+                                    <div class="text-primary fw-semibold mb-2">от 1000 ₽</div>
+                                    <div class="mb-1">от 2-7 дней с 10-18 часов</div>
+                                    <div class="fs-6 text-muted-light">*Точное время лоставки уточняйте у
+                                        менеждера</div>
+                                </div>
+                                <div class="checkout-radio-card__body">
+                                    <div class="mb-5">
+                                        <div class="mb-12px">
+                                            <select class="form-select">
+                                                <option selected="">Выбрать ТК</option>
+                                                <option value="1">ТК «Название 1»</option>
+                                                <option value="2">ТК «Название 2»</option>
+                                                <option value="2">ТК «Название 3»</option>
+                                                <option value="2">ТК «Название 4»</option>
+                                                <option value="2">ТК «Название 5»</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-12px">
+                                            <label
+                                                class="d-flex gap-2 align-items-center">
+                                                <input type="radio" name="checkout-delivery-tc"
+                                                    class="form-radio" data-child-radio>
+                                                <span>Доставка до терминала ТК</span>
+                                            </label>
+                                        </div>
+                                        <div class="mb-12px">
+                                            <label
+                                                class="d-flex gap-2 align-items-center">
+                                                <input type="radio" name="checkout-delivery-tc"
+                                                    class="form-radio" data-child-radio>
+                                                <span>Доставка до покупателя средствами ТК</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="fs-6">
+                                        <p class="fw-medium mb-1">Условия получения заказа</p>
+                                        <p>1. На месте, где предполагается разгрузка, необходимо иметь
+                                            доступ для грузового
+                                            автомобиля.</p>
+                                        <p>2. Чтобы избежать повторной платной доставки, пожалуйста, будьте
+                                            на месте для приема
+                                            товара в указанное время, так как водитель не может ждать более
+                                            20 минут из-за его
+                                            графика.</p>
+                                        <p>3. При расчете стоимости доставки учитывается общий вес и объем
+                                            товаров.</p>
+                                        <p class="fw-medium mb-1">Оплата</p>
+                                        <p class="text-muted-light">Онлайн, наличными при получении</p>
+                                        <p class="text-primary">*Доставка разных категорий товаров считается
+                                            по максимальной:
+                                            обои-свет, плитка-сантехника, крупный формат.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <!-- Доставка до Торговой точки/Склада -->
+                            <div class="checkout-radio-card" data-group="delivery">
+                                <div class="checkout-radio-card__header">
+                                    <label class="d-flex justify-content-between gap-2 mb-12px">
+                                        <div class="h4 fw-normal text-uppercase mb-0">Доставка до Торговой
+                                            точки/Склада</div>
+                                        <input type="radio" name="checkout-delivery" class="form-radio"
+                                            data-parent-radio>
+                                    </label>
+                                    <div class="text-success fw-semibold mb-2">Бесплатно</div>
+                                    <!-- <div class="mb-1">Условия получения заказа со склада</div> -->
+                                    <div class="fs-6 text-muted-light">Заказ пропуска (ФИО + номер документа
+                                        + гос. номер
+                                        машины).<br> Ежедневно с 10:00 до 17:00.</div>
+                                </div>
+                                <!-- <div class="checkout-radio-card__body">
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content-widget max-w-full">
+                    <button type="submit" class="btn btn-secondary">сохранить изменения</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- FOOTER -->
         <footer class="footer">

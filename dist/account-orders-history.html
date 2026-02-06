@@ -79,14 +79,17 @@
                                 </svg>
                             </a>
                         </div>
-                        <!--<div class="navbar-mobile__icon icon-heart">
+                        <!-- icon -->
+                        <div class="navbar-mobile__icon icon-notifications">
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                    <path d="M16.5091 28.2013L4.20238 17.054C-2.48607 10.3655 7.34593 -2.47625 16.5091 7.91311C25.6722 -2.47625 35.4598 10.4101 28.8159 17.054L16.5091 28.2013Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13.4219 29C13.5912 29.5769 13.9429 30.0835 14.4242 30.4437C14.9055 30.8041 15.4907 30.9989 16.0919 30.9989C16.6931 30.9989 17.2783 30.8041 17.7595 30.4437C18.2408 30.0835 18.5925 29.5769 18.7619 29" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M16.0879 3.73633V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M25.7921 14.0001C26.1343 22.2377 28.0879 25.0001 28.0879 25.0001H4.08789C4.08789 25.0001 6.08789 22.4454 6.08789 14.0001C6.08938 12.4334 6.4586 10.889 7.16581 9.49111C7.87302 8.09321 8.8985 6.88082 10.1597 5.9515C11.4209 5.02219 12.8827 4.4019 14.4274 4.14054C15.972 3.87885 16.1877 3.90023 17.7214 4.14172" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
+                                <div class="notification-count">0</div>
                             </a>
-                            <div class="notification-count">99</div>
-                        </div>-->
+                        </div>
                         <div class="navbar-mobile__icon icon-cart">
                             <a href="cart.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -118,23 +121,41 @@
                             <div class="mobile-collapse-menu__menu-container">
 
                                 <!-- Кнопка "Каталог >" -->
-                                <button type="button" class="btn-catalog mobile-catalog-menu-invoker">
+                                <!-- <button type="button" class="btn-catalog mobile-catalog-menu-invoker">
                                     <span>Каталог</span>
                                     <svg width="20" height="20">
                                         <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
                                     </svg>
-                                </button>
+                                </button> -->
+
+                                <div class="mb-3">
+                                    <div class="prices-switch">
+                                        <a href="#"><span class="sbtn active">РРЦ</span><span class="sbtn">ОПТ</span></a>
+                                    </div>
+                                </div>
 
                                 <!-- Основное меню -->
                                 <ul class="mobile-main-menu-section">
-                                    <li>
-                                        <a href="#" class="d-flex gap-2 align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M10.0054 17.2414L2.64031 10.5701C-1.36248 6.56735 4.52161 -1.11798 10.0054 5.09966C15.4892 -1.11798 21.3467 6.59405 17.3706 10.5701L10.0054 17.2414Z" fill="#02378F" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <span>Избраное (<span class="notification-count favorites-counter">0</span>)</span>
-                                        </a>
+                                    <li class="has-submenu">
+                                        <a href="#">Плитка</a>
+                                        <button type="button" class="submenu-toggler"></button>
+                                        <ul class="submenu">
+                                            <li><a href="#">Каталог плитки</a></li>
+                                            <li><a href="#">Распродажа плитки</a></li>
+                                            <li><a href="#">Стенды</a></li>
+                                            <li><a href="#">Экспозиторы</a></li>
+                                        </ul>
                                     </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Обои</a>
+                                        <button type="button" class="submenu-toggler"></button>
+                                        <ul class="submenu">
+                                            <li><a href="#">Каталог обоев</a></li>
+                                            <li><a href="#">Распродажа обоев</a></li>
+                                            <li><a href="#">Каталоги</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Краска</a></li>
                                     <li><a href="#">Бренды и Фабрики</a></li>
                                     <li><a href="#">Коллекции</a></li>
                                     <li class="has-submenu">
@@ -147,23 +168,6 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">Контакты</a></li>
-                                    <li class="has-submenu">
-                                        <a href="#">Пример выпадающего меню</a>
-                                        <button type="button" class="submenu-toggler"></button>
-                                        <ul class="submenu">
-                                            <li><a href="#">Пример 1</a></li>
-                                            <li class="has-submenu">
-                                                <a href="#">Пример выпадающего меню</a>
-                                                <button type="button" class="submenu-toggler"></button>
-                                                <ul class="submenu">
-                                                    <li><a href="#">Пример 1</a></li>
-                                                    <li><a href="#">Пример 2</a></li>
-                                                    <li><a href="#">Пример 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Пример 3</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </div>
                             
@@ -721,6 +725,7 @@
                                         <path d="M1 20.8301L20.799 1.03109" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
+                                <span class="navbar-desktop__offcanvas-toggle-title">О нас</span>
                             </a>
                             <!-- Меню -->
                             <ul class="navbar-nav">
@@ -1033,16 +1038,6 @@
                                         <span>Краски</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="nav-link">
-                                        <span>Коллекции</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link">
-                                        <span>Контакты</span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                         <!-- Переключатель -->
@@ -1080,6 +1075,26 @@
                                 </a>
                             </div>
                             <!-- icon -->
+                            <div class="navbar-desktop__icon icon-notifications">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M13.4219 29C13.5912 29.5769 13.9429 30.0835 14.4242 30.4437C14.9055 30.8041 15.4907 30.9989 16.0919 30.9989C16.6931 30.9989 17.2783 30.8041 17.7595 30.4437C18.2408 30.0835 18.5925 29.5769 18.7619 29" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M16.0879 3.73633V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M25.7921 14.0001C26.1343 22.2377 28.0879 25.0001 28.0879 25.0001H4.08789C4.08789 25.0001 6.08789 22.4454 6.08789 14.0001C6.08938 12.4334 6.4586 10.889 7.16581 9.49111C7.87302 8.09321 8.8985 6.88082 10.1597 5.9515C11.4209 5.02219 12.8827 4.4019 14.4274 4.14054C15.972 3.87885 16.1877 3.90023 17.7214 4.14172" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <div class="notification-count">0</div>
+                                </a>
+                            </div>
+                            <!-- icon -->
+                            <div class="navbar-desktop__icon icon-location">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M28.0687 13.0343C28.0687 21.0572 16.0343 30.4172 16.0343 30.4172C16.0343 30.4172 4 21.0572 4 13.0343C4 6.47963 9.47963 1 16.0343 1C22.589 1 28.0687 6.47963 28.0687 13.0343Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M16.0349 17.0453C18.2503 17.0453 20.0463 15.2494 20.0463 13.0339C20.0463 10.8184 18.2503 9.02246 16.0349 9.02246C13.8194 9.02246 12.0234 10.8184 12.0234 13.0339C12.0234 15.2494 13.8194 17.0453 16.0349 17.0453Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- icon -->
                             <div class="navbar-desktop__icon icon-profile">
                                 <a href="account-login.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -1087,15 +1102,6 @@
                                         <path d="M4 29.8903H28.564V28.505C28.5422 26.5573 27.9936 24.6464 26.9693 22.9512C25.945 21.2557 24.4784 19.831 22.7066 18.8102C20.9348 17.7893 18.9155 17.2056 16.8375 17.1134C16.6522 17.1052 16.467 17.1009 16.282 17.1006C16.097 17.1009 15.9118 17.1052 15.7265 17.1134C13.6484 17.2056 11.6292 17.7893 9.85733 18.8102C8.08553 19.831 6.61898 21.2557 5.59467 22.9512C4.57037 24.6464 4.02173 26.5573 4 28.505V29.8903Z" fill="white" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </a>
-                            </div>
-                            <!-- icon -->
-                            <div class="navbar-desktop__icon icon-whishlist">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                        <path d="M16.5091 28.2013L4.20238 17.054C-2.48607 10.3655 7.34593 -2.47625 16.5091 7.91311C25.6722 -2.47625 35.4598 10.4101 28.8159 17.054L16.5091 28.2013Z" stroke="#1A1A16" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                                <div class="notification-count">2</div>
                             </div>
                             <!-- icon -->
                             <div class="navbar-desktop__icon icon-cart">
@@ -1283,8 +1289,7 @@
                             <form class="form-order-search" action="#">
     <div class="row align-items-end gy-4">
         <div class="col-lg position-relative">
-            <input type="text" autocomplete="off" class="form-control"
-                placeholder="Поиск по артикулу, коллекции или названию">
+            <input type="text" autocomplete="off" class="form-control" placeholder="Поиск по артикулу, коллекции или названию">
         </div>
         <div class="col-lg-auto">
             <button type="submit" class="btn btn-outline">

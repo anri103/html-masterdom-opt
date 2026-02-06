@@ -1,0 +1,429 @@
+<div class="modal fade" id="addOrderShipmentModal" tabindex="-1" aria-labelledby="addOrderShipmentModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title h5" id="addNewPayerModalLabel">Заполните необходимые поля</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="small-floating-labels">
+                    <div class="content-widget max-w-700px">
+                        <p class="fw-medium mb-12px">Способ отгрузки</p>
+                        <div class="d-flex flex-column gap-3" role="tablist">
+                            <label class="d-flex gap-2 align-items-center active" role="tab" data-bs-toggle="tab" data-bs-target="#selfPickup">
+                                <input type="radio" name="deliveryMethod" class="form-radio" checked>
+                                <span>Самовывоз</span>
+                            </label>
+                            <label class="d-flex gap-2 align-items-center" role="tab" data-bs-toggle="tab" data-bs-target="#deliveryByTK">
+                                <input type="radio" name="deliveryMethod" class="form-radio">
+                                <span>Доставка транспортной компанией</span>
+                            </label>
+                            <label class="d-flex gap-2 align-items-center" role="tab" data-bs-toggle="tab" data-bs-target="#deliveryByTT">
+                                <input type="radio" name="deliveryMethod" class="form-radio">
+                                <span>Доставка до торговой точки / склада</span>
+                            </label>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-outline" data-bs-toggle="modal" data-bs-target="#changeMethodShipmentModal">изменить</a>
+                        </div>
+                    </div>
+                    <div class="content-widget max-w-700px">
+                        <div class="tab-content">
+
+                            <!-- Самовывоз -->
+                            <div class="tab-pane fade show active" role="tabpanel" id="selfPickup">
+                                <!-- Время и дата самовывоза -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Время и дата самовывоза</p>
+                                    <div class="mb-12px">
+                                        <select class="form-select">
+                                            <option selected="">Выберите интервал времени</option>
+                                            <option value="1">9:00 - 10:00</option>
+                                            <option value="2">10:00 - 11:00</option>
+                                            <option value="2">11:00 - 12:00</option>
+                                            <option value="2">12:00 - 13:00</option>
+                                            <option value="2">13:00 - 14:00</option>
+                                            <option value="2">14:00 - 15:00</option>
+                                            <option value="2">15:00 - 16:00</option>
+                                            <option value="2">16:00 - 17:00</option>
+                                            <option value="2">17:00 - 18:00</option>
+                                            <option value="2">18:00 - 19:00</option>
+                                            <option value="2">19:00 - 20:00</option>
+                                            <option value="2">20:00 - 21:00</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Данные для пропуска -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Данные для пропуска</p>
+                                    <p class="small text-muted-light">Пропуск необходимо заказывать на водителя с машиной<br> и на каждого пассажира отдельно.</p>
+                                    <div class="visitorPass">
+                                        <div class="visitorPass__data">
+                                            <div class="mb-12px">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="ФИО (водителя)">
+                                                    <label>ФИО (водителя)</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-12px">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" placeholder="Тип документа">
+                                                    <label>Тип документа</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-12px">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Номер документа">
+                                                    <label>Номер документа</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visitorPass__button mb-12px">
+                                            <button type="button" class="btn btn-text p-0 border-0">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16"
+                                                    height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path
+                                                        d="M16 9.13208H9.15862V16H6.84138V9.13208H0V6.90566H6.84138V0H9.15862V6.90566H16V9.13208Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                                <span class="align-middle">Добавить пассажира</span>
+                                            </button>
+                                            <p class="small text-muted-light mt-12px">пропуск
+                                                оформляется на каждого пассажира</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Номер автомобиля">
+                                            <label>Номер автомобиля</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Номер прицепа">
+                                            <label>Номер прицепа</label>
+                                        </div>
+                                        <label class="d-flex gap-2 align-items-center mt-12px">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span class="small text-muted-light">иностранный номер
+                                                машины/прицепа</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Доставка транспортной компанией -->
+                            <div class="tab-pane fade" role="tabpanel" id="deliveryByTK">
+                                <!-- Alert -->
+                                <div class="mb-4 mb-lg-5">
+                                    <div class="bg-danger-subtle text-danger-emphasis p-3 mb-0">Заявку на доставку необходимо подать <b>не позднее 16:00 за день до планируемой доставки!</b></div>
+                                </div>
+                                <!-- Транспортная компания: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Транспортная компания:</p>
+                                    <div class="mb-12px">
+                                        <select class="form-select">
+                                            <option selected="">Выбрать ТК</option>
+                                            <option value="1">ТК «Название 1»</option>
+                                            <option value="3">ТК «Название 2»</option>
+                                            <option value="4">ТК «Название 3»</option>
+                                            <option value="5">ТК «Название 4»</option>
+                                            <option value="6">ТК «Название 5»</option>
+                                            <option value="nolist">НЕТ В СПИСКЕ</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Ваша транспортная компания">
+                                            <label>Ваша транспортная компания</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Адрес терминала: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Адрес терминала:</p>
+                                    <div class="fs-4 fw-medium text-primary">Москва, Рябиновая ул., 37, стр. 5</div>
+                                </div>
+                                <!-- Адрес терминала (Москва и МО): -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Адрес терминала (Москва и МО):</p>
+                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Адрес*" required>
+                                                <label>Адрес*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Дом">
+                                                <label>Дом*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Квартира">
+                                                <label>Корпус/Владение</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Вид доставки: -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Вид доставки:</p>
+                                    <div class="d-flex flex-column gap-3">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryMyTransferCompanyType" class="form-radio">
+                                            <span>Доставка до терминала</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryMyTransferCompanyType" class="form-radio">
+                                            <span>Доставка до адреса</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Информация о получателе: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Информация о получателе:</p>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Организация*" required>
+                                            <label>Организация*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="ИНН*" required>
+                                            <label>ИНН*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="ОГРН*" required>
+                                            <label>ОГРН*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Город*" required>
+                                            <label>Город*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Телефон*" required>
+                                            <label>Телефон*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Адрес доставки: -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Адрес доставки:</p>
+                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Адрес*" required>
+                                                <label>Адрес*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Дом*" required>
+                                                <label>Дом*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Корпус/Владение">
+                                                <label>Корпус/Владение</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Офис">
+                                                <label>Офис</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Название торговой точки*" required>
+                                                <label>Название торговой точки*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Комментарий к заказу -->
+                                <div class="mb-4 mb-lg-5">
+                                    <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Доставка до торговой точки / склада -->
+                            <div class="tab-pane fade" role="tabpanel" id="deliveryByTT">
+                                <!-- Адрес: -->
+                                <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Адрес:</p>
+                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
+                                        <div class="col-12">
+                                            <select class="form-select">
+                                                <option selected="">Выберите адрес доставки</option>
+                                                <option value="1">Адрес доставки 1</option>
+                                                <option value="2">Адрес доставки 2</option>
+                                                <option value="3">Адрес доставки 3</option>
+                                                <option value="nolist">Новый адрес</option>
+                                            </select>
+                                            <div>
+                                                <a href="#" class="fs-14px text-danger">удалить этот адрес</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Адрес*" required>
+                                                <label>Адрес*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Дом*" required>
+                                                <label>Дом*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Корпус/Владение">
+                                                <label>Корпус/Владение</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Вход">
+                                                <label>Вход</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="Павильон">
+                                                <label>Павильон</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-secondary">Сохранить этот адрес</button>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex flex-column flex-lg-row flex-wrap gap-3">
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>нужна разгрузка</span>
+                                                </label>
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>подьем на этаж</span>
+                                                </label>
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>нет лифта</span>
+                                                </label>
+                                                <label class="d-flex gap-2 align-items-center">
+                                                    <input type="checkbox" class="form-checkbox" value="">
+                                                    <span>паркинг</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Дата доставки: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Дата доставки:</p>
+                                    <div class="mb-12px">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Время работы: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Время работы:</p>
+                                    <div class="mb-12px">
+                                        <select class="form-select">
+                                            <option selected="">Выберите интервал времени</option>
+                                            <option value="1">9:00 - 10:00</option>
+                                            <option value="2">10:00 - 11:00</option>
+                                            <option value="2">11:00 - 12:00</option>
+                                            <option value="2">12:00 - 13:00</option>
+                                            <option value="2">13:00 - 14:00</option>
+                                            <option value="2">14:00 - 15:00</option>
+                                            <option value="2">15:00 - 16:00</option>
+                                            <option value="2">16:00 - 17:00</option>
+                                            <option value="2">17:00 - 18:00</option>
+                                            <option value="2">18:00 - 19:00</option>
+                                            <option value="2">19:00 - 20:00</option>
+                                            <option value="2">20:00 - 21:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Информация о получателе: -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <p class="fw-medium mb-12px">Информация о получателе:</p>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Организация*" required="">
+                                            <label>Организация*</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Телефон*" required="">
+                                            <label>Телефон*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="mb-4 mb-lg-5">
+                                    <p class="fw-medium mb-12px">Дата доставки</p>
+                                    <p class="small text-muted-light">доставка осуществляется в течении
+                                        выбранного дня</p>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryDate" class="form-radio" checked>
+                                            <span>дата</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryDate" class="form-radio">
+                                            <span>дата</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="radio" name="deliveryDate" class="form-radio">
+                                            <span>дата</span>
+                                        </label>
+                                    </div>
+                                </div> -->
+                                <!-- Комментарий к заказу -->
+                                <div class="mb-4 mb-lg-5 max-w-540px">
+                                    <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
+                                </div>
+                                <div class="mb-4 mb-lg-5">
+                                    <div class="mb-12px">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span>отгрузить по готовности</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content-widget max-w-700px">
+                        <button type="submit" class="btn btn-secondary">оформить отгрузку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

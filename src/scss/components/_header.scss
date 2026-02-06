@@ -108,6 +108,13 @@
             background-color: #DEE5ED;
         }
 
+        &.icon-notifications .notification-count {
+            left: 12px;
+            right: auto;
+            color: #fff;
+            background-color: #02378F;
+        }
+
         // &.icon-profile .notification-count {
         //     top: auto;
         //     bottom: -2px;
@@ -734,6 +741,13 @@
             background-color: #DEE5ED;
         }
 
+        &.icon-notifications .notification-count {
+            left: 12px;
+            right: auto;
+            color: #fff;
+            background-color: #02378F;
+        }
+
         // &.icon-profile .notification-count {
         //     top: auto;
         //     bottom: -2px;
@@ -945,8 +959,22 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 100%;
-        letter-spacing: 1%;
+        letter-spacing: 0.02em;
         color: #1A1A16;
+
+        @media (max-width: 991px) {
+            & > a {
+                padding-right: 16px;
+                padding-left: 16px;
+            }
+
+            .sbtn {
+                padding-top: 6px;
+                padding-right: 12px;
+                padding-bottom: 6px;
+                padding-left: 12px;
+            }
+        }
 
         @media (min-width: 992px) {
             font-size: 18px;
