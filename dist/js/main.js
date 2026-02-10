@@ -772,40 +772,40 @@ document.addEventListener("DOMContentLoaded", initializeTextBlocks);
 //////////////////////////////////////////////////////////////////
 // Страница "Оформление заказа"
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Переменная для отслеживания мобильного состояния
     let isMobile = $(window).width() < 768;
-    
+
     // Обновляем состояние при ресайзе
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         isMobile = $(window).width() < 768;
     });
-    
+
     // Функция для определения контейнера прокрутки
     function getScrollContainer($element) {
         // Ищем активное модальное окно (с классом show)
         const $activeModal = $('.modal.show');
-        
+
         // Проверяем, находится ли элемент внутри активного модального окна
         if ($activeModal.length && $element.closest('.modal').is($activeModal)) {
             return $activeModal;
         }
         return null; // Основная страница
     }
-    
+
     // Функция для плавной прокрутки к элементу с задержкой
     function scrollToElement($element) {
         if (!isMobile) return; // Только на мобильных
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             const $container = getScrollContainer($element);
-            
+
             if ($container && $container.length) {
                 // Прокрутка внутри модального окна
                 const elementTop = $element.offset().top;
                 const containerTop = $container.offset().top;
                 const scrollPosition = elementTop - containerTop - 150;
-                
+
                 $container.animate({
                     scrollTop: scrollPosition
                 }, 300);
@@ -822,11 +822,11 @@ $(document).ready(function() {
     }
 
     // Обработчик для родительских radio
-    $(document).on('change', '[data-parent-radio]', function() {
+    $(document).on('change', '[data-parent-radio]', function () {
         const $card = $(this).closest('.checkout-radio-card');
         const group = $card.data('group');
         const $body = $card.find('.checkout-radio-card__body');
-        
+
         $card.toggleClass('js-active', this.checked);
         if (this.checked) {
             $body.stop(true, true).slideDown(300);
@@ -834,8 +834,8 @@ $(document).ready(function() {
         } else {
             $body.stop(true, true).slideUp(300);
         }
-        
-        $(`.checkout-radio-card[data-group="${group}"]`).not($card).each(function() {
+
+        $(`.checkout-radio-card[data-group="${group}"]`).not($card).each(function () {
             $(this).removeClass('js-active')
                 .find('.checkout-radio-card__body').slideUp(300)
                 .find('[data-child-radio]').prop('checked', false);
@@ -843,35 +843,35 @@ $(document).ready(function() {
                 .find('.item-pickup-option__body').slideUp(300);
         });
     });
-    
+
     // Обработчик для дочерних radio
-    $(document).on('change', '[data-child-radio]', function() {
+    $(document).on('change', '[data-child-radio]', function () {
         const $option = $(this).closest('.item-pickup-option');
         const $card = $(this).closest('.checkout-radio-card');
-        
+
         if ($option.length) {
             $card.find('.item-pickup-option').not($option)
                 .removeClass('js-active')
                 .find('.item-pickup-option__body').slideUp(300);
-            
+
             $option.toggleClass('js-active', this.checked)
                 .find('.item-pickup-option__body')
                 .stop(true, true)[this.checked ? 'slideDown' : 'slideUp'](300);
-                
+
             if (this.checked) {
                 scrollToElement($option);
             }
         }
     });
-    
+
     // Инициализация начального состояния
-    $('[data-parent-radio]:checked').each(function() {
+    $('[data-parent-radio]:checked').each(function () {
         $(this).closest('.checkout-radio-card')
             .addClass('js-active')
             .find('.checkout-radio-card__body').show();
     });
-    
-    $('[data-child-radio]:checked').each(function() {
+
+    $('[data-child-radio]:checked').each(function () {
         const $option = $(this).closest('.item-pickup-option');
         if ($option.length) {
             $option.addClass('js-active')
@@ -880,4 +880,420 @@ $(document).ready(function() {
     });
 });
 
-// CUSTOM
+// CUSTOM CODE
+
+class ConditionalFormManager {
+    constructor(formSelector) {
+        this.form = document.querySelector(formSelector);
+        if (!this.form) return;
+        
+        this.currentTab = 'selfPickup';
+        this.init();
+    }
+
+    init() {
+        // Условные триггеры
+        this.triggers = this.form.querySelectorAll('[data-conditional-trigger]');
+        this.triggers.forEach(trigger => {
+            trigger.addEventListener('change', (e) => {
+                this.updateConditions();
+                
+                if (e.target.hasAttribute('data-reset-children')) {
+                    this.resetDependentBlocks(e.target);
+                }
+            });
+        });
+
+        // Кнопки сохранения адресов
+        this.setupSaveButtons();
+        
+        // Кнопки удаления опций
+        this.setupDeleteButtons();
+        
+        // Загрузка сохранённых адресов
+        this.loadSavedAddresses();
+
+        this.setupBootstrapTabListeners();
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+        this.updateConditions();
+    }
+
+    /**
+     * 💾 Настройка кнопок сохранения адресов
+     */
+    setupSaveButtons() {
+        const saveButtons = this.form.querySelectorAll('[data-save-address]');
+        
+        saveButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const selectId = btn.dataset.saveAddress;
+                const fields = btn.dataset.fields.split(',');
+                this.saveAddress(selectId, fields);
+            });
+        });
+    }
+
+    /**
+     * 💾 Сохранение нового адреса
+     */
+    saveAddress(selectId, fields) {
+        const select = document.getElementById(selectId);
+        if (!select) return;
+
+        // Собираем значения полей
+        const values = {};
+        let isValid = true;
+
+        fields.forEach(field => {
+            const input = document.getElementById(`${selectId}_${field}`);
+            if (input) {
+                values[field] = input.value.trim();
+                
+                // Проверка обязательных полей
+                if (input.hasAttribute('data-required-when-visible') && !values[field]) {
+                    isValid = false;
+                }
+            }
+        });
+
+        if (!isValid) {
+            this.showToast('Заполните все обязательные поля', 'warning');
+            return;
+        }
+
+        // Формируем полный адрес
+        const fullAddress = this.buildFullAddress(values, fields);
+
+        // Создаём новую опцию
+        const option = document.createElement('option');
+        option.value = `saved_${Date.now()}`; // Уникальный ID
+        option.textContent = fullAddress;
+        option.dataset.addressData = JSON.stringify(values);
+
+        // Вставляем перед "НОВЫЙ АДРЕС"
+        const nolistOption = select.querySelector('option[value="nolist"]');
+        select.insertBefore(option, nolistOption);
+
+        // Выбираем новый адрес
+        select.value = option.value;
+        this.updateConditions();
+
+        // Очищаем форму
+        this.clearAddressForm(selectId, fields);
+
+        // Сохраняем в localStorage
+        this.saveSelectToStorage(selectId);
+
+        this.showToast('Адрес сохранён!', 'success');
+    }
+
+    /**
+     * 🏗️ Формирование полного адреса
+     */
+    buildFullAddress(values, fields) {
+        const parts = [];
+        
+        if (values.street) parts.push(values.street);
+        if (values.house) parts.push(`д. ${values.house}`);
+        if (values.building) parts.push(`корп. ${values.building}`);
+        if (values.entrance) parts.push(`вх. ${values.entrance}`);
+        if (values.pavilion) parts.push(`пав. ${values.pavilion}`);
+        if (values.office) parts.push(`оф. ${values.office}`);
+        if (values.shopName) parts.push(`(${values.shopName})`);
+        
+        return parts.join(', ');
+    }
+
+    /**
+     * 🧹 Очистка формы адреса
+     */
+    clearAddressForm(selectId, fields) {
+        fields.forEach(field => {
+            const input = document.getElementById(`${selectId}_${field}`);
+            if (input) input.value = '';
+        });
+    }
+
+    /**
+     * 🗑️ Настройка кнопок удаления
+     */
+    setupDeleteButtons() {
+        const deleteButtons = this.form.querySelectorAll('[data-delete-option]');
+        
+        deleteButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const selectId = btn.dataset.deleteOption;
+                this.deleteSelectedOption(selectId);
+            });
+        });
+    }
+
+    /**
+     * 🗑️ Удаление выбранной опции
+     */
+    deleteSelectedOption(selectId) {
+        const select = document.getElementById(selectId);
+        if (!select) return;
+
+        const selectedValue = select.value;
+        
+        if (!selectedValue || selectedValue === 'nolist') {
+            this.showToast('Выберите адрес для удаления', 'warning');
+            return;
+        }
+
+        // Нельзя удалять статические адреса (не начинаются с "saved_")
+        if (!selectedValue.startsWith('saved_')) {
+            this.showToast('Этот адрес нельзя удалить', 'warning');
+            return;
+        }
+
+        if (!confirm('Удалить этот адрес?')) return;
+
+        // Удаляем опцию
+        const option = select.querySelector(`option[value="${selectedValue}"]`);
+        if (option) option.remove();
+
+        // Сбрасываем select
+        select.value = '';
+        this.updateConditions();
+
+        // Сохраняем в localStorage
+        this.saveSelectToStorage(selectId);
+
+        this.showToast('Адрес удалён', 'info');
+    }
+
+    /**
+     * 💿 Сохранение select в localStorage
+     */
+    saveSelectToStorage(selectId) {
+        const select = document.getElementById(selectId);
+        if (!select || !select.hasAttribute('data-save-new-option')) return;
+
+        const savedOptions = [];
+        
+        // Сохраняем только динамически добавленные опции
+        select.querySelectorAll('option').forEach(option => {
+            if (option.value.startsWith('saved_')) {
+                savedOptions.push({
+                    value: option.value,
+                    text: option.textContent,
+                    data: option.dataset.addressData
+                });
+            }
+        });
+
+        localStorage.setItem(`select_${selectId}`, JSON.stringify(savedOptions));
+    }
+
+    /**
+     * 💿 Загрузка сохранённых адресов
+     */
+    loadSavedAddresses() {
+        const selects = this.form.querySelectorAll('select[data-save-new-option]');
+        
+        selects.forEach(select => {
+            const selectId = select.id;
+            const saved = localStorage.getItem(`select_${selectId}`);
+            
+            if (saved) {
+                try {
+                    const options = JSON.parse(saved);
+                    const nolistOption = select.querySelector('option[value="nolist"]');
+                    
+                    options.forEach(opt => {
+                        const option = document.createElement('option');
+                        option.value = opt.value;
+                        option.textContent = opt.text;
+                        option.dataset.addressData = opt.data;
+                        
+                        select.insertBefore(option, nolistOption);
+                    });
+                    
+                    console.log(`✅ Загружено адресов для ${selectId}: ${options.length}`);
+                } catch (error) {
+                    console.error(`Ошибка загрузки ${selectId}:`, error);
+                }
+            }
+        });
+    }
+
+    // ============================================
+    // УСЛОВНАЯ ЛОГИКА
+    // ============================================
+
+    resetDependentBlocks(trigger) {
+        const triggerName = trigger.id || trigger.name;
+        const dependentBlocks = this.form.querySelectorAll(`[data-condition="${triggerName}"]`);
+        
+        dependentBlocks.forEach(block => {
+            if (!block.classList.contains('active')) {
+                this.clearBlockInputs(block);
+            }
+        });
+    }
+
+    clearBlockInputs(block) {
+        const textInputs = block.querySelectorAll('input[type="text"], input[type="date"], textarea');
+        textInputs.forEach(input => {
+            input.value = '';
+            input.classList.remove('is-invalid', 'is-valid');
+        });
+
+        const selects = block.querySelectorAll('select');
+        selects.forEach(select => select.selectedIndex = 0);
+
+        const radios = block.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => radio.checked = false);
+
+        const checkboxes = block.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => checkbox.checked = false);
+    }
+
+    setupBootstrapTabListeners() {
+        const tabTriggers = document.querySelectorAll('[data-bs-toggle="tab"]');
+        
+        tabTriggers.forEach(trigger => {
+            trigger.addEventListener('shown.bs.tab', (event) => {
+                const previousTab = this.currentTab;
+                const newTabId = event.target.getAttribute('data-bs-target').replace('#', '');
+                
+                if (previousTab && previousTab !== newTabId) {
+                    this.clearTabData(previousTab);
+                }
+                
+                this.currentTab = newTabId;
+            });
+        });
+    }
+
+    clearTabData(tabId) {
+        const tab = document.getElementById(tabId);
+        if (!tab) return;
+        
+        this.clearBlockInputs(tab);
+        
+        const selects = tab.querySelectorAll('select');
+        selects.forEach(select => {
+            select.selectedIndex = 0;
+            select.dispatchEvent(new Event('change'));
+        });
+        
+        this.updateConditions();
+    }
+
+    updateConditions() {
+        const conditionalBlocks = this.form.querySelectorAll('[data-condition]');
+        
+        conditionalBlocks.forEach(block => {
+            const conditionName = block.dataset.condition;
+            const triggerValue = this.getTriggerValue(conditionName);
+            
+            let shouldShow = false;
+            
+            if (block.dataset.showWhen !== undefined) {
+                const showWhen = block.dataset.showWhen.split(',');
+                shouldShow = showWhen.includes(triggerValue);
+            } else if (block.dataset.showWhenNot !== undefined) {
+                const hideWhen = block.dataset.showWhenNot.split(',');
+                shouldShow = !hideWhen.includes(triggerValue);
+            }
+            
+            if (shouldShow) {
+                block.classList.add('active');
+                this.enableRequiredFields(block);
+            } else {
+                block.classList.remove('active');
+                this.disableRequiredFields(block);
+            }
+        });
+    }
+
+    getTriggerValue(triggerName) {
+        let trigger = this.form.querySelector(`#${triggerName}`);
+        if (!trigger) {
+            trigger = this.form.querySelector(`[name="${triggerName}"]:checked`);
+        }
+        return trigger ? trigger.value : '';
+    }
+
+    enableRequiredFields(block) {
+        const fields = block.querySelectorAll('[data-required-when-visible]');
+        fields.forEach(field => field.setAttribute('required', ''));
+    }
+
+    disableRequiredFields(block) {
+        const fields = block.querySelectorAll('[data-required-when-visible]');
+        fields.forEach(field => field.removeAttribute('required'));
+    }
+
+    showToast(message, type = 'success') {
+        const container = document.querySelector('.toast-container');
+        
+        const config = {
+            success: { icon: '✓', bgClass: 'bg-success', textClass: 'text-white' },
+            danger: { icon: '✕', bgClass: 'bg-danger', textClass: 'text-white' },
+            warning: { icon: '⚠', bgClass: 'bg-warning', textClass: 'text-dark' },
+            info: { icon: 'ℹ', bgClass: 'bg-info', textClass: 'text-white' }
+        };
+        
+        const { icon, bgClass, textClass } = config[type] || config.info;
+        
+        const toastEl = document.createElement('div');
+        toastEl.className = `toast align-items-center ${bgClass} ${textClass} border-0`;
+        toastEl.setAttribute('role', 'alert');
+        
+        toastEl.innerHTML = `
+            <div class="d-flex">
+                <div class="toast-body">
+                    <strong>${icon}</strong> ${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        `;
+        
+        container.appendChild(toastEl);
+        
+        const toast = new bootstrap.Toast(toastEl, {
+            autohide: true,
+            delay: 3000
+        });
+        
+        toast.show();
+        
+        toastEl.addEventListener('hidden.bs.toast', () => {
+            toastEl.remove();
+        });
+    }
+
+    handleSubmit(e) {
+        const visibleRequiredFields = this.form.querySelectorAll(
+            '.conditional-block.active [data-required-when-visible][required]'
+        );
+
+        let isValid = true;
+        visibleRequiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+
+        if (!isValid) {
+            e.preventDefault();
+            this.showToast('Заполните все обязательные поля', 'danger');
+        }
+    }
+}
+
+// Инициализация
+document.addEventListener('DOMContentLoaded', () => {
+    const manager = new ConditionalFormManager('#checkoutForm');
+    window.formManager = manager;
+    
+    console.log('✅ Форма заказа готова');
+});

@@ -1892,7 +1892,7 @@
                     <div class="content-widget max-w-700px">
                         <div class="tab-content">
 
-                            <!-- Вкладка: «Самовывоз» -->
+                            <!-- ========== САМОВЫВОЗ ========== -->
                             <div class="tab-pane fade show active" role="tabpanel" id="selfPickup">
                                 <!-- Время и дата самовывоза -->
                                 <div class="mb-4 mb-lg-5 max-w-540px">
@@ -1980,15 +1980,17 @@
                                 </div>
                             </div>
 
-                            <!-- Вкладка: «Доставка транспортной компанией» -->
+                            <!-- ========== ДОСТАВКА ТРАНСПОРТНОЙ КОМПАНИЕЙ ========== -->
                             <div class="tab-pane fade" role="tabpanel" id="deliveryByTK">
+
                                 <!-- Message: -->
                                 <div class="mb-4 mb-lg-5">
                                     <div class="bg-danger-subtle text-danger-emphasis p-3 mb-0">
                                         Заявку на доставку необходимо подать <b>не позднее 16:00 за день до планируемой доставки!</b>
                                     </div>
                                 </div>
-                                <!-- Транспортная компания: -->
+
+                                <!-- Транспортная компания -->
                                 <div class="mb-4 mb-lg-5 max-w-540px">
                                     <p class="fw-medium mb-12px">Транспортная компания:</p>
                                     <div class="mb-12px">
@@ -2002,46 +2004,77 @@
                                             <option value="nolist">НЕТ В СПИСКЕ</option>
                                         </select>
                                     </div>
+
+                                    <!-- Своя ТК -->
                                     <div class="conditional-block mb-12px" data-condition="tkSelect" data-show-when="nolist">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" placeholder="Ваша транспортная компания" data-required-when-visible>
                                             <label>Ваша транспортная компания</label>
                                         </div>
                                     </div>
+
+                                    <!-- Выбор даты -->
                                     <div class="mb-12px">
                                         <input type="date" class="form-control">
                                     </div>
                                 </div>
-                                <!-- Адрес терминала: -->
+
+                                <!-- Адрес терминала (для стандартных ТК) -->
                                 <div class="conditional-block mb-4 mb-lg-5 max-w-540px" data-condition="tkSelect" data-show-when-not=",nolist">
                                     <p class="fw-medium mb-12px">Адрес терминала:</p>
                                     <div class="fs-4 fw-medium text-primary">Москва, Рябиновая ул., 37, стр. 5</div>
                                 </div>
-                                <!-- Адрес терминала (Москва и МО): -->
+
+                                <!-- Адрес терминала (для своей ТК) -->
                                 <div class="conditional-block mb-4 mb-lg-5" data-condition="tkSelect" data-show-when="nolist">
                                     <p class="fw-medium mb-12px">Адрес терминала (Москва и МО):</p>
-                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Адрес*" data-required-when-visible>
-                                                <label>Адрес*</label>
+                                    
+                                    <div class="mb-12px">
+                                        <select id="terminalAddress" class="form-select" data-conditional-trigger data-save-new-option>
+                                            <option value="">Выберите адрес</option>
+                                            <option value="t1">ул. Складская, д. 10, корп. 2</option>
+                                            <option value="t2">ул. Промышленная, д. 5</option>
+                                            <option value="t3">Варшавское шоссе, д. 125, к3</option>
+                                            <option value="nolist">НОВЫЙ АДРЕС</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Кнопка удаления -->
+                                    <div class="conditional-block mb-12px" data-condition="terminalAddress" data-show-when-not=",nolist">
+                                        <a href="#" class="fs-14px text-danger" data-delete-option="terminalAddress">удалить этот адрес</a>
+                                    </div>
+
+                                    <!-- Форма нового адреса -->
+                                    <div class="conditional-block" data-condition="terminalAddress" data-show-when="nolist">
+                                        <div class="row" style="--bs-gutter-y: 22px;">
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" id="terminalAddress_street" class="form-control" placeholder="Адрес*" data-required-when-visible>
+                                                    <label>Адрес*</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6 col-lg">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Дом*" data-required-when-visible>
-                                                <label>Дом*</label>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="terminalAddress_house" class="form-control" placeholder="Дом*" data-required-when-visible>
+                                                    <label>Дом*</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6 col-lg">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Квартира">
-                                                <label>Корпус/Владение</label>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="terminalAddress_building" class="form-control" placeholder="Корпус/Владение">
+                                                    <label>Корпус/Владение</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="button" class="btn btn-secondary" data-save-address="terminalAddress" data-fields="street,house,building">
+                                                    Сохранить этот адрес
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Вид доставки: -->
+
+                                <!-- Вид доставки -->
                                 <div class="conditional-block mb-4 mb-lg-5" data-condition="tkSelect" data-show-when="nolist">
                                     <p class="fw-medium mb-12px">Вид доставки:</p>
                                     <div class="d-flex flex-column gap-3">
@@ -2055,14 +2088,17 @@
                                         </label>
                                     </div>
                                 </div>
-                                <!-- Информация о получателе: -->
+
+                                <!-- Информация о получателе -->
                                 <div class="conditional-block mb-4 mb-lg-5 max-w-540px" data-condition="tkSelect" data-show-when-not="">
                                     <p class="fw-medium mb-12px">Информация о получателе:</p>
                                     <div class="mb-12px">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" placeholder="Организация*" data-required-when-visible>
-                                            <label>Организация*</label>
-                                        </div>
+                                        <select class="form-select">
+                                            <option value="">Организация</option>
+                                            <option value="org1">ООО «Рога и Копыта»</option>
+                                            <option value="org2">ООО «Ромашка»</option>
+                                            <option value="org3">ООО «Одуванчик»</option>
+                                        </select>
                                     </div>
                                     <div class="mb-12px">
                                         <div class="form-floating">
@@ -2076,7 +2112,7 @@
                                             <label>ОГРН*</label>
                                         </div>
                                     </div>
-                                    <div class="mb-12px">
+                                    <div class="conditional-block mb-12px" data-condition="tkSelect" data-show-when="nolist">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" placeholder="Город*" data-required-when-visible>
                                             <label>Город*</label>
@@ -2088,134 +2124,174 @@
                                             <label>Телефон*</label>
                                         </div>
                                     </div>
+                                    <div class="mb-12px">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Дополнительный телефон">
+                                            <label>Дополнительный телефон</label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Адрес доставки: -->
+
+                                <!-- Адрес доставки -->
                                 <div class="conditional-block mb-4 mb-lg-5" data-condition="deliveryMyTransferCompanyType" data-show-when="address">
                                     <p class="fw-medium mb-12px">Адрес доставки:</p>
-                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Адрес*" data-required-when-visible>
-                                                <label>Адрес*</label>
+
+                                    <div class="mb-12px">
+                                        <select id="deliveryAddress" class="form-select" data-conditional-trigger data-save-new-option>
+                                            <option value="">Выберите адрес</option>
+                                            <option value="d1">ул. Тверская, д. 15, корп. 1, оф. 205</option>
+                                            <option value="d2">Ленинский проспект, д. 42, оф. 301</option>
+                                            <option value="d3">ул. Новый Арбат, д. 24, корп. А, оф. 12</option>
+                                            <option value="nolist">НОВЫЙ АДРЕС</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Кнопка удаления -->
+                                    <div class="conditional-block mb-12px" data-condition="deliveryAddress" data-show-when-not=",nolist">
+                                        <a href="#" class="fs-14px text-danger" data-delete-option="deliveryAddress">удалить этот адрес</a>
+                                    </div>
+
+                                    <!-- Форма нового адреса -->
+                                    <div class="conditional-block" data-condition="deliveryAddress" data-show-when="nolist">
+                                        <div class="row" style="--bs-gutter-y: 22px;">
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" id="deliveryAddress_street" class="form-control" placeholder="Адрес*" data-required-when-visible>
+                                                    <label>Адрес*</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6 col-lg">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Дом*" data-required-when-visible>
-                                                <label>Дом*</label>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="deliveryAddress_house" class="form-control" placeholder="Дом*" data-required-when-visible>
+                                                    <label>Дом*</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6 col-lg">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Корпус/Владение">
-                                                <label>Корпус/Владение</label>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="deliveryAddress_building" class="form-control" placeholder="Корпус/Владение">
+                                                    <label>Корпус/Владение</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6 col-lg">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Офис">
-                                                <label>Офис</label>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="deliveryAddress_office" class="form-control" placeholder="Офис">
+                                                    <label>Офис</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" placeholder="Название торговой точки*" data-required-when-visible>
-                                                <label>Название торговой точки*</label>
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" id="deliveryAddress_shopName" class="form-control" placeholder="Название торговой точки*" data-required-when-visible>
+                                                    <label>Название торговой точки*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="button" class="btn btn-secondary" data-save-address="deliveryAddress" data-fields="street,house,building,office,shopName">
+                                                    Сохранить этот адрес
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- Комментарий к заказу -->
                                 <div class="conditional-block mb-4 mb-lg-5" data-condition="tkSelect" data-show-when-not="">
                                     <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
                                 </div>
                             </div>
 
-                            <!-- Вкладка: «Доставка до торговой точки / склада» -->
+                            <!-- ========== ДОСТАВКА ДО ТОРГОВОЙ ТОЧКИ / СКЛАДА ========== -->
                             <div class="tab-pane fade" role="tabpanel" id="deliveryByTT">
-                                <!-- Адрес: -->
+
+                                <!-- Адрес -->
                                 <div class="mb-4 mb-lg-5">
                                     <p class="fw-medium mb-12px">Адрес:</p>
-                                    <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                                        <div class="col-12">
-                                            <select id="addressSelect" class="form-select" data-conditional-trigger>
-                                                <option value="">Выберите адрес доставки</option>
-                                                <option value="1">Адрес доставки 1</option>
-                                                <option value="2">Адрес доставки 2</option>
-                                                <option value="3">Адрес доставки 3</option>
-                                                <option value="nolist">НОВЫЙ АДРЕС</option>
-                                            </select>
-                                            <div class="conditional-block" data-condition="addressSelect" data-show-when-not=",nolist">
-                                                <a href="#" class="fs-14px text-danger" id="deleteAddressBtn">удалить этот адрес</a>
-                                            </div>
-                                        </div>
-                                        <div class="conditional-block col-12" data-condition="addressSelect" data-show-when="nolist">
-                                            <div class="row align-items-center" style="--bs-gutter-y: 22px;">
-                                                <div class="col-12">
-                                                    <div class="form-floating">
-                                                        <input type="text" id="newAddressStreet" class="form-control" placeholder="Адрес*" data-required-when-visible>
-                                                        <label>Адрес*</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-lg">
-                                                    <div class="form-floating">
-                                                        <input type="text" id="newAddressHouse" class="form-control" placeholder="Дом*" data-required-when-visible>
-                                                        <label>Дом*</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-lg">
-                                                    <div class="form-floating">
-                                                        <input type="text" id="newAddressBuilding" class="form-control" placeholder="Корпус/Владение">
-                                                        <label>Корпус/Владение</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-lg">
-                                                    <div class="form-floating">
-                                                        <input type="text" id="newAddressEntrance" class="form-control" placeholder="Вход">
-                                                        <label>Вход</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-lg">
-                                                    <div class="form-floating">
-                                                        <input type="text" id="newAddressPavilion" class="form-control" placeholder="Павильон">
-                                                        <label>Павильон</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button type="button" class="btn btn-secondary" id="saveAddressBtn">Сохранить этот адрес</button>
+                                    
+                                    <div class="mb-12px">
+                                        <select id="tradingPointAddress" class="form-select" data-conditional-trigger data-save-new-option>
+                                            <option value="">Выберите адрес</option>
+                                            <option value="tp1">ул. Ленина, д. 25, вх. 2, пав. А5</option>
+                                            <option value="tp2">Площадь Революции, д. 1, вх. 1, пав. Б12</option>
+                                            <option value="tp3">ул. Садовая, д. 8, корп. 1, вх. 3</option>
+                                            <option value="nolist">НОВЫЙ АДРЕС</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Кнопка удаления -->
+                                    <div class="conditional-block mb-12px" data-condition="tradingPointAddress" data-show-when-not=",nolist">
+                                        <a href="#" class="fs-14px text-danger" data-delete-option="tradingPointAddress">удалить этот адрес</a>
+                                    </div>
+
+                                    <!-- Форма нового адреса -->
+                                    <div class="conditional-block" data-condition="tradingPointAddress" data-show-when="nolist">
+                                        <div class="row" style="--bs-gutter-y: 22px;">
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" id="tradingPointAddress_street" class="form-control" placeholder="Адрес*" data-required-when-visible>
+                                                    <label>Адрес*</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="d-flex flex-column flex-lg-row flex-wrap gap-3">
-                                                <label class="d-flex gap-2 align-items-center">
-                                                    <input type="checkbox" class="form-checkbox" value="">
-                                                    <span>нужна разгрузка</span>
-                                                </label>
-                                                <label class="d-flex gap-2 align-items-center">
-                                                    <input type="checkbox" class="form-checkbox" value="">
-                                                    <span>подьем на этаж</span>
-                                                </label>
-                                                <label class="d-flex gap-2 align-items-center">
-                                                    <input type="checkbox" class="form-checkbox" value="">
-                                                    <span>нет лифта</span>
-                                                </label>
-                                                <label class="d-flex gap-2 align-items-center">
-                                                    <input type="checkbox" class="form-checkbox" value="">
-                                                    <span>паркинг</span>
-                                                </label>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="tradingPointAddress_house" class="form-control" placeholder="Дом*" data-required-when-visible>
+                                                    <label>Дом*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="tradingPointAddress_building" class="form-control" placeholder="Корпус/Владение">
+                                                    <label>Корпус/Владение</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="tradingPointAddress_entrance" class="form-control" placeholder="Вход">
+                                                    <label>Вход</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-lg">
+                                                <div class="form-floating">
+                                                    <input type="text" id="tradingPointAddress_pavilion" class="form-control" placeholder="Павильон">
+                                                    <label>Павильон</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="button" class="btn btn-secondary" data-save-address="tradingPointAddress" data-fields="street,house,building,entrance,pavilion">
+                                                    Сохранить этот адрес
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Чекбоксы -->
+                                    <div class="d-flex flex-column flex-lg-row flex-wrap gap-3 mt-3">
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span>нужна разгрузка</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span>подьем на этаж</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span>нет лифта</span>
+                                        </label>
+                                        <label class="d-flex gap-2 align-items-center">
+                                            <input type="checkbox" class="form-checkbox" value="">
+                                            <span>паркинг</span>
+                                        </label>
+                                    </div>
                                 </div>
-                                <!-- Дата доставки: -->
+
+                                <!-- Дата доставки -->
                                 <div class="mb-4 mb-lg-5 max-w-540px">
                                     <p class="fw-medium mb-12px">Дата доставки:</p>
                                     <div class="mb-12px">
                                         <input type="date" class="form-control">
                                     </div>
                                 </div>
-                                <!-- Время работы: -->
+
+                                <!-- Время работы -->
                                 <div class="mb-4 mb-lg-5 max-w-540px">
                                     <p class="fw-medium mb-12px">Время работы:</p>
                                     <div class="mb-12px">
@@ -2236,27 +2312,36 @@
                                         </select>
                                     </div>
                                 </div>
-                                <!-- Информация о получателе: -->
+
+                                <!-- Информация о получателе -->
                                 <div class="mb-4 mb-lg-5 max-w-540px">
                                     <p class="fw-medium mb-12px">Информация о получателе:</p>
                                     <div class="mb-12px">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" placeholder="Организация*">
-                                            <label>Организация*</label>
-                                        </div>
+                                        <select class="form-select">
+                                            <option value="">Организация</option>
+                                            <option value="org1">ООО «Рога и Копыта»</option>
+                                            <option value="org2">ООО «Ромашка»</option>
+                                            <option value="org3">ООО «Одуванчик»</option>
+                                        </select>
                                     </div>
                                     <div class="mb-12px">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" placeholder="Телефон*">
                                             <label>Телефон*</label>
                                         </div>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Дополнительный телефон">
+                                            <label>Дополнительный телефон</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- Комментарий к заказу -->
+
+                                <!-- Комментарий -->
                                 <div class="mb-4 mb-lg-5 max-w-540px">
-                                    <textarea class="form-control" rows="3"
-                                        placeholder="Комментарий к заказу"></textarea>
+                                    <textarea class="form-control" rows="3" placeholder="Комментарий к заказу"></textarea>
                                 </div>
+
+                                <!-- Чекбокс -->
                                 <div class="mb-4 mb-lg-5">
                                     <div class="mb-12px">
                                         <label class="d-flex gap-2 align-items-center">
@@ -2273,421 +2358,6 @@
                         <button type="submit" class="btn btn-secondary">оформить отгрузку</button>
                     </div>
                 </form>
-
-                <!-- Скрипт формы -->
-                <script>
-                    class ConditionalFormManager {
-                        constructor(formSelector) {
-                            this.form = document.querySelector(formSelector);
-                            if (!this.form) return;
-                            
-                            this.savedAddresses = [];
-                            this.addressCounter = 4;
-                            this.currentTab = 'selfPickup';
-                            
-                            this.loadAddressesFromStorage();
-                            this.init();
-                        }
-
-                        init() {
-                            this.triggers = this.form.querySelectorAll('[data-conditional-trigger]');
-                            
-                            this.triggers.forEach(trigger => {
-                                trigger.addEventListener('change', (e) => {
-                                    this.updateConditions();
-                                    
-                                    // Сброс зависимых блоков при переключении
-                                    if (e.target.hasAttribute('data-reset-children')) {
-                                        this.resetDependentBlocks(e.target);
-                                    }
-                                });
-                            });
-
-                            this.setupBootstrapTabListeners();
-                            this.setupAddressSaving();
-                            this.setupAddressDeleting();
-                            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-                            this.updateConditions();
-                        }
-
-                        /**
-                         * Сброс блоков, зависящих от данного триггера
-                         */
-                        resetDependentBlocks(trigger) {
-                            const triggerName = trigger.id || trigger.name;
-                            
-                            // Находим все блоки, зависящие от этого триггера
-                            const dependentBlocks = this.form.querySelectorAll(`[data-condition="${triggerName}"]`);
-                            
-                            dependentBlocks.forEach(block => {
-                                // Очищаем только если блок скрыт
-                                if (!block.classList.contains('active')) {
-                                    this.clearBlockInputs(block);
-                                }
-                            });
-                            
-                            console.log(`🔄 Сброшены зависимые блоки для: ${triggerName}`);
-                        }
-
-                        /**
-                         * Универсальная очистка блока
-                         */
-                        clearBlockInputs(block) {
-                            const textInputs = block.querySelectorAll('input[type="text"], input[type="date"], input[type="time"], input[type="email"], input[type="tel"], textarea');
-                            textInputs.forEach(input => {
-                                input.value = '';
-                                input.classList.remove('is-invalid', 'is-valid');
-                            });
-
-                            const selects = block.querySelectorAll('select');
-                            selects.forEach(select => select.selectedIndex = 0);
-
-                            const radios = block.querySelectorAll('input[type="radio"]');
-                            radios.forEach(radio => radio.checked = false);
-
-                            const checkboxes = block.querySelectorAll('input[type="checkbox"]');
-                            checkboxes.forEach(checkbox => checkbox.checked = false);
-                        }
-
-                        /**
-                         * УНИВЕРСАЛЬНАЯ работа с Bootstrap табами (поддерживает любое количество вкладок)
-                         */
-                        setupBootstrapTabListeners() {
-                            const tabTriggers = document.querySelectorAll('[data-bs-toggle="tab"]');
-                            
-                            tabTriggers.forEach(trigger => {
-                                trigger.addEventListener('shown.bs.tab', (event) => {
-                                    const previousTab = this.currentTab;
-                                    const newTabId = event.target.getAttribute('data-bs-target').replace('#', '');
-                                    
-                                    console.log(`🔄 Переключение: ${previousTab} → ${newTabId}`);
-                                    
-                                    if (previousTab && previousTab !== newTabId) {
-                                        this.clearTabData(previousTab);
-                                    }
-                                    
-                                    this.currentTab = newTabId;
-                                });
-                            });
-                        }
-
-                        clearTabData(tabId) {
-                            const tab = document.getElementById(tabId);
-                            if (!tab) return;
-                            
-                            console.log(`🧹 Очистка вкладки: ${tabId}`);
-                            this.clearBlockInputs(tab);
-                            
-                            // Сбрасываем select'ы и триггерим change для обновления условий
-                            const selects = tab.querySelectorAll('select');
-                            selects.forEach(select => {
-                                select.selectedIndex = 0;
-                                select.dispatchEvent(new Event('change'));
-                            });
-                            
-                            this.updateConditions();
-                        }
-
-                        // ============================================
-                        // УНИВЕРСАЛЬНАЯ СИСТЕМА УСЛОВИЙ
-                        // ============================================
-
-                        /**
-                         * Поддерживает:
-                         * - data-show-when="value" - показывать при точном значении
-                         * - data-show-when="value1,value2" - показывать при одном из значений
-                         * - data-show-when-not="value" - показывать при любом КРОМЕ указанного
-                         * - data-show-when-not="" - показывать при любом непустом значении
-                         * - data-show-when-not=",value" - показывать при любом КРОМЕ пустого и указанного
-                         */
-                        updateConditions() {
-                            const conditionalBlocks = this.form.querySelectorAll('[data-condition]');
-                            
-                            conditionalBlocks.forEach(block => {
-                                const conditionName = block.dataset.condition;
-                                const triggerValue = this.getTriggerValue(conditionName);
-                                
-                                let shouldShow = false;
-                                
-                                // Проверяем data-show-when (позитивное условие)
-                                if (block.dataset.showWhen !== undefined) {
-                                    const showWhen = block.dataset.showWhen.split(',');
-                                    shouldShow = showWhen.includes(triggerValue);
-                                }
-                                // Проверяем data-show-when-not (негативное условие)
-                                else if (block.dataset.showWhenNot !== undefined) {
-                                    const hideWhen = block.dataset.showWhenNot.split(',');
-                                    shouldShow = !hideWhen.includes(triggerValue);
-                                }
-                                
-                                if (shouldShow) {
-                                    block.classList.add('active');
-                                    this.enableRequiredFields(block);
-                                } else {
-                                    block.classList.remove('active');
-                                    this.disableRequiredFields(block);
-                                }
-                            });
-                        }
-
-                        getTriggerValue(triggerName) {
-                            let trigger = this.form.querySelector(`#${triggerName}`);
-                            if (!trigger) {
-                                trigger = this.form.querySelector(`[name="${triggerName}"]:checked`);
-                            }
-                            return trigger ? trigger.value : '';
-                        }
-
-                        enableRequiredFields(block) {
-                            const fields = block.querySelectorAll('[data-required-when-visible]');
-                            fields.forEach(field => field.setAttribute('required', ''));
-                        }
-
-                        disableRequiredFields(block) {
-                            const fields = block.querySelectorAll('[data-required-when-visible]');
-                            fields.forEach(field => field.removeAttribute('required'));
-                        }
-
-                        // ============================================
-                        // LOCALSTORAGE
-                        // ============================================
-
-                        loadAddressesFromStorage() {
-                            try {
-                                const saved = localStorage.getItem('deliveryAddresses');
-                                if (saved) {
-                                    const addresses = JSON.parse(saved);
-                                    if (addresses.length > 0) {
-                                        const maxId = Math.max(...addresses.map(a => a.id));
-                                        this.addressCounter = maxId + 1;
-                                    }
-                                    this.savedAddresses = addresses;
-                                    addresses.forEach(addr => this.addAddressOption(addr));
-                                    console.log(`✅ Загружено адресов: ${addresses.length}`);
-                                }
-                            } catch (error) {
-                                console.error('❌ Ошибка загрузки адресов:', error);
-                                localStorage.removeItem('deliveryAddresses');
-                            }
-                        }
-
-                        saveAddressesToStorage() {
-                            try {
-                                localStorage.setItem('deliveryAddresses', JSON.stringify(this.savedAddresses));
-                                console.log('✅ Адреса сохранены');
-                                return true;
-                            } catch (error) {
-                                console.error('❌ Ошибка сохранения:', error);
-                                if (error.name === 'QuotaExceededError') {
-                                    this.showToast('Превышен лимит хранилища', 'danger');
-                                }
-                                return false;
-                            }
-                        }
-
-                        // ============================================
-                        // СОХРАНЕНИЕ И УДАЛЕНИЕ АДРЕСОВ
-                        // ============================================
-
-                        setupAddressSaving() {
-                            const saveBtn = document.getElementById('saveAddressBtn');
-                            if (!saveBtn) return;
-                            saveBtn.addEventListener('click', () => this.saveNewAddress());
-                        }
-
-                        saveNewAddress() {
-                            const street = document.getElementById('newAddressStreet').value.trim();
-                            const house = document.getElementById('newAddressHouse').value.trim();
-                            const building = document.getElementById('newAddressBuilding').value.trim();
-                            const entrance = document.getElementById('newAddressEntrance').value.trim();
-                            const pavilion = document.getElementById('newAddressPavilion').value.trim();
-
-                            if (!street || !house) {
-                                this.showToast('Заполните адрес и номер дома', 'warning');
-                                return;
-                            }
-
-                            let fullAddress = `${street}, д. ${house}`;
-                            if (building) fullAddress += `, корп. ${building}`;
-                            if (entrance) fullAddress += `, вх. ${entrance}`;
-                            if (pavilion) fullAddress += `, пав. ${pavilion}`;
-
-                            const newAddress = {
-                                id: this.addressCounter++,
-                                street,
-                                house,
-                                building,
-                                entrance,
-                                pavilion,
-                                fullAddress,
-                                createdAt: new Date().toISOString()
-                            };
-
-                            this.savedAddresses.push(newAddress);
-                            
-                            if (this.saveAddressesToStorage()) {
-                                this.addAddressOption(newAddress);
-                                this.clearNewAddressForm();
-
-                                const addressSelect = document.getElementById('addressSelect');
-                                addressSelect.value = newAddress.id.toString();
-                                this.updateConditions();
-
-                                this.showToast('Адрес сохранён!', 'success');
-                            }
-                        }
-
-                        setupAddressDeleting() {
-                            const deleteBtn = document.getElementById('deleteAddressBtn');
-                            if (!deleteBtn) return;
-                            deleteBtn.addEventListener('click', (e) => {
-                                e.preventDefault();
-                                this.deleteAddress();
-                            });
-                        }
-
-                        deleteAddress() {
-                            const addressSelect = document.getElementById('addressSelect');
-                            const selectedValue = addressSelect.value;
-
-                            if (!selectedValue || selectedValue === 'nolist') {
-                                this.showToast('Выберите адрес для удаления', 'warning');
-                                return;
-                            }
-
-                            if (!confirm('Удалить этот адрес?')) {
-                                return;
-                            }
-
-                            const selectedOption = addressSelect.querySelector(`option[value="${selectedValue}"]`);
-                            if (selectedOption) {
-                                selectedOption.remove();
-                            }
-
-                            this.savedAddresses = this.savedAddresses.filter(
-                                addr => addr.id.toString() !== selectedValue
-                            );
-
-                            this.saveAddressesToStorage();
-                            addressSelect.value = '';
-                            this.updateConditions();
-
-                            this.showToast('Адрес удалён', 'info');
-                        }
-
-                        addAddressOption(address) {
-                            const addressSelect = document.getElementById('addressSelect');
-                            const option = document.createElement('option');
-                            option.value = address.id;
-                            option.textContent = address.fullAddress;
-                            option.dataset.addressData = JSON.stringify(address);
-                            
-                            const newAddressOption = addressSelect.querySelector('option[value="nolist"]');
-                            addressSelect.insertBefore(option, newAddressOption);
-                        }
-
-                        clearNewAddressForm() {
-                            document.getElementById('newAddressStreet').value = '';
-                            document.getElementById('newAddressHouse').value = '';
-                            document.getElementById('newAddressBuilding').value = '';
-                            document.getElementById('newAddressEntrance').value = '';
-                            document.getElementById('newAddressPavilion').value = '';
-                        }
-
-                        // ============================================
-                        // BOOTSTRAP TOAST УВЕДОМЛЕНИЯ
-                        // ============================================
-
-                        /**
-                         * Bootstrap Toast вместо кастомных уведомлений
-                         * @param {string} message - Текст сообщения
-                         * @param {string} type - Тип: success, danger, warning, info
-                         */
-                        showToast(message, type = 'success') {
-                            const container = document.querySelector('.toast-container');
-                            
-                            // Определяем иконку и цвет по типу
-                            const config = {
-                                success: { icon: '✓', bgClass: 'bg-success', textClass: 'text-white' },
-                                danger: { icon: '✕', bgClass: 'bg-danger', textClass: 'text-white' },
-                                warning: { icon: '⚠', bgClass: 'bg-warning', textClass: 'text-dark' },
-                                info: { icon: 'ℹ', bgClass: 'bg-info', textClass: 'text-white' }
-                            };
-                            
-                            const { icon, bgClass, textClass } = config[type] || config.info;
-                            
-                            // Создаём toast элемент
-                            const toastEl = document.createElement('div');
-                            toastEl.className = `toast align-items-center ${bgClass} ${textClass} border-0`;
-                            toastEl.setAttribute('role', 'alert');
-                            toastEl.setAttribute('aria-live', 'assertive');
-                            toastEl.setAttribute('aria-atomic', 'true');
-                            
-                            toastEl.innerHTML = `
-                                <div class="d-flex">
-                                    <div class="toast-body">
-                                        <strong>${icon}</strong> ${message}
-                                    </div>
-                                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                                </div>
-                            `;
-                            
-                            container.appendChild(toastEl);
-                            
-                            // Инициализируем и показываем toast
-                            const toast = new bootstrap.Toast(toastEl, {
-                                autohide: true,
-                                delay: 3000
-                            });
-                            
-                            toast.show();
-                            
-                            // Удаляем элемент после скрытия
-                            toastEl.addEventListener('hidden.bs.toast', () => {
-                                toastEl.remove();
-                            });
-                        }
-
-                        // ============================================
-                        // ВАЛИДАЦИЯ
-                        // ============================================
-
-                        handleSubmit(e) {
-                            const visibleRequiredFields = this.form.querySelectorAll(
-                                '.conditional-block.active [data-required-when-visible][required]'
-                            );
-
-                            let isValid = true;
-                            visibleRequiredFields.forEach(field => {
-                                if (!field.value.trim()) {
-                                    field.classList.add('is-invalid');
-                                    isValid = false;
-                                } else {
-                                    field.classList.remove('is-invalid');
-                                }
-                            });
-
-                            if (!isValid) {
-                                e.preventDefault();
-                                this.showToast('Заполните все обязательные поля', 'danger');
-                            }
-                        }
-                    }
-
-                    // Инициализация
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const manager = new ConditionalFormManager('#checkoutForm');
-                        window.formManager = manager;
-                        
-                        console.log('✅ Финальная версия инициализирована');
-                        console.log('📋 Поддерживаемые условия:');
-                        console.log('   • data-show-when="value" - показывать при точном значении');
-                        console.log('   • data-show-when="v1,v2" - показывать при одном из значений');
-                        console.log('   • data-show-when-not="value" - НЕ показывать при значении');
-                        console.log('   • data-show-when-not="" - показывать при любом непустом');
-                        console.log('   • data-show-when-not=",value" - показывать кроме пустого и value');
-                    });
-                </script>
 
             </div>
         </div>
