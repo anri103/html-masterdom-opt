@@ -1297,3 +1297,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('✅ Форма заказа готова');
 });
+
+// Код для полей с датой
+
+const d = document.querySelector('input[type="date"]');
+if (d && !d.value) d.valueAsDate = new Date();
