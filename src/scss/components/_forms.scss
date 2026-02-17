@@ -122,3 +122,43 @@ textarea {
 .small-floating-labels .form-floating>label {
     font-size: 12px;
 }
+
+// choices
+
+.choices {
+    --choices-bg-color: var(--bs-body-bg);
+    --choices-inner-padding: 1rem 0.75rem;
+    --choices-inner-one-padding: 1rem;
+    --choices-list-single-padding: 0;
+    --choices-keyline-color: var(--bs-border-color);
+    --choices-font-size-lg: var(--bs-body-font-size);
+    --choices-font-size-md: var(--bs-body-font-size);
+    --choices-input-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+    --choices-z-index: 5;
+
+    &__inner {
+        border-radius: 0;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+    }
+
+    &[data-type*=select-one]::after {
+        content: "";
+        border: none;
+        margin-top: 0;
+        width: 14px;
+        height: 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M1.00781 1.07916L5.9816 6.70326C6.03983 6.77202 6.10978 6.82674 6.18723 6.86412C6.26466 6.9015 6.34798 6.92078 6.43219 6.92078C6.51638 6.92078 6.59972 6.9015 6.67715 6.86412C6.75459 6.82674 6.82453 6.77202 6.88278 6.70326L11.8565 1.07916' stroke='%23474A51' stroke-width='1.00133' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        transform: translateY(-50%);
+        transition: 0.3s ease;
+    }
+
+    &[data-type*=select-one].is-open::after {
+        margin-top: 0;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}

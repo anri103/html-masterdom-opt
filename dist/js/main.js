@@ -1299,6 +1299,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Код для полей с датой
-
 const d = document.querySelector('input[type="date"]');
 if (d && !d.value) d.valueAsDate = new Date();
+
+// Custom Choices SELECT
+const selectPickers = document.querySelectorAll('.selectpicker');
+selectPickers.forEach(select => {
+    new Choices(select, {
+        placeholder: false,
+        itemSelectText: ''
+    });
+});
